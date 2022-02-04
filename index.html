@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/imgs/favicon.png">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/images.css">
+    <title>NFTorio</title>
+</head>
+<body id="bodyenso" style="overflow: hidden;">
+    <div id="spinnerCenter">
+        <div class="spinner-border" style=" width: 2.6rem; height: 2.6rem;" role="status"></div>
+        <img style="width: 150px;height: 50px;margin-top: 8px;" src="/imgs/nav-brand-logo-black.png" alt="nav-brand-logo">
+    </div>
+    <!-- NAV --> 
+<div id="preAnashei" style="display: none;"></div>
+    <header>
+        <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <div id="isologotipo"></div></a>
+                    <!-- web theme -->
+                    <div class="dropdown">
+                        <button id="themeBtn" class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">THEME</button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
+                            <li><a class="dropdown-item" id="theme1" onclick="">light</a></li>
+                            <li><a class="dropdown-item" id="theme2">dark</a></li>
+                            <!-- <li><a class="dropdown-item font-monospace" id="theme3">- REBORN -</a></li> -->
+                        </ul>
+                    </div>
+                    <button onclick="connect()" type="button" class="btn btn-dark">Connect Metamask </button>
+                    <!-- web theme -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto fs-5 ">
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link active fw-bold" href="./index.html">- MY REPOSITORY -</a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link fw-bold" href="/music.html">MUSIC</a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link fw-bold" href="/about.html">ABOUT ME</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+<!-- PRINCIPAL INDEX -->
+<div id="app"></div>
+<div id="wrapper">
+
+<h2 class="h2 fs-1 mb-2">My Repository</h2>
+<p class="productDescription">warning: all images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
+
+
+<div id="anashei" style="display: none;" class="productBoxNFT">
+    <h1 id="NFTTitle" class="productTitle"></h1>
+    <div id="NFTphoto" class="image1"></div>
+    <p id="nftDescription" class="productDescription"></p>
+    <p id="nftPrice" class="productPrice"></p>
+    <div id="bitcoinPay" class="d-grid gap-2"></div>
+    <img id="cruz" src="/imgs/x.svg">
+</div>
+
+
+<!-- PRODUCTOS -->
+<div id="productGrid">
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image1"></div>
+        <h1 id="title" class="productTitle">Insanity</h1>
+        <p id="description" class="productDescription">Time travelling selfDrived bot.</p>
+        <p id="price" class="productPrice">$75</p>
+        <div id="bitcoinPay">
+            <a onclick="nft1()">
+                <button type="button" class="btn btn-secondary">Inspect</button>
+            </a>
+            <a class="blockoPayBtn" data-toggle="modal" data-uid=7f3354cb3a3d47c7>
+                <button type="button" class="btn btn-dark"> Buy </button>
+            </a>
+        </div>
+            <!-- 7f3354cb3a3d47c7 -->
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image2"></div>
+        <h1 id="title" class="productTitle">Protowave111</h1>
+        <p id="description" class="productDescription">Empathyless bot called Protoboy.</p>
+        <p id="price" class="productPrice">$75</p>
+        <div id="bitcoinPay">
+            <a onclick="nft2()">
+                <button type="button" class="btn btn-secondary">Inspect</button>
+            </a>
+            <a class="blockoPayBtn" data-toggle="modal" data-uid=cc43bbe48eda480a>
+                <button type="button" class="btn btn-dark"> Buy </button>
+            </a>
+        </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image3"></div>
+        <h1 id="title" class="productTitle">OBSERVER</h1>
+        <p id="description" class="productDescription">You are never aware of him.</p>
+        <p id="price" class="productPrice">$75</p>
+            <div id="bitcoinPay">
+                <a onclick="nft3()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=4e6592c887bb4d9a>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image4"></div>
+        <h1 id="title" class="productTitle">OBSERVER ® XL</h1>
+        <p id="description" class="productDescription">SE ® XL.</p>
+        <p id="price" class="productPrice">$75</p>
+            <div id="bitcoinPay">
+                <a onclick="nft4()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=c89b01122fb846a1>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image5"></div>
+        <h1 id="title" class="productTitle">dangerLeader</h1>
+        <p id="description" class="productDescription">You are always on danger cause of him.</p>
+        <p id="price" class="productPrice">$75</p>
+            <div id="bitcoinPay">
+                <a onclick="nft5()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=d895fbbfe7124f2c>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- KAWAKI COLLECTION --> 
+
+    <!-- KAWAKI COLLECTION -->
+    <div class="productBox">
+        <div id="photo" class="image6"></div>
+        <h1 id="title" class="productTitle">Kawaki.v1</h1>
+        <p id="description" class="productDescription">First token on the Kawaki NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft6()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=9a24859a4c0444cd>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image7"></div>
+        <h1 id="title" class="productTitle">Kawaki.v2</h1>
+        <p id="description" class="productDescription">Second token on the Kawaki NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft7()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=12663705d2d44982>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image8"></div>
+        <h1 id="title" class="productTitle">Kawaki.v3</h1>
+        <p id="description" class="productDescription">Third token on the Kawaki NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft8()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=5192056c92324347>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image9"></div>
+        <h1 id="title" class="productTitle">Kawaki.v4</h1>
+        <p id="description" class="productDescription">Fourth token on the Kawaki NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft9()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=acdb3acec66844e1>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image10"></div>
+        <h1 id="title" class="productTitle">Kawaki.v5</h1>
+        <p id="description" class="productDescription">Fifth token on the Kawaki NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft10()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=56b8dc28f3e64051>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image11"></div>
+        <h1 id="title" class="productTitle">endlessScream.v1</h1>
+        <p id="description" class="productDescription">First token on the screamer cat NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft11()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=c84519f4fcc34288>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image12"></div>
+        <h1 id="title" class="productTitle">endlessScream.v2"</h1>
+        <p id="description" class="productDescription">Second token on the screamer cat NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft12()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=ad12288f079d4c11>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image13"></div>
+        <h1 id="title" class="productTitle">endlessScream.v3</h1>
+        <p id="description" class="productDescription">Third token on the screamer cat NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft13()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=88ed930bfe804df0>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image14"></div>
+        <h1 id="title" class="productTitle">endlessScream.v4</h1>
+        <p id="description" class="productDescription">Fourth token on the screamer cat NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft14()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=bcf8bcff07344958>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image15"></div>
+        <h1 id="title" class="productTitle">endlessScream.v5</h1>
+        <p id="description" class="productDescription">Fifth token on the screamer cat NFT Collection.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft15()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=9b8b5bd050ef4744>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image16"></div>
+        <h1 id="title" class="productTitle">Annoyed Protoboy</h1>
+        <p id="description" class="productDescription">You don't want to be in front of him at his rage moment.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft16()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=38bea77dae6049e8>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image17"></div>
+        <h1 id="title" class="productTitle">04.EVA</h1>
+        <p id="description" class="productDescription">Eva-04 Re-designed.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft17()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=7cf1b19d127c4441>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image18"></div>
+        <h1 id="title" class="productTitle">Chuck-E</h1>
+        <p id="description" class="productDescription">Small size - big injuries.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft18()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=74eb945e6f5f48ac>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image19"></div>
+        <h1 id="title" class="productTitle">astroBot.v1</h1>
+        <p id="description" class="productDescription">Astro-boy was modified to kill every existing life forms.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft19()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=ff38c1b3a42949b2>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image20"></div>
+        <h1 id="title" class="productTitle">astroBot.v2</h1>
+        <p id="description" class="productDescription">He is no longer half human.</p>
+        <p id="price" class="productPrice">$50</p>
+            <div id="bitcoinPay">
+                <a onclick="nft20()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=41e9c4063a224854>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image21"></div>
+        <h1 id="title" class="productTitle">Texture.v1</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft21()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=caabea9c4ad74966>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image22"></div>
+        <h1 id="title" class="productTitle">Texture.v2</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft22()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=14b41570fdf04a90>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image23"></div>
+        <h1 id="title" class="productTitle">Texture.v3</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft23()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=08a09eeba88b430f>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image24"></div>
+        <h1 id="title" class="productTitle">Texture.v4</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft24()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=cf8ddd7f131b4155>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image25"></div>
+        <h1 id="title" class="productTitle">Texture.v5</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft25()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=40ca6d423e2b40ff>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image26"></div>
+        <h1 id="title" class="productTitle">Texture.v6</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft26()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=d873bf75e8bb4347>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image27"></div>
+        <h1 id="title" class="productTitle">Texture.v7</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft27()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=b552a0a6853d4d66>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image28"></div>
+        <h1 id="title" class="productTitle">Texture.v8</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft28()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=269a90aadbf440b6>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image29"></div>
+        <h1 id="title" class="productTitle">Texture.v9</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft29()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=0acef96486304dbe>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image30"></div>
+        <h1 id="title" class="productTitle">Texture.v10</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft30()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=2bee479dd5514470>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image31"></div>
+        <h1 id="title" class="productTitle">Texture.v11</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft31()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=b681c7b194c54f72>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image32"></div>
+        <h1 id="title" class="productTitle">Texture.v12</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft32()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=c9d20f6ae1124163>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image33"></div>
+        <h1 id="title" class="productTitle">Texture.v13</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft33()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=4bc30b973c2f4a85>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image34"></div>
+        <h1 id="title" class="productTitle">Texture.v14</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft34()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=691a57e1886c4848>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+    <!-- producto -->
+    <div class="productBox">
+        <div id="photo" class="image35"></div>
+        <h1 id="title" class="productTitle">Texture.v15</h1>
+        <p id="description" class="productDescription">Feel free to use this image on your personal works.</p>
+        <p id="price" class="productPrice">$25</p>
+            <div id="bitcoinPay">
+                <a onclick="nft35()" >
+                    <button type="button" class="btn btn-secondary">Inspect</button>
+                </a>
+                <a class="blockoPayBtn" data-toggle="modal" data-uid=1a26a8d0321a44b1>
+                    <button type="button" class="btn btn-dark"> Buy </button>
+                </a>
+            </div>
+    </div>
+
+</div>
+<div class="h2">
+    <a class="blockoPayBtn fs-6 mt-5" id="all" data-toggle="modal" data-uid=13c84765d6454330>buy all [+27 images i want to gift you] - INSTANT delivery</a>
+</div>
+
+</div> <!-- WRAPPER -->
+<!-- footer -->
+<footer class="bg-dark text-center text-white mt-3">
+    <h3 class="h3">- CONTACT ME -</h3>
+    <div class="container p-1">
+        <!-- Section: Social media -->
+            <section class="mb-3">
+                <!-- Telegram -->
+                    <a class="btn btn-outline-light btn-floating m-1 text-nowrap" target="_blank" role="button" href="https://t.me/v54tgchannel">Telegram</a>
+                <!-- WhatsApp -->
+                    <a class="btn btn-outline-light btn-floating m-1 text-nowrap" target="_blank" role="button" href="https://discord.gg/NMERDCVD">Discord</a>
+                <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1 text-nowrap" target="_blank" role="button" href="https://www.instagram.com/vittoopugliese/">Instagram</a>
+                <!-- Twitty -->
+                    <a class="btn btn-outline-light btn-floating m-1 text-nowrap" target="_blank" role="button" href="https://twitter.com/vittoopugliese">Twitty</a>
+                <!-- Correo -->
+                    <a class="btn btn-outline-light btn-floating m-1 text-nowrap" target="_blank" role="button" href="https://www.google.com/search?q=href+mailto+doesnt+work+lol&sxsrf=AOaemvIjNrci9HvA1v5x7k5RJX_N-X2JuQ%3A1631234530493&ei=4qk6YbDaHcPB5OUPo76aqAE&oq=href+mailto+doesnt+work+lol&gs_lcp=Cgdnd3Mtd2l6EAM6BAgjECc6CwgAEIAEELEDEIMBOgQIABBDOhEILhCABBCxAxCDARDHARDRAzoICAAQgAQQsQM6BwgAELEDEEM6CgguEMcBEKMCEEM6CggAEIAEEIcCEBQ6BQgAEIAEOgUILhCABDoFCAAQywE6BggAEBYQHjoFCCEQoAE6CAgAEA0QBRAeOggIABAWEAoQHjoICCEQFhAdEB5KBAhBGABQviZY6lFgj1doAXACeACAAYMCiAG4FJIBBjI0LjMuMZgBAKABAcABAQ&sclient=gws-wiz&ved=0ahUKEwiw0_CVlvPyAhXDILkGHSOfBhUQ4dUDCA4&uact=5">vittoopugliese@gmail.com</a>  
+        </div>
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-size:18px;" > TERMS & CONDITIONS
+                <br>1 - All tokens must be purchased at the time of being exposed or used on the internet and / or real life.<br>
+                <br>2 - Each token is tied to a notepad with its respective identification number. If a person who claims to own a token cannot present the identification number, it wont be considered the owner of that token.<br>
+                <br>3 - ALL images are unique, when you purchase one, it will be retired of this page.<br>
+            </div>
+        </footer>   
+
+<script src="https://www.blockonomics.co/js/pay_button.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="/app.js"></script>
+<script src="/functions.js"></script>
+</body>
+</html>
