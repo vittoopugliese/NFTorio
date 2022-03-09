@@ -13,7 +13,7 @@ function nft1(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image1')
@@ -31,7 +31,7 @@ function nft2(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image2')
@@ -48,7 +48,7 @@ function nft3(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image3')
@@ -64,7 +64,7 @@ function nft4(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image4')
@@ -80,7 +80,7 @@ function nft5(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image5')
@@ -96,7 +96,7 @@ function nft6(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image6')
@@ -112,7 +112,7 @@ function nft7(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image7')
@@ -128,7 +128,7 @@ function nft8(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image8')
@@ -144,7 +144,7 @@ function nft9(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image9')
@@ -160,7 +160,7 @@ function nft10(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image10')
@@ -176,7 +176,7 @@ function nft11(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image11')
@@ -192,7 +192,7 @@ function nft12(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image12')
@@ -208,7 +208,7 @@ function nft13(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image13')
@@ -224,7 +224,7 @@ function nft14(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image14')
@@ -240,7 +240,7 @@ function nft15(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image15')
@@ -256,7 +256,7 @@ function nft16(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image16')
@@ -272,7 +272,7 @@ function nft17(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image17')
@@ -288,7 +288,7 @@ function nft18(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image18')
@@ -304,7 +304,7 @@ function nft19(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image19')
@@ -320,7 +320,7 @@ function nft20(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image20')
@@ -336,7 +336,7 @@ function nft21(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image21')
@@ -352,7 +352,7 @@ function nft22(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image22')
@@ -368,7 +368,7 @@ function nft23(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image23')
@@ -384,7 +384,7 @@ function nft24(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image24')
@@ -400,7 +400,7 @@ function nft25(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image25')
@@ -416,7 +416,7 @@ function nft26(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image26')
@@ -432,7 +432,7 @@ function nft27(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image27')
@@ -448,7 +448,7 @@ function nft28(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image28')
@@ -464,7 +464,7 @@ function nft29(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image29')
@@ -480,7 +480,7 @@ function nft30(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image30')
@@ -496,7 +496,7 @@ function nft31(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image31')
@@ -512,7 +512,7 @@ function nft32(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image32')
@@ -528,7 +528,7 @@ function nft33(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image33')
@@ -544,7 +544,7 @@ function nft34(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image34')
@@ -560,7 +560,7 @@ function nft35(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
-    fetch('/styles/values.json').then(response => response.json())
+    fetch('values.json').then(response => response.json())
     .then(data =>{
     photo.className = ''
     photo.classList.add('image35')

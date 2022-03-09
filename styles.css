@@ -3,7 +3,7 @@
 a{text-decoration: none !important;color: black;}
 a:hover{color: rgb(70, 70, 70);}
 .btn:focus, .btn:active:focus, .btn.active:focus{outline:none !important;box-shadow:none !important;}
-/* start */
+
 body{
   background-image: linear-gradient(to Top, rgb(110, 110, 110) 0%, white 100%);
 }

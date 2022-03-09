@@ -107,6 +107,8 @@ const nfts = [{
     "description": "Time travelling selfDrived virtual bot.",
     "price": "$75",
 }]
-nfts.forEach(nfts =>{
-    app.innerHTML += `<li>${nfts.title} - ${nfts.price} - ${nfts.description} - ${nfts.image}</li>`
-})
+
+
+// nfts.forEach(nfts =>{
+//     app.innerHTML += `<li>${nfts.title} - ${nfts.price} - ${nfts.description} - ${nfts.image}</li>`
+// })
