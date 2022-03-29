@@ -5,10 +5,6 @@ const price = document.getElementById('nftPrice')
 const bircoin = document.getElementById('bitcoinPay2')
 const bircoinBtn = document.getElementById('bitcoinPay')
 
-// 75 = ac86e95dc73b428b
-// 50 = ba85a9c10ca543fa
-// 25 = 90a7647d7ea5403a
-
 function nft1(){
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
