@@ -23,83 +23,95 @@
     <header>
         <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <div id="isologotipo"></div></a>
-                    <!-- web theme -->
+                    <a class="navbar-brand" href="index.html">
+                        <div id="isologotipo"></div>
+                    </a>
+
                     <div class="dropdown">
                         <button id="themeBtn" class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">THEME</button>
+
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
                             <li><a class="dropdown-item" id="theme1" onclick="">light</a></li>
                             <li><a class="dropdown-item" id="theme2">dark</a></li>
-                            <!-- <li><a class="dropdown-item font-monospace" id="theme3">- REBORN -</a></li> -->
                         </ul>
                     </div>
-                    <button onclick="connect()" type="button" class="btn btn-dark">Connect Metamask </button>
-                    <!-- web theme -->
+
+                    <button id="mask" onclick="connect()" type="button" class="btn btn-dark"><img src="imgs/metamask.svg" alt="metamask connect button" style="height: 2.2em;width: 2.2em;"></button>
+
                 </div>
             </nav>
         </header>
 <!-- PRINCIPAL INDEX -->
+<div style="margin-top:80px ;"></div>
 <div id="wrapper">
+        <aside id="aSide">
+            <div id="aside-wrapper">
 
-<h2 class="h2 fs-1 mb-2">My Repository</h2>
-<p class="productDescription">warning: all images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
+                <h2 class="h2" id="search-text">Search</h2>
 
+                <div class="input-group">
+                        <img src="imgs/search.svg" id="search-icon" alt="search icon">  
+                    <input id="search-input" type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
 
-<div id="anashei" style="display: none;" class="productBoxNFT">
-    <h1 id="NFTTitle" class="productTitle"></h1>
-    <div id="NFTphoto" class="image1"></div>
-    <p id="nftDescription" class="productDescription"></p>
-    <p id="nftPrice" class="productPrice"></p>
-    <div id="bitcoinPay" class="d-grid gap-2"></div>
-    <img id="cruz" src="imgs/x.svg">
-</div>
+            </div>
 
+        </aside>
 
-<!-- PRODUCTOS -->
-<div id="productGrid">
-
-<div id="added" style="display: none;"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-<div id="added"></div>
-
-</div>
-<div class="h2">
-    <a class="blockoPayBtn fs-6 mt-5" id="all" data-toggle="modal" data-uid=13c84765d6454330>buy all [+27 images i want to gift you] - INSTANT delivery</a>
-</div>
+        <h2 class="h2 fs-1 mb-2">My Repository</h2>
+        <p class="productDescription">warning: all images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
+        
+        
+        <div id="anashei" style="display: none;" class="productBoxNFT">
+            <h1 id="NFTTitle" class="productTitle"></h1>
+            <div id="NFTphoto" class="image1"></div>
+            <p id="nftDescription" class="productDescription"></p>
+            <p id="nftPrice" class="productPrice"></p>
+            <div id="bitcoinPay" class="d-grid gap-2"></div>
+            <img id="cruz" src="imgs/x.svg">
+        </div>
+        
+        <!-- PRODUCTOS -->
+        <div id="productGrid">
+        
+        <div id="added" style="display: none;"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        <div id="added"></div>
+        
+        </div>
 
 </div> <!-- WRAPPER -->
 <!-- footer -->
@@ -123,7 +135,10 @@
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); font-size:18px;" > TERMS & CONDITIONS
                 <br>1 - All tokens must be purchased at the time of being exposed or used on the internet and / or real life.<br>
                 <br>2 - Each token is tied to a notepad with its respective identification number. If a person who claims to own a token cannot present the identification number, it wont be considered the owner of that token.<br>
-                <br>3 - ALL images are unique, when you purchase one, it will be retired of this page.<br>
+                <br>3 - ALL images are unique, when you purchase one, it will be marked as owned on this page.<br>
+                <div class="h2">
+                    <a class="blockoPayBtn fs-6 mt-5" id="all" data-toggle="modal" data-uid=13c84765d6454330>click for surprise !!</a>
+                </div>
             </div>
         </footer>   
 

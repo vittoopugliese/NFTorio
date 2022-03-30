@@ -12,6 +12,7 @@ const themeSwitchTo1 = document.querySelector('#theme1')
 const themeSwitchTo2 = document.querySelector('#theme2')
 const navClass = document.querySelector('#menu')
 const themeClass = document.querySelector('#themeBtn')
+const isologotipo = document.querySelector('#isologotipo')
 
 themeSwitchTo1.addEventListener('click', ()=>{
     document.body.style.backgroundImage = 'linear-gradient(to Top, rgb(110, 110, 110) 0%, white 100%)'
@@ -25,10 +26,12 @@ themeSwitchTo1.addEventListener('click', ()=>{
     themeClass.classList.add('btn-light')
     anashei.style.backgroundColor = 'whitesmoke'
     anashei.style.border = '2px solid rgb(184, 184, 184)'
+    isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo-black.png)'
     if(localStorage.getItem('dark-mode')==='true'){
         localStorage.removeItem('dark-mode')
         anashei.style.backgroundColor = 'whitesmoke'
         anashei.style.border = '2px solid rgb(184, 184, 184)'
+        isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo-black.png)'
     }
 })
 themeSwitchTo2.addEventListener('click', ()=>{
@@ -43,10 +46,13 @@ themeSwitchTo2.addEventListener('click', ()=>{
     themeClass.classList.remove('btn-light')
     anashei.style.backgroundColor = '#353535'
     anashei.style.border = '2px solid grey'
+    isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo-black.png)'
     if(document.body.classList.contains('dark')){
         localStorage.setItem('dark-mode', 'true')
         anashei.style.backgroundColor = '#353535'
         anashei.style.border = '2px solid grey'
+        isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo.png)'
+        
     }
 })
 if(localStorage.getItem('dark-mode')==='true')
@@ -60,6 +66,7 @@ if(localStorage.getItem('dark-mode')==='true')
     navClass.classList.remove('navbar-light')
     themeClass.classList.add('btn-dark')
     themeClass.classList.remove('btn-light')
+    isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo.png)'
 }
 
 // inspect
@@ -86,7 +93,6 @@ document.addEventListener('keydown', (event) => {
         preAnashei.style.display = 'none'
         bodyenso.style.overflow = 'auto'
     }
-    
 })
 
 //web3
@@ -95,7 +101,6 @@ async function connect(){
     await window.web3.currentProvider.enable()
     web3 = new web3(window.web3.currentProvider)
 }
-
 //array
 const values = {
     "nftTitle1": "Insanity",
@@ -335,3 +340,20 @@ addedToGrid[i].innerHTML += `
 </div>
     `
 }
+
+
+const searchText = document.querySelector('#search-text');
+const searchInput = document.querySelector('#search-text');
+const searchIcon = document.querySelector('#search-icon');
+const aside = document.querySelector('#aside-wrapper');
+
+aside.addEventListener(('mouseover'), () => {
+    searchIcon.style.left = '80%'
+})
+aside.addEventListener(('mouseleave'), () => {
+    searchIcon.style.left = '1%'
+})
+
+searchIcon.addEventListener(('click'), () => {
+   console.log(searchInput.value)
+})
