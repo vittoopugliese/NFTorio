@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Rubik:ital,wght@1,300&display=swap');
 *{padding: 0;margin: 0;box-sizing: border-box;outline:none;font-family: 'Rubik', sans-serif;font-weight: 500;}
 *::selection{background-color: grey;}#tocador{cursor: pointer;}
 a{text-decoration: none !important;color: black;}
@@ -7,7 +8,7 @@ a:hover{color: rgb(70, 70, 70);}
 
 body{
   overflow-x: hidden !important;
-  background-image: linear-gradient(to Top, rgb(110, 110, 110) 0%, white 100%);
+  background-image: linear-gradient(to Top, rgb(200, 200, 200) 0%, white 100%);
 }
 .light{
   color: black;
@@ -25,65 +26,17 @@ body{
 }
 /* rest */
 #wrapper{
-
   width: 80vw;
   margin: 0 auto;
   z-index: 1;
 }
-#aSide{
-  
-  filter: drop-shadow(0px 0px 12px rgba(124, 124, 124, 0.877));
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0.54);
-  
-  height: 100%;
-  width: 5%;
-  position: fixed;
-  top: 65px;
-  left: 0px;
-  transition: width 0.3s ;
-  display: flex;
-  flex-direction: column;
-}
-#aSide:hover{
-  width: 35%;
-}
-#aside-wrapper{
-  
-  height: 100%;
-
-}
-#search-text{
-  position: absolute;
-  font-size: 2em;
-  width: 100%;
-  top: 0px;
-  left: -108px;
-}
-#search-input{
-position: fixed;
-height: 4%;
-width: 100%;
-top: 3em;
-left: -3px;
-transition: left 0.3s ease-in;
-}
-#search-icon{
-  position: absolute;
-  z-index: 500;
-  width: 25px;
-  top: 54px;
-  left: 5px;
-  transition: left 0.2s ;
-  cursor: pointer;
-}
-
 #mask{
   position: fixed;
   z-index: 100;
-  border: 2px solid rgb(131, 131, 131);
+  border: 2px solid rgba(131, 131, 131, 0.397);
   right: 10px;
   bottom: 20px;
+  border-radius:40px;
 }
 #menu{
   display: flex;
@@ -114,6 +67,7 @@ transition: left 0.3s ease-in;
   column-gap: 12px;
   row-gap: 40px;
   margin: 10px auto 10px auto;
+  transition: filter 0.3s;
 }
 .productBox{
   margin: 2px 5px 2px 5px;
@@ -171,10 +125,12 @@ transition: left 0.3s ease-in;
 }
 /* NFT CONTENT INDEX */
 #preAnashei{
-  position: relative;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   z-index: 200;
   width: 100%;
-  height: 100vh;
+  height: 5000px;
   margin: 0 auto;
   background-color: rgba(17, 17, 17, 0.726);
 }
@@ -182,22 +138,21 @@ transition: left 0.3s ease-in;
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 80vw;
-  height: 70vh;
+  width: 90vw;
+  height: 80vh;
   margin: 0 auto !important;
   max-width: 900px;
   background-color: whitesmoke;
   position:fixed;
-  left: 0;
-  right: 0;
-  bottom: 120px;
-  z-index: 300;
-  border: 2px solid rgb(184, 184, 184);
+  left: 0px;
+  right: 0px;
+  top: 80px;
+  z-index: 200;
+  border: 2px solid rgb(175, 175, 175);
   border-radius: 30px;
   -webkit-box-shadow: 7px 6px 15px 3px rgba(0,0,0,0.4);
   -moz-box-shadow: 7px 6px 15px 3px rgba(0,0,0,0.34);
   box-shadow: 7px 6px 15px 3px rgba(0,0,0,0.34);
-  transition: height 0.5s;
 }
 .productBoxNFT{
   grid-template-columns: 90% 10%;
@@ -212,13 +167,13 @@ transition: left 0.3s ease-in;
   background-color: whitesmoke;
   border-radius: 50%;
 }
-#NFTTitle{
+#nftTitle{
   font-size: 28px;
   margin: 20px auto 10px auto !important;
   grid-column: 1/3;
   grid-row: 1/2;
 }
-#NFTphoto{
+#nftPhoto{
   width: 200px;
   height: 200px;
   display: flex;
@@ -238,6 +193,68 @@ transition: left 0.3s ease-in;
   margin: 2px;
   grid-column: 1/3;
   grid-row: 4/5;
+}
+footer{
+  z-index: 10;
+  position: relative;
+  display: flex;
+  height: 500px;
+  width: 100vw;
+  justify-content: center;
+  background-color: rgb(30, 30, 30);
+  margin: 0 auto;
+  align-content: flex-end;
+  text-align: center;
+  flex-direction: column;
+  border-top: 20px solid rgba(45, 45, 45, 0.75);
+}
+#aSide{
+  filter: drop-shadow(0px 0px 12px rgba(124, 124, 124, 0.877));
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.74);
+  height: 100%;
+  width: 40px;
+  position: fixed;
+  top: 65px;
+  left: 0px;
+  transition: width 0.3s ;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(170, 170, 170, 0.54);
+}
+#aSide:hover{
+  width: 250px;
+}
+#aside-wrapper{
+  height: 100%;
+  z-index: -100;
+}
+#search-text{
+  position: fixed;
+  font-size: 30px;
+  top: 0px;
+  left: -150px;
+  transition: left 0.3s ;
+}
+#search-input{
+border-style: none;
+border-radius: 5px;
+border: 1px solid rgb(190, 190, 190);
+position: fixed;
+height: 30px;
+width: 100%;
+top: 54px;
+left: -3px;
+transition: left 0.3s;
+}
+#search-icon{
+  position: fixed;
+  z-index: 500;
+  width: 25px;
+  top: 57px;
+  left: 5px;
+  transition: left 0.3s;
+  cursor: pointer;
 }
 ::-webkit-scrollbar{
   width: 10px;
@@ -263,11 +280,11 @@ transition: left 0.3s ease-in;
   #wrapperSc{
     width: 40vw;margin: 0 auto;
   }
-  #NFTphoto{
+  #nftPhoto{
     width: 340px !important;
     height: 340px !important;
   }
-  #NFTTitle{
+  #nftTitle{
     font-size: 30px;
     margin-top: 2px auto 2px auto!important;
   }
@@ -291,22 +308,24 @@ transition: left 0.3s ease-in;
     width: 50vw;margin: 0 auto;
   }
   #anashei{
-    bottom: 154px;
+    top: 100px;
+    width: 70vw;
+    height: 70vw;
   }
-  #NFTphoto{
+  #nftPhoto{
     width: 380px !important;
     height: 380px !important;
   }
-  #NFTTitle{
-    font-size: 30px;
-    margin-top: 2px auto 2px auto!important;
+  #nftTitle{
+    font-size: 40px;
+    margin-top: 2px auto 2px auto;
   }
   #nftDescription{
-    font-size: 26px;
-    margin: 12px auto 2px!important;
+    font-size: 34px;
+    margin: -10px auto 2px !important;
   }
   #nftPrice{
-    font-size: 36px;
+    font-size: 40px;
     margin: 4px !important;
   }
   .productBoxNFT{
@@ -315,7 +334,7 @@ transition: left 0.3s ease-in;
     grid-auto-flow: column;
   }
   #cruz{
-    height: 24px;
+    height: 30px;
     grid-column: 2/3;
     grid-row: 1/2;
     cursor: pointer;
@@ -333,11 +352,11 @@ transition: left 0.3s ease-in;
   #anashei{
     bottom: 154px;
   }
-  #NFTphoto{
+  #nftPhoto{
     width: 400px !important;
     height: 400px !important;
   }
-  #NFTTitle{
+  #nftTitle{
     font-size: 30px;
     margin-top: 2px !important;
     margin-bottom: 6px !important;
@@ -363,33 +382,45 @@ transition: left 0.3s ease-in;
     background-color: whitesmoke;
     border-radius: 50%;
   }
+
 }
-/* Media Queris */
+
 /* HEIGHT */
-/* Media Queris */
+
 @media (min-height: 638px){
-  #NFTphoto{
+  #nftPhoto{
     width: 250px;
     height: 250px;
   }
 }
 @media (min-height: 800px){
-  #NFTphoto{
+  #nftPhoto{
     width: 280px;
     height: 280px;
   }
 }
 
-/* Music CsSs */
-/* Music CsSs */
 
-#wrapperSc{
-  width: 68vw;margin: 0 auto;
-}
-#musicGrid{
-  display: flex;
-  flex-flow: column;
-}
-.tema{
-  margin: 5px 0;
+
+@media (max-width: 1920px){
+  #anashei{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 80vh;
+    margin: 0 auto !important;
+    max-width: 900px;
+    background-color: whitesmoke;
+    position:fixed;
+    left: 0px;
+    right: 0px;
+    top: 80px;
+    z-index: 200;
+    border: 2px solid rgb(175, 175, 175);
+    border-radius: 30px;
+    -webkit-box-shadow: 7px 6px 15px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 7px 6px 15px 3px rgba(0,0,0,0.34);
+    box-shadow: 7px 6px 15px 3px rgba(0,0,0,0.34);
+  }
 }

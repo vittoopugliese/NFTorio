@@ -1,11 +1,12 @@
-const title = document.getElementById('NFTTitle')
-const photo = document.getElementById('NFTphoto')
+const title = document.getElementById('nftTitle')
+const photo = document.getElementById('nftPhoto')
 const description = document.getElementById('nftDescription')
 const price = document.getElementById('nftPrice')
 const bircoin = document.getElementById('bitcoinPay2')
 const bircoinBtn = document.getElementById('bitcoinPay')
 
 function nft1(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -24,6 +25,7 @@ function nft1(){
 })}
 
 function nft2(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -41,6 +43,7 @@ function nft2(){
 })}
 
 function nft3(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -57,6 +60,7 @@ function nft3(){
     </a>`
 })}
 function nft4(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -73,6 +77,7 @@ function nft4(){
     </a>`
 })}
 function nft5(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -89,6 +94,7 @@ function nft5(){
     </a>`
 })}
 function nft6(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -105,6 +111,7 @@ function nft6(){
     </a>`
 })}
 function nft7(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -121,6 +128,7 @@ function nft7(){
     </a>`
 })}
 function nft8(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -137,6 +145,7 @@ function nft8(){
     </a>`
 })}
 function nft9(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -153,6 +162,7 @@ function nft9(){
     </a>`
 })}
 function nft10(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -169,6 +179,7 @@ function nft10(){
     </a>`
 })}
 function nft11(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -185,6 +196,7 @@ function nft11(){
     </a>`
 })}
 function nft12(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -201,6 +213,7 @@ function nft12(){
     </a>`
 })}
 function nft13(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -217,6 +230,7 @@ function nft13(){
     </a>`
 })}
 function nft14(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -233,6 +247,7 @@ function nft14(){
     </a>`
 })}
 function nft15(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -249,6 +264,7 @@ function nft15(){
     </a>`
 })}
 function nft16(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -265,6 +281,7 @@ function nft16(){
     </a>`
 })}
 function nft17(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -281,6 +298,7 @@ function nft17(){
     </a>`
 })}
 function nft18(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -297,6 +315,7 @@ function nft18(){
     </a>`
 })}
 function nft19(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -313,6 +332,7 @@ function nft19(){
     </a>`
 })}
 function nft20(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -329,6 +349,7 @@ function nft20(){
     </a>`
 })}
 function nft21(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -345,6 +366,7 @@ function nft21(){
     </a>`
 })}
 function nft22(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -361,6 +383,7 @@ function nft22(){
     </a>` 
 })}
 function nft23(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -377,6 +400,7 @@ function nft23(){
     </a>`
 })}
 function nft24(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -393,6 +417,7 @@ function nft24(){
     </a>`
 })}
 function nft25(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -409,6 +434,7 @@ function nft25(){
     </a>`
 })}
 function nft26(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -425,6 +451,7 @@ function nft26(){
     </a>` 
 })}
 function nft27(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -441,6 +468,7 @@ function nft27(){
     </a>`
 })}
 function nft28(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -457,6 +485,7 @@ function nft28(){
     </a>`
 })}
 function nft29(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -473,6 +502,7 @@ function nft29(){
     </a>`
 })}
 function nft30(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -489,6 +519,7 @@ function nft30(){
     </a>`
 })}
 function nft31(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -505,6 +536,7 @@ function nft31(){
     </a>`
 })}
 function nft32(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -521,6 +553,7 @@ function nft32(){
     </a>`
 })}
 function nft33(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -537,6 +570,7 @@ function nft33(){
     </a>`
 })}
 function nft34(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
@@ -553,6 +587,7 @@ function nft34(){
     </a>`
 })}
 function nft35(){
+    pGrid.style.filter = 'blur(4px)'
     anashei.style.display = 'grid'
     preAnashei.style.display = 'flex'
     bodyenso.style.overflow = 'hidden'
