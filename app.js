@@ -1,5 +1,5 @@
 window.onload = function(){
-    const body = document.getElementById('bodyenso');
+    const body = document.getElementById('body');
     const spinning = document.getElementById('spinnerCenter');
     body.style.overflow = 'auto';
     setTimeout(() => {
@@ -12,37 +12,10 @@ window.onload = function(){
 }
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
+    productModal.style.display = 'none'
+    modalBackground.style.display = 'none'
+    wrapper.style.filter = 'blur(15px)'
 }
-
-// inspect
-const anashei = document.getElementById('anashei')
-const preAnashei = document.getElementById('preAnashei')
-const cruz = document.getElementById('cruz')
-
-anashei.style.display = 'none'
-preAnashei.style.display = 'none' 
-
-cruz.addEventListener('click', ()=>{
-    anashei.style.display = 'none'
-    preAnashei.style.display = 'none'
-    bodyenso.style.overflow = 'auto'
-    pGrid.style.filter = 'blur(0px)'
-})
-preAnashei.addEventListener('click', ()=>{
-    anashei.style.display = 'none'
-    preAnashei.style.display = 'none'
-    bodyenso.style.overflow = 'auto'
-    pGrid.style.filter = 'blur(0px)'
-})    
-document.addEventListener('keydown', (event) => {
-    const key = event.key
-    if(key == 'Escape'){
-        anashei.style.display = 'none'
-        preAnashei.style.display = 'none'
-        bodyenso.style.overflow = 'auto'
-        pGrid.style.filter = 'blur(0px)'
-    }
-})
 
 //web3
 let web3
@@ -52,6 +25,7 @@ async function connect(){
 }
 
 //array
+const addedToGrid = document.querySelectorAll('#added');
 const values = {
     "nftTitle1": "Insanity",
     "nftImage1": "imgs/nft 1.png",
@@ -297,10 +271,7 @@ const values = {
     "nftPrice35": "$25",
     "nftUid35": "1a26a8d0321a44b1",
     "nfTags35": "Texture, texture, v15",
-};  
-
-
-const addedToGrid = document.querySelectorAll('#added');
+};
 
 function load() {
     for (let i = 1; i < 36; i++) {
@@ -309,16 +280,16 @@ function load() {
         let price = values[`nftPrice${i}`]
         let dataUid = values[`nftUid${i}`]
         let tag = values[`nfTags${i}`]
-        
+
         addedToGrid[i].innerHTML += `
         <div class="productBox" data-tag="${tag}">
-            <div id="photo" class="image${[i]}"></div>
+            <div class="image${[i]}"></div>
         
             <h1 id="title" class="productTitle">${title}</h1>
             <p id="description" class="productDescription">${description}</p>
-            <p id="price" class="productPrice">${price}</p>
+            <p id="price" class="productPrice">- ${price} -</p>
         
-            <div id="bitcoinPay">
+            <div id="InspectButtons">
                 <a id="inspect">
                     <button type="button" class="Sbtn">Inspect</button>
                 </a>
@@ -359,7 +330,6 @@ searchInput.addEventListener(('keyup'), (e) => {
         } 
     }
 })
-
 aside.addEventListener(('mouseover'), () => {
     wrapper.style.filter = 'blur(4px)'
     searchIcon.style.left = '218px'
@@ -371,14 +341,9 @@ aside.addEventListener(('mouseleave'), () => {
     searchText.style.left = '-150px'
 })
 
-// automation
-const nftTitle = document.getElementById('nftTitle')
-const nftDescription = document.getElementById('nftDescription')
-const nftPrice = document.getElementById('nftPrice')
-const photo = document.getElementById('nftPhoto')
-const bircoin = document.getElementById('bitcoinPay2')
-const bircoinBtn = document.getElementById('bitcoinPay')
-
+// inspect
+const productModal = document.getElementById('productModal')
+const modalBackground = document.getElementById('modalBackground')
 const inspect = document.querySelectorAll('#inspect');
 
 for (let i = 0; i < 36; i++) {
@@ -386,18 +351,47 @@ for (let i = 0; i < 36; i++) {
     let dataUid = values[`nftUid${i + 1}`]
 
     inspect[i].addEventListener('click', () => {
-        pGrid.style.filter = 'blur(4px)'
-        anashei.style.display = 'grid'
-        preAnashei.style.display = 'flex'
-        bodyenso.style.overflow = 'hidden'
-        photo.className = ''
-        photo.classList.add(image)
-        nftTitle.innerHTML = title[i].innerHTML
-        nftDescription.innerHTML = description[i].innerHTML
-        nftPrice.innerHTML = price[i].innerHTML
-        bircoinBtn.innerHTML = `
-        <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=${dataUid}>
-        <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
-        </a>`
+        productModal.style.display = 'grid'
+        productModal.innerHTML = `
+        <div id="productModal">
+            <h1 id="nftTitle" >${title[i].innerHTML}</h1>
+            <div id="nftImage"></div>
+            <p id="nftDescription">${description[i].innerHTML}</p>
+            <p id="nftPrice">${price[i].innerHTML}</p>
+            <div id="InspectButtons"><a class="blockoPayBtn" id="InspectButtons2" data-toggle="modal" data-uid=${dataUid}><button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" ></button></a></div>
+            <img id="cruz" src="imgs/svgs/x.svg">
+        </div>
+        `
+        const nftImage = document.getElementById('nftImage')
+
+        wrapper.style.filter = 'blur(4px)'
+        productModal.style.display = 'grid'
+        modalBackground.style.display = 'flex'
+        body.style.overflow = 'hidden'
+        nftImage.className = ''
+        nftImage.classList.add(image)
+
+        const cruz = document.querySelectorAll('#cruz')
+        cruz[0].addEventListener('click', ()=>{
+          productModal.style.display = 'none'
+          modalBackground.style.display = 'none'
+          body.style.overflow = 'auto'
+          wrapper.style.filter = 'blur(0px)'
+          })
+        modalBackground.addEventListener('click', ()=>{
+              productModal.style.display = 'none'
+              modalBackground.style.display = 'none'
+              body.style.overflow = 'auto'
+              wrapper.style.filter = 'blur(0px)'
+          })    
+        document.addEventListener('keydown', (event) => {
+              const key = event.key
+              if(key == 'Escape'){
+                  productModal.style.display = 'none'
+                  modalBackground.style.display = 'none'
+                  body.style.overflow = 'auto'
+                  wrapper.style.filter = 'blur(0px)'
+              }
+          })
       })
-  }
+}
