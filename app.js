@@ -2,7 +2,13 @@ window.onload = function(){
     const body = document.getElementById('bodyenso');
     const spinning = document.getElementById('spinnerCenter');
     body.style.overflow = 'auto';
-    spinning.style.display = 'none';
+    setTimeout(() => {
+        spinning.style.opacity = '0';
+        setTimeout(() => {
+            spinning.style.display = 'none';
+            window.scrollTo(0, 0);
+        }, 500)
+    }, 400)
 }
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -292,6 +298,31 @@ const values = {
     "nftUid35": "1a26a8d0321a44b1",
     "nfTags35": "",
 };  
+const title = document.getElementById('nftTitle')
+const photo = document.getElementById('nftPhoto')
+const description = document.getElementById('nftDescription')
+const price = document.getElementById('nftPrice')
+const bircoin = document.getElementById('bitcoinPay2')
+const bircoinBtn = document.getElementById('bitcoinPay')
+
+function nft1(){
+    pGrid.style.filter = 'blur(4px)'
+    anashei.style.display = 'grid'
+    preAnashei.style.display = 'flex'
+    bodyenso.style.overflow = 'hidden'
+    fetch('values.json').then(response => response.json())
+    .then(data =>{
+    photo.className = ''
+    photo.classList.add('image1')
+    title.innerHTML = data[0].nftTitle1
+    description.innerHTML = data[0].nftDescription1
+    price.innerHTML = data[0].nftPrice1
+    bircoinBtn.innerHTML = `
+    <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=7f3354cb3a3d47c7>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
+    </a>`
+    
+})}
 
 const addedToGrid = document.querySelectorAll('#added');
 
@@ -363,3 +394,5 @@ aside.addEventListener(('mouseleave'), () => {
     searchIcon.style.left = '5px'
     searchText.style.left = '-150px'
 })
+
+

@@ -23,6 +23,8 @@ body{
   z-index: 10000;
   top: 0px;
   left: 0px;
+  opacity: 1;
+  transition: opacity 0.74s;
 }
 /* rest */
 #wrapper{
@@ -55,7 +57,7 @@ nav{
   left: 0px;
   z-index: 10;
   padding: 5px 10px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 nav a{
 margin: auto 0px;
@@ -115,7 +117,7 @@ p{
   left: 8px;
 }
 #productGrid{
-  width: 85%;
+  width: 80%;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -123,7 +125,6 @@ p{
   column-gap: 10px;
   row-gap: 20px;
   margin: 10px auto;
-  transition: filter 0.3s;
 }
 .productBox{
   margin: 2px 5px 2px 5px;
@@ -132,11 +133,13 @@ p{
   justify-content: center;
   animation: width 2s, height 4s;
   padding: 10px;
+  border: 2px solid transparent;
 }
 .productBox:hover {
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.472);
-  filter: drop-shadow(0px 0px 15px rgba(100, 100, 100, 0.92));
+  filter: drop-shadow(0px 0px 15px rgba(154, 154, 154, 0.9));
+  border: 2px solid rgb(220, 220, 220);
 } 
 .productImage{
   display: flex;
@@ -167,6 +170,7 @@ p{
   font-weight: 900;
   text-align: center;
   margin-bottom: 8px;
+  font-style: normal;
 }
 #bitcoinPay{
   display: flex;
@@ -265,7 +269,6 @@ footer{
   border-top: 20px solid rgba(45, 45, 45, 0.75);
 }
 #aSide{
-  filter: drop-shadow(0px 0px 12px rgba(124, 124, 124, 0.877));
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.74);
   height: 100%;
@@ -276,6 +279,7 @@ footer{
   transition: width 0.3s ;
   display: flex;
   flex-direction: column;
+  filter: drop-shadow(0px 0px 12px rgba(124, 124, 124, 0.877));
   border-right: 1px solid rgba(170, 170, 170, 0.54);
 }
 #aSide:hover{
