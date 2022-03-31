@@ -7,77 +7,9 @@ window.onload = function(){
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
-// theme
-const themeSwitchTo1 = document.querySelector('#theme1')
-const themeSwitchTo2 = document.querySelector('#theme2')
-const navClass = document.querySelector('#menu')
-const themeClass = document.querySelector('#themeBtn')
-const isologotipo = document.querySelector('#isologotipo')
-
-themeSwitchTo1.addEventListener('click', ()=>{
-    document.body.style.backgroundImage = 'linear-gradient(to Top, rgb(200, 200, 200) 0%, white 100%)'
-    document.body.classList.remove('dark')
-    document.body.classList.add('light')
-    navClass.classList.remove('bg-dark')
-    navClass.classList.add('bg-secondary')
-    navClass.classList.remove('navbar-dark')
-    navClass.classList.add('navbar-light')
-    themeClass.classList.remove('btn-dark')
-    themeClass.classList.add('btn-light')
-    anashei.style.backgroundColor = 'whitesmoke'
-    anashei.style.border = '2px solid rgb(184, 184, 184)'
-    isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo-black.png)'
-    searchText.style.color = 'black'
-    aside.style.backgroundColor = 'rgba(255, 255, 255, 0.74)'
-    if(localStorage.getItem('dark-mode')==='true'){
-        localStorage.removeItem('dark-mode')
-        anashei.style.backgroundColor = 'whitesmoke'
-        anashei.style.border = '2px solid rgb(184, 184, 184)'
-        searchText.style.color = 'black'
-        aside.style.backgroundColor = 'rgba(255, 255, 255, 0.74)'
-        isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo-black.png)'
-    }
-})
-themeSwitchTo2.addEventListener('click', ()=>{
-    document.body.style.backgroundImage = 'linear-gradient(to Top, rgb(20, 20, 20) 0%, rgb(50, 50, 50) 100%)'
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
-    navClass.classList.add('bg-dark')
-    navClass.classList.remove('bg-secondary')
-    navClass.classList.add('navbar-dark')
-    navClass.classList.remove('navbar-light')
-    themeClass.classList.add('btn-dark')
-    themeClass.classList.remove('btn-light')
-    anashei.style.backgroundColor = '#353535'
-    anashei.style.border = '2px solid grey'
-    isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo-black.png)'
-    searchText.style.color = 'white'
-    aside.style.backgroundColor = 'rgba(30, 30, 30,0.6)'
-    if(document.body.classList.contains('dark')){
-        localStorage.setItem('dark-mode', 'true')
-        anashei.style.backgroundColor = '#353535'
-        anashei.style.border = '2px solid grey'
-        searchText.style.color = 'white'
-        aside.style.backgroundColor = 'rgba(30, 30, 30,0.6)'
-        isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo.png)'
-    }
-})
-if(localStorage.getItem('dark-mode')==='true'){
-    document.body.style.backgroundImage = 'linear-gradient(to Top, rgb(20, 20, 20) 0%, rgb(50, 50, 50) 100%)'
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
-    navClass.classList.add('bg-dark')
-    navClass.classList.remove('bg-secondary')
-    navClass.classList.add('navbar-dark')
-    navClass.classList.remove('navbar-light')
-    themeClass.classList.add('btn-dark')
-    themeClass.classList.remove('btn-light')
-    isologotipo.style.backgroundImage = 'url(imgs/nav-brand-logo.png)'
-}
 
 // inspect
 const anashei = document.getElementById('anashei')
-
 const preAnashei = document.getElementById('preAnashei')
 const cruz = document.getElementById('cruz')
 
@@ -369,11 +301,10 @@ function load() {
         let description = values[`nftDescription${i}`]
         let price = values[`nftPrice${i}`]
         let dataUid = values[`nftUid${i}`]
-        let tag1 = values[`nfTags${i}`]
-        let tag2 = values[`nfTagz${i}`]
+        let tag = values[`nfTags${i}`]
         
         addedToGrid[i].innerHTML += `
-        <div class="productBox" data-ftag="${tag1}" data-stag="${tag2}">
+        <div class="productBox" data-tag="${tag}">
             <div id="photo" class="image${[i]}"></div>
         
             <h1 id="title" class="productTitle">${title}</h1>
@@ -382,10 +313,10 @@ function load() {
         
             <div id="bitcoinPay">
                 <a onclick="nft${[i]}()">
-                    <button type="button" class="btn btn-secondary">Inspect</button>
+                    <button type="button" class="Sbtn">Inspect</button>
                 </a>
                 <a class="blockoPayBtn" data-toggle="modal" data-uid="${dataUid}">
-                    <button type="button" class="btn btn-dark"> Buy </button>
+                    <button type="button" class="Fbtn"> Buy </button>
                 </a>
             </div>
         </div>`
@@ -400,12 +331,13 @@ const searchIcon = document.querySelector('#search-icon');
 const aside = document.querySelector('#aside-wrapper');
 const pGrid = document.querySelector('#productGrid');
 const pBox = document.querySelectorAll('.productBox')
+const wrapper = document.querySelector('#wrapper')
 
 searchInput.addEventListener(('keyup'), (e) => {
     let target = e.target.value
     for (let i = 0; i < 36; i++) {
         let pBoxed = pBox[i]
-        let boxed = pBoxed.getAttribute('data-ftag')
+        let boxed = pBoxed.getAttribute('data-tag')
 
         if(boxed.includes(target)){
             pBoxed.style.display = 'flex'
@@ -422,12 +354,12 @@ searchInput.addEventListener(('keyup'), (e) => {
 })
 
 aside.addEventListener(('mouseover'), () => {
-    pGrid.style.filter = 'blur(4px)'
+    wrapper.style.filter = 'blur(4px)'
     searchIcon.style.left = '218px'
     searchText.style.left = '5px'
 })
 aside.addEventListener(('mouseleave'), () => {
-    pGrid.style.filter = 'blur(0px)'
+    wrapper.style.filter = 'blur(0px)'
     searchIcon.style.left = '5px'
     searchText.style.left = '-150px'
 })

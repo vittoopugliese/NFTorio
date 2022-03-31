@@ -19,7 +19,7 @@ function nft1(){
     price.innerHTML = data[0].nftPrice1
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=7f3354cb3a3d47c7>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
     
 })}
@@ -38,7 +38,7 @@ function nft2(){
     price.innerHTML = data[0].nftPrice2
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=cc43bbe48eda480a>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 
@@ -56,7 +56,7 @@ function nft3(){
     price.innerHTML = data[0].nftPrice3
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=4e6592c887bb4d9a>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft4(){
@@ -73,7 +73,7 @@ function nft4(){
     price.innerHTML = data[0].nftPrice4
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=c89b01122fb846a1>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft5(){
@@ -90,7 +90,7 @@ function nft5(){
     price.innerHTML = data[0].nftPrice5
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=d895fbbfe7124f2c>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft6(){
@@ -107,7 +107,7 @@ function nft6(){
     price.innerHTML = data[0].nftPrice6
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=9a24859a4c0444cd>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft7(){
@@ -124,7 +124,7 @@ function nft7(){
     price.innerHTML = data[0].nftPrice7
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=12663705d2d44982>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft8(){
@@ -141,7 +141,7 @@ function nft8(){
     price.innerHTML = data[0].nftPrice8
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=5192056c92324347>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft9(){
@@ -158,7 +158,7 @@ function nft9(){
     price.innerHTML = data[0].nftPrice9
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=acdb3acec66844e1>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft10(){
@@ -175,7 +175,7 @@ function nft10(){
     price.innerHTML = data[0].nftPrice10
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=56b8dc28f3e64051>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft11(){
@@ -192,7 +192,7 @@ function nft11(){
     price.innerHTML = data[0].nftPrice11
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=c84519f4fcc34288>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft12(){
@@ -209,7 +209,7 @@ function nft12(){
     price.innerHTML = data[0].nftPrice12
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=ad12288f079d4c11>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft13(){
@@ -226,7 +226,7 @@ function nft13(){
     price.innerHTML = data[0].nftPrice13
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=88ed930bfe804df0>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft14(){
@@ -243,7 +243,7 @@ function nft14(){
     price.innerHTML = data[0].nftPrice14
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=bcf8bcff07344958>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft15(){
@@ -260,7 +260,7 @@ function nft15(){
     price.innerHTML = data[0].nftPrice15
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=9b8b5bd050ef4744>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft16(){
@@ -277,7 +277,7 @@ function nft16(){
     price.innerHTML = data[0].nftPrice16
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=38bea77dae6049e8>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft17(){
@@ -294,7 +294,7 @@ function nft17(){
     price.innerHTML = data[0].nftPrice17
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=7cf1b19d127c4441>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft18(){
@@ -311,7 +311,7 @@ function nft18(){
     price.innerHTML = data[0].nftPrice18
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=74eb945e6f5f48ac>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft19(){
@@ -328,7 +328,7 @@ function nft19(){
     price.innerHTML = data[0].nftPrice19
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=ff38c1b3a42949b2>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft20(){
@@ -345,7 +345,7 @@ function nft20(){
     price.innerHTML = data[0].nftPrice20
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=41e9c4063a224854>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft21(){
@@ -362,7 +362,7 @@ function nft21(){
     price.innerHTML = data[0].nftPrice21
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=caabea9c4ad74966>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft22(){
@@ -379,7 +379,7 @@ function nft22(){
     price.innerHTML = data[0].nftPrice22
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=14b41570fdf04a90>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>` 
 })}
 function nft23(){
@@ -396,7 +396,7 @@ function nft23(){
     price.innerHTML = data[0].nftPrice23
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=08a09eeba88b430f>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft24(){
@@ -413,7 +413,7 @@ function nft24(){
     price.innerHTML = data[0].nftPrice24
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=cf8ddd7f131b4155>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft25(){
@@ -430,7 +430,7 @@ function nft25(){
     price.innerHTML = data[0].nftPrice25
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=40ca6d423e2b40ff>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft26(){
@@ -447,7 +447,7 @@ function nft26(){
     price.innerHTML = data[0].nftPrice26
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=d873bf75e8bb4347>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>` 
 })}
 function nft27(){
@@ -464,7 +464,7 @@ function nft27(){
     price.innerHTML = data[0].nftPrice27
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=b552a0a6853d4d66>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft28(){
@@ -481,7 +481,7 @@ function nft28(){
     price.innerHTML = data[0].nftPrice28
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=269a90aadbf440b6>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft29(){
@@ -498,7 +498,7 @@ function nft29(){
     price.innerHTML = data[0].nftPrice29
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=0acef96486304dbe>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft30(){
@@ -515,7 +515,7 @@ function nft30(){
     price.innerHTML = data[0].nftPrice30
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=2bee479dd5514470>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft31(){
@@ -532,7 +532,7 @@ function nft31(){
     price.innerHTML = data[0].nftPrice31
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=b681c7b194c54f72>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft32(){
@@ -549,7 +549,7 @@ function nft32(){
     price.innerHTML = data[0].nftPrice32
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=c9d20f6ae1124163>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft33(){
@@ -566,7 +566,7 @@ function nft33(){
     price.innerHTML = data[0].nftPrice33
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=4bc30b973c2f4a85>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft34(){
@@ -583,7 +583,7 @@ function nft34(){
     price.innerHTML = data[0].nftPrice34
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=691a57e1886c4848>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}
 function nft35(){
@@ -600,6 +600,6 @@ function nft35(){
     price.innerHTML = data[0].nftPrice35
     bircoinBtn.innerHTML = `
     <a class="blockoPayBtn" id="bitcoinPay2" data-toggle="modal" data-uid=1a26a8d0321a44b1>
-    <button  type="button" class="btn btn-dark fs-4">Buy with Bitcoin</button>
+    <button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" width="30px"></button>
     </a>`
 })}

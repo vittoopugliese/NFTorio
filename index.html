@@ -4,75 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="imgs/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="images.css">
     <title>NFTorio</title>
 </head>
 <body id="bodyenso" style="overflow: hidden;">
+<!-- preload -->
     <div id="spinnerCenter">
-        <div class="spinner-border" style=" width: 2.6rem; height: 2.6rem;" role="status"></div>
-        <img style="width: 150px;height: 50px;margin-top: 8px;" src="imgs/nav-brand-logo-black.png" alt="nav-brand-logo">
+        <img draggable="false" style="width: 5.4rem; height: 5.4rem;" src="imgs/svgs/spinner.svg"></img>
+        <img draggable="false" style="width: 180px;height: 60px;margin-top: -10px;" src="imgs/nftorio.png" alt="nav-brand-logo">
     </div>
-    <!-- NAV --> 
+<!-- nav --> 
 <div id="preAnashei" style="display: none;"></div>
     <header>
-        <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <div id="isologotipo"></div>
-                    </a>
-
-                    <div class="dropdown">
-                        <button id="themeBtn" class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">THEME</button>
-
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickable">
-                            <li><a class="dropdown-item" id="theme1" onclick="">light</a></li>
-                            <li><a class="dropdown-item" id="theme2">dark</a></li>
-                        </ul>
-                    </div>
-
-                    <button id="mask" onclick="connect()" type="button" class="btn btn-dark"><img draggable="false" src="imgs/metamask.svg" alt="metamask connect button" style="height: 2.2em;width: 2.2em;user-select: none;"></button>
-
-                </div>
-            </nav>
-        </header>
-<!-- PRINCIPAL INDEX -->
-<div style="margin-top:80px ;"></div>
-<div id="wrapper">
-        <aside id="aSide">
-            <div id="aside-wrapper">
-
-                <h2 class="h2" id="search-text">Search</h2>
-
-                <div class="input-group">
-                        <img src="imgs/search.svg" id="search-icon" alt="search icon">  
-                    <input id="search-input" type="text" value="">
-                </div>
-
+        <nav>
+            <a href="index.html">
+                <div id="isologotipo"></div>
+            </a>
+            <button id="mask" onclick="connect()" type="button"><img draggable="false" src="imgs/svgs/metamask.svg" alt="metamask connect button" style="height: 2.5em;width: 2.5em;user-select: none;"></button>
+        </nav>
+    </header>
+<!-- content -->
+<div style="margin-top:70px ;"></div>
+    <aside id="aSide">
+        <div id="aside-wrapper">
+            <h2 id="search-text">Search...</h2>
+            <div>
+                <img src="imgs/svgs/search.svg" id="search-icon" alt="search icon">  
+                <input id="search-input" type="text" value="">
             </div>
-        </aside>
-
-        <h2 class="h2 fs-1 mb-2">My Repository</h2>
-        <p class="productDescription">warning: all images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
-        
-        
-        <div id="anashei" style="display: none;" class="productBoxNFT">
-            <h1 id="nftTitle" class="productTitle"></h1>
-            <div id="nftPhoto" class="image1"></div>
-            <p id="nftDescription" class="productDescription"></p>
-            <p id="nftPrice" class="productPrice"></p>
-            <div id="bitcoinPay" class="d-grid gap-2"></div>
-            <img id="cruz" src="imgs/x.svg">
         </div>
-        
-        <!-- PRODUCTOS -->
-        <div id="productGrid">
-        
+    </aside>
+<div id="wrapper">
+    <h2>My Repository</h2>
+    <p>warning: all images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
+<!-- modals -->
+    <div id="anashei" style="display: none;" class="productBoxNFT">
+        <h1 id="nftTitle" class="productTitle"></h1>
+        <div id="nftPhoto" class="image1"></div>
+        <p id="nftDescription" class="productDescription"></p>
+        <p id="nftPrice" class="productPrice"></p>
+        <div id="bitcoinPay"></div>
+        <img id="cruz" src="imgs/svgs/x.svg">
+    </div>
+<!-- eneftis -->
+    <div id="productGrid">
         <div id="added" style="display: none;"></div>
         <div id="added"></div>
         <div id="added"></div>
@@ -110,21 +87,16 @@
         <div id="added"></div>
         <div id="added"></div>
         <div id="added"></div>
-        
-        </div>
-
-</div> <!-- WRAPPER -->
+    </div>
+</div>
 
 <footer>
-
-    <div class="h2">
-        <a class="blockoPayBtn fs-6 mt-5" id="all" data-toggle="modal" data-uid=13c84765d6454330>click for surprise !!</a>
+    <div>
+        <a class="blockoPayBtn" style="cursor: pointer;color: white;" data-toggle="modal" data-uid=13c84765d6454330>click for surprise !!</a>
     </div>
-
 </footer>
 
 <script src="https://www.blockonomics.co/js/pay_button.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 <script src="functions.js"></script>
 </body>
