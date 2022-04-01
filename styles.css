@@ -441,7 +441,6 @@ footer{
   #nftDescription{
     font-size: 22px;
     margin: 10px auto;
-    grid-row: 3/4;
     font-style: italic;
     text-align: center;
   }
