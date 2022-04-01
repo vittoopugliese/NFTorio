@@ -1,7 +1,10 @@
+const body = document.getElementById('body');
+const spinning = document.getElementById('spinnerCenter');
+const wrapper = document.querySelector('#wrapper')
+wrapper.style.filter = 'blur(50px)'
 window.onload = function(){
-    const body = document.getElementById('body');
-    const spinning = document.getElementById('spinnerCenter');
     body.style.overflow = 'auto';
+    wrapper.style.filter = 'blur(0px)' 
     setTimeout(() => {
         spinning.style.opacity = '0';
         setTimeout(() => {
@@ -11,10 +14,10 @@ window.onload = function(){
     }, 400)
 }
 window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
+    wrapper.style.filter = 'blur(30px)'
     productModal.style.display = 'none'
     modalBackground.style.display = 'none'
-    wrapper.style.filter = 'blur(15px)'
+    window.scrollTo(0, 0);
 }
 
 //web3
@@ -33,14 +36,14 @@ const values = {
     "nftPrice1": "$75",
     "nftUid1": "7f3354cb3a3d47c7",
     "nfTags1": "Insanity, insanity",
-
+    
     "nftTitle2": "Protowave111",
     "nftImage2": "imgs/nft 2.png",
     "nftDescription2": "Empathyless bot called Protoboy.",
     "nftPrice2": "$75",
     "nftUid2": "cc43bbe48eda480a",
     "nfTags2": "Protowave111, protowave, protoboy, 111",
-
+    
     "nftTitle3": "OBSERVER",
     "nftImage3": "imgs/nft 3.png",
     "nftDescription3": "You are never aware of him.",
@@ -287,14 +290,14 @@ function load() {
         
             <h1 id="title" class="productTitle">${title}</h1>
             <p id="description" class="productDescription">${description}</p>
-            <p id="price" class="productPrice">- ${price} -</p>
+            <p id="price" class="productPrice">${price}</p>
         
             <div id="InspectButtons">
                 <a id="inspect">
                     <button type="button" class="Sbtn">Inspect</button>
                 </a>
                 <a class="blockoPayBtn" data-toggle="modal" data-uid="${dataUid}">
-                    <button type="button" class="Fbtn"> Buy </button>
+                    <button type="button" class="Fbtn">Buy</button>
                 </a>
             </div>
         </div>`
@@ -309,7 +312,6 @@ const searchIcon = document.querySelector('#search-icon');
 const aside = document.querySelector('#aside-wrapper');
 const pGrid = document.querySelector('#productGrid');
 const pBox = document.querySelectorAll('.productBox')
-const wrapper = document.querySelector('#wrapper')
 
 searchInput.addEventListener(('keyup'), (e) => {
     let target = e.target.value
@@ -358,7 +360,17 @@ for (let i = 0; i < 36; i++) {
             <div id="nftImage"></div>
             <p id="nftDescription">${description[i].innerHTML}</p>
             <p id="nftPrice">${price[i].innerHTML}</p>
-            <div id="InspectButtons"><a class="blockoPayBtn" id="InspectButtons2" data-toggle="modal" data-uid=${dataUid}><button  type="button" class="btc"><img src="imgs/svgs/bitcoin.svg" alt="bitcoin" ></button></a></div>
+            <div id="CryptoButtons">
+                <a id="CryptoButtons" class="blockoPayBtn" data-toggle="modal" data-uid=${dataUid}>
+                    <img src="imgs/svgs/bitcoin.svg" alt="bitcoin purchase button">
+                </a>
+                <a id="CryptoButtons">
+                    <img src="imgs/svgs/ethereum.svg" alt="ethereum purchase button">
+                </a>
+                <a id="CryptoButtons">
+                    <img src="imgs/svgs/share.png" alt="share button">
+                </a>
+            </div>
             <img id="cruz" src="imgs/svgs/x.svg">
         </div>
         `

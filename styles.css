@@ -8,12 +8,28 @@ body{
   overflow-x: hidden !important;
   background-image: linear-gradient(to Top, rgb(200, 200, 200) 0%, white 100%);
 }
+#spinnerCenter{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  user-select: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 10000;
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+  transition: opacity 0.54s;
+}
 #wrapper{
   width: 80vw;
   min-height: 100vh;
   margin: 60px auto 10px auto;
   z-index: 1;
-  transition: filter 0.5s;
+  transition: filter 0.4s;
 }
 nav{
   display: flex;
@@ -94,28 +110,6 @@ p{
   cursor: pointer;
   background-color: white;
 }
-.Fbtn{
-  font-size: 17px;
-  font-style: normal;
-  border-style: none;
-  height: 40px;
-  width: 68px;
-  border-radius: 4px;
-  background-color: rgb(40, 40, 40);
-  color: white;
-  cursor: pointer;
-}
-.Sbtn{
-  font-size: 17px;
-  font-style: normal;
-  border-style: none;
-  height: 40px;
-  width: 80px;
-  border-radius: 4px;
-  background-color: rgb(130, 130, 130);
-  color: white;
-  cursor: pointer;
-}
 #productGrid{
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
@@ -125,14 +119,13 @@ p{
   column-gap: 10px;
   row-gap: 10px;
   margin: 10px auto;
-  filter: blur(0px) !important;
 }
 .productBox{
   display: flex;
   flex-flow: column;
-  padding: 10px;
-  margin: 3px 5px;
   justify-content: center;
+  padding: 10px;
+  margin: 2px;
   border: 2px solid transparent;
 }
 .productBox:hover {
@@ -154,11 +147,25 @@ p{
   margin: 5px auto;
 }
 .productPrice{
-  font-size: 26px;
+  font-size: 24px;
+  margin: 2px auto 4px auto;
   font-weight: 900;
   text-align: center;
-  margin-bottom: 8px;
   font-style: normal;
+}
+.Fbtn, .Sbtn{
+  font-size: 17px;
+  font-style: normal;
+  border-style: none;
+  height: 40px;
+  width: 80px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(40, 40, 40);
+}
+.Sbtn{
+  background-color: rgb(130, 130, 130);
 }
 #InspectButtons{
   display: flex;
@@ -166,19 +173,24 @@ p{
   align-items: center;
   justify-content: center;
   flex-flow: row-reverse;
-  column-gap: 10px;
-  margin: 10px auto;
+  gap: 10px;
+  margin: 2px auto;
   grid-column: 1/3;
 }
 #productModal{
   display: grid;
+  grid-template-rows: 8% 60% 13% 10% 10%;
   justify-content: center;
   align-items: center;
   min-width: 600px;
   width: 35%;
   height: 75%;
   margin: 0px auto;
+  padding: 5px;
   max-width: 900px;
+  max-height: 800px;
+  min-height: 500px;
+  min-width: 500px;
   position:fixed;
   left: 0px;
   right: 0px;
@@ -198,10 +210,6 @@ p{
   height: 100vh;
   margin: 0px auto;
   background-color: rgba(10, 10, 10, 0.85);
-}
-.productBoxNFT{
-  grid-template-rows: 10% 60% 10% 10% 10%;
-  grid-auto-flow: column;
 }
 #nftImage{
   width: 375px;
@@ -226,9 +234,11 @@ p{
   text-align: center;
 }
 #nftPrice{
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
   font-size: 35px;
   margin: 2px;
-  grid-row: 4/5;
   font-weight: 900;
   text-align: center;
   margin-bottom: 8px auto;
@@ -255,22 +265,6 @@ footer{
   flex-direction: column;
   border-top: 20px solid rgba(45, 45, 45, 0.75);
 }
-#spinnerCenter{
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  user-select: none;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: 10000;
-  top: 0px;
-  left: 0px;
-  opacity: 1;
-  transition: opacity 0.54s;
-}
 #mask{
   position: fixed;
   z-index: 100;
@@ -286,25 +280,29 @@ footer{
   color: white;
   cursor: pointer;
 }
-.btc{
-  margin: auto;
-  font-size: 17px;
-  font-style: normal;
-  height: 70px;
-  width: 70px;
-  padding: 10px;
-  border-radius: 600px;
-  background-color: rgb(40, 40, 40);
-  color: white;
+#CryptoButtons{
   cursor: pointer;
-  position: relative;
-}
-.btc img{
+  display: flex;
+  flex-direction: row;
   position: absolute;
-  top: 11px;
-  left: 11px;
-  width: 45px;
+  bottom: 10px;
 }
+#CryptoButtons a{
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 100%;
+}
+#CryptoButtons:nth-child(1){
+  left: 15px;
+}
+#CryptoButtons:nth-child(2){
+  left: 75px;
+}
+#CryptoButtons:nth-child(3){
+  left: 135px;
+}
+
 ::-webkit-scrollbar{
   width: 10px;
 }
@@ -342,7 +340,7 @@ footer{
   }
 }
 
-@media (max-width: 554px){
+@media (max-width: 575px){
   #productGrid{
     grid-template-columns:1fr;
   }
@@ -351,7 +349,7 @@ footer{
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 475px){
   #productModal{
     min-width: 400px;
   }
@@ -368,15 +366,6 @@ footer{
   }
   #nftPrice{
     font-size: 35px;
-  }
-  .btc{
-    height: 54px;
-    width: 54px;
-  }
-  .btc img{
-    top: 8px;
-    left: 8px;
-    width: 35px;
   }
 }
 
@@ -399,15 +388,6 @@ footer{
   #nftPrice{
     font-size: 35px;
   }
-  .btc{
-    height: 54px;
-    width: 54px;
-  }
-  .btc img{
-    top: 8px;
-    left: 8px;
-    width: 35px;
-  }
 }
 
 @media (max-width: 375px){
@@ -421,14 +401,15 @@ footer{
   }
   h2{
     text-align: center;
-    font-size: 32px;
+    font-size: 27px;
     margin-top: 0px;
   }
   h3{
-    font-size: 18px;
+    font-size: 16px;
     padding-top: 20px;
   }
   p{
+    font-size: 14px;
     text-align: center;
     font-style: italic;
     margin: 5px auto;
@@ -472,24 +453,5 @@ footer{
     text-align: center;
     margin-bottom: 8px auto;
     font-style: normal;
-  }
-  .btc{
-    margin: auto;
-    font-size: 17px;
-    font-style: normal;
-    height: 50px;
-    width: 50px;
-    padding: 10px;
-    border-radius: 600px;
-    background-color: rgb(40, 40, 40);
-    color: white;
-    cursor: pointer;
-    position: relative;
-  }
-  .btc img{
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 30px;
   }
 }
