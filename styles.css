@@ -455,3 +455,137 @@ footer{
     font-style: normal;
   }
 }
+
+/* images */
+#isologotipo{
+  background-image: url(imgs/nftorio.png);
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.image1{
+  background-image: url(imgs/nfts/nft\ 1.png)
+}
+.image2{
+  background-image: url(imgs/nfts/nft\ 2.png);
+}
+.image3{
+  background-image: url(imgs/nfts/nft\ 3.png);
+}
+.image4{
+  background-image: url(imgs/nfts/nft\ 4.png);
+}
+.image5{
+  background-image: url(imgs/nfts/nft\ 5.png);
+}
+.image6{
+  background-image: url(imgs/nfts/nft\ 6.png);
+}
+.image7{
+  background-image: url(imgs/nfts/nft\ 7.png);
+}
+.image8{
+  background-image: url(imgs/nfts/nft\ 8.png);
+}
+.image9{
+  background-image: url(imgs/nfts/nft\ 9.png);
+}
+.image10{
+  background-image: url(imgs/nfts/nft\ 10.png);
+}
+.image11{
+  background-image: url(imgs/nfts/nft\ 11.png);
+}
+.image12{
+  background-image: url(imgs/nfts/nft\ 12.png);
+}
+.image13{
+  background-image: url(imgs/nfts/nft\ 13.png);
+}
+.image14{
+  background-image: url(imgs/nfts/nft\ 14.png);
+}
+.image15{
+  background-image: url(imgs/nfts/nft\ 15.png);
+}
+.image16{
+  background-image: url(imgs/nfts/nft\ 16.png);
+}
+.image17{
+  background-image: url(imgs/nfts/nft\ 17.png);
+}
+.image18{
+  background-image: url(imgs/nfts/nft\ 18.png);
+}
+.image19{
+  background-image: url(imgs/nfts/nft\ 19.png);
+}
+.image20{
+  background-image: url(imgs/nfts/nft\ 20.png);
+}
+.image21{
+  background-image: url(imgs/nfts/nft\ 21.png);
+}
+.image22{
+  background-image: url(imgs/nfts/nft\ 22.png);
+}
+.image23{
+  background-image: url(imgs/nfts/nft\ 23.png);
+}
+.image24{
+  background-image: url(imgs/nfts/nft\ 24.png);
+}
+.image25{
+  background-image: url(imgs/nfts/nft\ 25.png);
+}
+.image26{
+  background-image: url(imgs/nfts/nft\ 26.png);
+}
+.image27{
+  background-image: url(imgs/nfts/nft\ 27.png);
+}
+.image28{
+  background-image: url(imgs/nfts/nft\ 28.png);
+}
+.image29{
+  background-image: url(imgs/nfts/nft\ 29.png);
+}
+.image30{
+  background-image: url(imgs/nfts/nft\ 30.png);
+}
+.image31{
+  background-image: url(imgs/nfts/nft\ 31.png);
+}
+.image32{
+  background-image: url(imgs/nfts/nft\ 32.png);
+}
+.image33{
+  background-image: url(imgs/nfts/nft\ 33.png);
+}
+.image34{
+  background-image: url(imgs/nfts/nft\ 34.png);
+}
+.image35{
+  background-image: url(imgs/nfts/nft\ 35.png);
+}
+  
+.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9, .image10, .image11, .image12, .image13, .image14, .image15, .image16, .image17, .image18, .image19, .image20, .image21, .image22, .image23, .image24, .image25, .image26, .image27, .image28, .image29, .image30, .image31, .image32, .image33, .image34, .image35{
+  display: flex;
+  justify-content: center;
+  margin: 3px auto;
+  width: 174px;
+  height: 174px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
