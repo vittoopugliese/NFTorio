@@ -315,21 +315,25 @@ const pBox = document.querySelectorAll('.productBox')
 
 searchInput.addEventListener(('keyup'), (e) => {
     let target = e.target.value
-    for (let i = 0; i < 36; i++) {
+    for (let i = 0; i < 37; i++) {
         let pBoxed = pBox[i]
         let boxed = pBoxed.getAttribute('data-tag')
-
+        let addedds = addedToGrid[i + 1]
         if(boxed.includes(target)){
             pBoxed.style.display = 'flex'
             pGrid.style.rowGap = '0px'
+            addedds.classList.remove('hide')
         }
         if(!boxed.includes(target)){
             pBoxed.style.display = 'none'
+            addedds.classList.add('hide')
         }
         if(target == ''){
             pBoxed.style.display = 'flex'
             pGrid.style.rowGap = '40px'
-        } 
+            addedds.classList.remove('hide')
+        }
+
     }
 })
 aside.addEventListener(('mouseover'), () => {
@@ -355,7 +359,6 @@ for (let i = 0; i < 36; i++) {
     inspect[i].addEventListener('click', () => {
         productModal.style.display = 'grid'
         productModal.innerHTML = `
-        <div id="productModal">
             <h1 id="nftTitle" >${title[i].innerHTML}</h1>
             <div id="nftImage"></div>
             <p id="nftDescription">${description[i].innerHTML}</p>
@@ -371,9 +374,8 @@ for (let i = 0; i < 36; i++) {
                     <img src="imgs/svgs/share.png" alt="share button">
                 </a>
             </div>
-            <img id="cruz" src="imgs/svgs/x.svg">
-        </div>
-        `
+            <img id="cruz" src="imgs/svgs/x.svg">`
+
         const nftImage = document.getElementById('nftImage')
 
         wrapper.style.filter = 'blur(4px)'
@@ -384,6 +386,7 @@ for (let i = 0; i < 36; i++) {
         nftImage.classList.add(image)
 
         const cruz = document.querySelectorAll('#cruz')
+
         cruz[0].addEventListener('click', ()=>{
           productModal.style.display = 'none'
           modalBackground.style.display = 'none'

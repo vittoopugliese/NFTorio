@@ -8,6 +8,9 @@ body{
   overflow-x: hidden !important;
   background-image: linear-gradient(to Top, rgb(200, 200, 200) 0%, white 100%);
 }
+.hide{
+  display: none;
+}
 #spinnerCenter{
   background-color: white;
   display: flex;
@@ -179,7 +182,7 @@ p{
 }
 #productModal{
   display: grid;
-  grid-template-rows: 8% 60% 13% 10% 10%;
+  grid-template-rows: 10% 60% 15% 15%;
   justify-content: center;
   align-items: center;
   min-width: 600px;
@@ -188,18 +191,18 @@ p{
   margin: 0px auto;
   padding: 5px;
   max-width: 900px;
+  min-width: 500px;
   max-height: 800px;
   min-height: 500px;
-  min-width: 500px;
   position:fixed;
   left: 0px;
   right: 0px;
   top: 100px;
   z-index: 500;
   border-radius: 15px;
-  background: linear-gradient(174deg, #ffffff 0%, #b0b0b0 100%);
+  background: linear-gradient(174deg, #ffffff 0%, #848484 100%);
   border: 2px solid rgb(130, 130, 130);
-  box-shadow: 10px 10px 15px 5px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 15px 5px rgba(0,0,0,0.6);
 }
 #modalBackground{
   position: fixed;
@@ -370,9 +373,12 @@ footer{
 }
 
 @media (max-width: 400px){
+  #wrapper{
+    width: 70vw;
+  }
   #productModal{
-    height: 65%;
     min-width: 350px;
+    top: 80px;
   }
   #nftImage{
     width: 325px;
@@ -394,11 +400,6 @@ footer{
   #productGrid{
     grid-template-columns:1fr;
   }
-  #wrapper{
-    width: 70vw;
-    margin: 60px auto 10px auto;
-    transition: filter 0.5s;
-  }
   h2{
     text-align: center;
     font-size: 27px;
@@ -415,43 +416,35 @@ footer{
     margin: 5px auto;
   }
   #productModal{
-    width: 85%;
-    height: 75%;
-    margin: 0px auto;
-    max-width: 900px;
-    left: 0px;
-    right: 0px;
-    top: 60px;
+    min-width: 300px;
+    top: 50px;
   }
   #nftImage{
     width: 250px;
     height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-row: 2/3;
   }
-  #nftTitle{
+  #nftTitle, #nftPrice{
     font-size: 28px;
-    margin: 10px auto;
-    grid-row: 1/2;
-    font-weight: 900;
-    text-align: center;
   }
   #nftDescription{
     font-size: 22px;
-    margin: 10px auto;
-    font-style: italic;
-    text-align: center;
   }
-  #nftPrice{
-    font-size: 28px;
-    margin: 2px;
-    grid-row: 4/5;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 8px auto;
-    font-style: normal;
+}
+@media (max-width: 325px){
+  #productGrid{
+    grid-template-columns:1fr;
+  }
+  #productModal{
+    min-width: 94%;
+  }
+}
+@media (max-width: 300px){
+  #productGrid{
+    grid-template-columns:1fr;
+  }
+  #nftImage{
+    width: 250px;
+    height: 250px;
   }
 }
 
@@ -459,6 +452,12 @@ footer{
   #nftImage{
     width: 275px;
     height: 275px;
+  }
+}
+@media (max-height: 650px){
+  #nftImage{
+    width: 250px;
+    height: 250px;
   }
 }
 /* images */
