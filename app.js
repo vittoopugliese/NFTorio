@@ -316,6 +316,10 @@ const searchIcon = document.querySelector("#search-icon");
 const aside = document.querySelector("#aside-wrapper");
 const pGrid = document.querySelector("#productGrid");
 const pBox = document.querySelectorAll(".productBox");
+const productTitle = document.querySelectorAll('.productTitle');
+const productDescription = document.querySelectorAll('.productDescription');
+const productPrice = document.querySelectorAll('.productPrice');
+const productImage = document.querySelectorAll('.productImage');
 
 searchInput.addEventListener("keyup", (e) => {
   let target = e.target.value;
@@ -338,6 +342,7 @@ searchInput.addEventListener("keyup", (e) => {
       addedds.classList.remove("hide");
     }
   }
+
 });
 aside.addEventListener("mouseover", () => {
   wrapper.style.filter = "blur(4px)";
@@ -387,8 +392,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const cruz = document.querySelectorAll("#cruz");
       cruz[0].addEventListener("click", () => {
-        productModal.style.display = "none";
         modalBackground.style.display = "none";
+        productModal.style.display = "none";
         body.style.overflow = "auto";
         wrapper.style.filter = "blur(0px)";
       });
@@ -429,4 +434,5 @@ for (let i = 0; i < nfts; i++) {
   let urlBtnIndex = urlBtn[i]
   urlBtnIndex.href = url
 }
-  
+
+

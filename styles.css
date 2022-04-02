@@ -135,7 +135,8 @@ p{
   justify-content: center;
   padding: 10px;
   margin: 2px;
-  border: 2px solid transparent;
+  border: 4px solid transparent;
+  transition: border 0.25s;
 }
 .productBox:hover {
   border-radius: 15px;
@@ -144,17 +145,20 @@ p{
   border: 2px solid rgb(220, 220, 220);
 } 
 .productTitle{
-  font-size: 25px;
+  font-size: 21px;
   font-weight: 800;
   text-align: center;
   margin: 10px auto 0px auto;
 }
 .productDescription{
-  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
   font-style: italic;
   text-align: center;
   margin: 5px auto;
 }
+
 .productPrice{
   font-size: 24px;
   margin: 2px auto 4px auto;
@@ -228,8 +232,8 @@ p{
   top: 0px;
   left: 0px;
   z-index: 200;
-  width: 100%;
-  height: 100vh;
+  width: 200vw;
+  height: 200vh;
   margin: 0px auto;
   background-color: rgba(10, 10, 10, 0.85);
 }
@@ -265,7 +269,7 @@ p{
   position: absolute;
   bottom: 25px;
   right: 25px;
-  font-size: 35px;
+  font-size: 54px;
   margin: 2px;
   font-weight: 900;
   text-align: center;
