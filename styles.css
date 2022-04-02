@@ -46,7 +46,7 @@ nav{
   background-color: rgb(255, 255, 255);
 }
 nav a{
-margin: auto 0px;
+  margin: auto 0px;
 }
 h2{
   text-align: center;
@@ -175,7 +175,7 @@ p{
   width: 100%;
   align-items: center;
   justify-content: center;
-  flex-flow: row-reverse;
+  flex-flow: row;
   gap: 10px;
   margin: 2px auto;
   grid-column: 1/3;
@@ -197,7 +197,7 @@ p{
   position:fixed;
   left: 0px;
   right: 0px;
-  top: 100px;
+  top: 4em;
   z-index: 500;
   border-radius: 15px;
   background: linear-gradient(174deg, #ffffff 0%, #848484 100%);
@@ -284,7 +284,6 @@ footer{
   cursor: pointer;
 }
 #CryptoButtons{
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -295,6 +294,7 @@ footer{
   width: 50px;
   background-color: white;
   border-radius: 100%;
+  cursor: pointer;
 }
 #CryptoButtons:nth-child(1){
   left: 15px;
@@ -339,7 +339,7 @@ footer{
     grid-template-columns:1fr 1fr;
   }
   #productModal{
-    min-width: 500px;
+    min-width: 90%;
   }
 }
 
@@ -348,13 +348,13 @@ footer{
     grid-template-columns:1fr;
   }
   #productModal{
-    min-width: 450px;
+    min-width: 90%;
   }
 }
 
 @media (max-width: 475px){
   #productModal{
-    min-width: 400px;
+    min-width: 90%;
   }
   #nftImage{
     width: 325px;
@@ -377,8 +377,8 @@ footer{
     width: 70vw;
   }
   #productModal{
-    min-width: 350px;
-    top: 80px;
+    min-width: 90%;
+    top: 3.5em;
   }
   #nftImage{
     width: 325px;
@@ -416,8 +416,7 @@ footer{
     margin: 5px auto;
   }
   #productModal{
-    min-width: 300px;
-    top: 50px;
+    min-width: 92%;
   }
   #nftImage{
     width: 250px;
@@ -450,13 +449,11 @@ footer{
 
 @media (max-height: 875px){
   #nftImage{
-    width: 275px;
     height: 275px;
   }
 }
 @media (max-height: 650px){
   #nftImage{
-    width: 250px;
     height: 250px;
   }
 }
@@ -471,6 +468,21 @@ footer{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9, .image10, .image11, .image12, .image13, .image14, .image15, .image16, .image17, .image18, .image19, .image20, .image21, .image22, .image23, .image24, .image25, .image26, .image27, .image28, .image29, .image30, .image31, .image32, .image33, .image34, .image35{
+  display: flex;
+  justify-content: center;
+  margin: 3px auto;
+  width: 174px;
+  height: 174px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 .image1{
   background-image: url(imgs/nfts/nft\ 1.png)
@@ -576,20 +588,4 @@ footer{
 }
 .image35{
   background-image: url(imgs/nfts/nft\ 35.png);
-}
-  
-.image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9, .image10, .image11, .image12, .image13, .image14, .image15, .image16, .image17, .image18, .image19, .image20, .image21, .image22, .image23, .image24, .image25, .image26, .image27, .image28, .image29, .image30, .image31, .image32, .image33, .image34, .image35{
-  display: flex;
-  justify-content: center;
-  margin: 3px auto;
-  width: 174px;
-  height: 174px;
-  border-radius: 20px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  -webkit-box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
-  -moz-box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
-  box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
-  border: 1px solid rgba(0, 0, 0, 0.3);
 }
