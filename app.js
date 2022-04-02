@@ -414,21 +414,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // share
-function share() {
+async function share() {
   if ("share" in navigator) {
-    navigator
-      .share({
+    try {
+      await navigator.share({
         title: "NFTorio Marketplace",
         text: 'Enter and take a look on this NFTs!',
         url: "https://nftorio.vittoriopugliese.com/",
       })
-      .then(() => {
-        alert("Your NFT has been sucefully shared !");
-      })
-      .catch(() => {
-        alert("Share error!");
-      });
+      alert("Your NFT has been sucefully shared !");
+    } catch(err) {
+      alert("Share error:" + err);
+    }
   } else {
-    alert("Share only supported on mobile devices...");
+    alert("This device doesn't support shared content.. tf bruh like buy a better one...");
   }
 }
+
