@@ -174,105 +174,105 @@ const values = {
 
   nftTitle21: "Texture.v1",
   nftImage21: "imgs/nfts/nft21.png",
-  nftDescription21: "Feel free to use this image on your personal works.",
+  nftDescription21: "You can use this into personal works.",
   nftPrice21: "$25",
   nftUid21: "caabea9c4ad74966",
   nfTags21: "Texture, texture, v1",
 
   nftTitle22: "Texture.v2",
   nftImage22: "imgs/nfts/nft22.png",
-  nftDescription22: "Feel free to use this image on your personal works.",
+  nftDescription22: "You can use this into personal works.",
   nftPrice22: "$25",
   nftUid22: "14b41570fdf04a90",
   nfTags22: "Texture, texture, v2",
 
   nftTitle23: "Texture.v3",
   nftImage23: "imgs/nfts/nft23.png",
-  nftDescription23: "Feel free to use this image on your personal works.",
+  nftDescription23: "You can use this into personal works.",
   nftPrice23: "$25",
   nftUid23: "08a09eeba88b430f",
   nfTags23: "Texture, texture, v3",
 
   nftTitle24: "Texture.v4",
   nftImage24: "imgs/nfts/nft24.png",
-  nftDescription24: "Feel free to use this image on your personal works.",
+  nftDescription24: "You can use this into personal works.",
   nftPrice24: "$25",
   nftUid24: "cf8ddd7f131b4155",
   nfTags24: "Texture, texture, v4",
 
   nftTitle25: "Texture.v5",
   nftImage25: "imgs/nfts/nft25.png",
-  nftDescription25: "Feel free to use this image on your personal works.",
+  nftDescription25: "You can use this into personal works.",
   nftPrice25: "$25",
   nftUid25: "40ca6d423e2b40ff",
   nfTags25: "Texture, texture, v5",
 
   nftTitle26: "Texture.v6",
   nftImage26: "imgs/nfts/nft26.png",
-  nftDescription26: "Feel free to use this image on your personal works.",
+  nftDescription26: "You can use this into personal works.",
   nftPrice26: "$25",
   nftUid26: "d873bf75e8bb4347",
   nfTags26: "Texture, texture, v6",
 
   nftTitle27: "Texture.v7",
   nftImage27: "imgs/nfts/nft27.png",
-  nftDescription27: "Feel free to use this image on your personal works.",
+  nftDescription27: "You can use this into personal works.",
   nftPrice27: "$25",
   nftUid27: "b552a0a6853d4d66",
   nfTags27: "Texture, texture, v7",
 
   nftTitle28: "Texture.v8",
   nftImage28: "imgs/nfts/nft28.png",
-  nftDescription28: "Feel free to use this image on your personal works.",
+  nftDescription28: "You can use this into personal works.",
   nftPrice28: "$25",
   nftUid28: "269a90aadbf440b6",
   nfTags28: "Texture, texture, v8",
 
   nftTitle29: "Texture.v9",
   nftImage29: "imgs/nfts/nft29.png",
-  nftDescription29: "Feel free to use this image on your personal works.",
+  nftDescription29: "You can use this into personal works.",
   nftPrice29: "$25",
   nftUid29: "0acef96486304dbe",
   nfTags29: "Texture, texture, v9",
 
   nftTitle30: "Texture.v10",
   nftImage30: "imgs/nfts/nft30.png",
-  nftDescription30: "Feel free to use this image on your personal works.",
+  nftDescription30: "You can use this into personal works.",
   nftPrice30: "$25",
   nftUid30: "2bee479dd5514470",
   nfTags30: "Texture, texture, v10",
 
   nftTitle31: "Texture.v11",
   nftImage31: "imgs/nfts/nft31.png",
-  nftDescription31: "Feel free to use this image on your personal works.",
+  nftDescription31: "You can use this into personal works.",
   nftPrice31: "$25",
   nftUid31: "b681c7b194c54f72",
   nfTags31: "Texture, texture, v11",
 
   nftTitle32: "Texture.v12",
   nftImage32: "imgs/nfts/nft32.png",
-  nftDescription32: "Feel free to use this image on your personal works.",
+  nftDescription32: "You can use this into personal works.",
   nftPrice32: "$25",
   nftUid32: "c9d20f6ae1124163",
   nfTags32: "Texture, texture, v12",
 
   nftTitle33: "Texture.v13",
   nftImage33: "imgs/nfts/nft33.png",
-  nftDescription33: "Feel free to use this image on your personal works.",
+  nftDescription33: "You can use this into personal works.",
   nftPrice33: "$25",
   nftUid33: "4bc30b973c2f4a85",
   nfTags33: "Texture, texture, v13",
 
   nftTitle34: "Texture.v14",
   nftImage34: "imgs/nfts/nft34.png",
-  nftDescription34: "Feel free to use this image on your personal works.",
+  nftDescription34: "You can use this into personal works.",
   nftPrice34: "$25",
   nftUid34: "691a57e1886c4848",
   nfTags34: "Texture, texture, v14",
 
   nftTitle35: "Texture.v15",
   nftImage35: "imgs/nfts/nft35.png",
-  nftDescription35: "Feel free to use this image on your personal works.",
+  nftDescription35: "You can use this into personal works.",
   nftPrice35: "$25",
   nftUid35: "1a26a8d0321a44b1",
   nfTags35: "Texture, texture, v15",
@@ -431,8 +431,7 @@ const urlBtn = document.querySelectorAll('#url');
 
 for (let i = 0; i < nfts; i++) {
   let url = `https://raw.githubusercontent.com/vittoopugliese/NFTorio/main/imgs/nfts/nft%20${i + 1}.png`
-  let urlBtnIndex = urlBtn[i]
-  urlBtnIndex.href = url
+  console.log('hola' + `${[i]}`)
 }
 
 
