@@ -348,11 +348,15 @@ aside.addEventListener("mouseover", () => {
   wrapper.style.filter = "blur(4px)";
   searchIcon.style.left = "218px";
   searchText.style.left = "5px";
+  magixs.style.left = '5px'
+  normal.style.left = '5px'
 });
 aside.addEventListener("mouseleave", () => {
   wrapper.style.filter = "blur(0px)";
   searchIcon.style.left = "5px";
   searchText.style.left = "-150px";
+  magixs.style.left = '-200px'
+  normal.style.left = '-200px'
 });
 
 // inspect
@@ -366,6 +370,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let dataUid = values[`nftUid${i + 1}`];
 
     inspect[i].addEventListener("click", () => {
+      setTimeout(() => {
+
       productModal.style.display = "grid";
       productModal.innerHTML = `
             <h1 id="nftTitle" >${title[i].innerHTML}</h1>
@@ -385,6 +391,10 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <img id="cruz" src="imgs/svgs/x.svg">`;
 
+            setTimeout(() => {
+              productModal.style.opacity = "1";
+              modalBackground.style.opacity = "1";
+            },80)
       productModal.style.display = "grid";
       modalBackground.style.display = "flex";
       body.style.overflow = "hidden";
@@ -396,12 +406,18 @@ document.addEventListener("DOMContentLoaded", () => {
         productModal.style.display = "none";
         body.style.overflow = "auto";
         wrapper.style.filter = "blur(0px)";
+        
+        productModal.style.opacity = "0";
+        modalBackground.style.opacity = "0";
       });
       modalBackground.addEventListener("click", () => {
         productModal.style.display = "none";
         modalBackground.style.display = "none";
         body.style.overflow = "auto";
         wrapper.style.filter = "blur(0px)";
+        
+        productModal.style.opacity = "0";
+        modalBackground.style.opacity = "0";
       });
       document.addEventListener("keydown", (event) => {
         const key = event.key;
@@ -410,8 +426,14 @@ document.addEventListener("DOMContentLoaded", () => {
           modalBackground.style.display = "none";
           body.style.overflow = "auto";
           wrapper.style.filter = "blur(0px)";
+          
+          productModal.style.opacity = "0";
+          modalBackground.style.opacity = "0";
         }
       });
+
+    },150)
+
     });
   }
 });
@@ -431,7 +453,55 @@ const urlBtn = document.querySelectorAll('#url');
 
 for (let i = 0; i < nfts; i++) {
   let url = `https://raw.githubusercontent.com/vittoopugliese/NFTorio/main/imgs/nfts/nft%20${i + 1}.png`
-  console.log('hola' + `${[i]}`)
 }
 
+const magixs = document.querySelector('#magixs');
+const normal = document.querySelector('#normal');
 
+magixs.addEventListener('click', () => {
+
+  for (let i = 0; i < nfts; i++) {
+
+    productImage[i].classList.toggle('none')
+    productPrice[i].style.display = 'none'
+    productTitle[i].style.display = 'none'
+    productDescription[i].style.display = 'none'
+    InspectButtons[i].style.display = 'none'
+
+    if (window.matchMedia('screen and (max-width: 420px)').matches == true){
+      pGrid.style.gridTemplateColumns = '1fr 1fr'
+      pGrid.style.gap = '2px'
+      productImage[i].style.width = '150px'
+      productImage[i].style.height = '150px'
+      aSide.style.opacity = '0.2'
+    }
+
+    pBox[i].addEventListener('mouseover', () => {
+      productImage[i].style.width = '300px'
+      productImage[i].style.height = '300px'
+    })
+    pBox[i].addEventListener('mouseleave', () => {
+      productImage[i].style.width = ''
+      productImage[i].style.height = ''
+    })
+  }
+  
+})
+
+normal.addEventListener('click', () => {
+
+  for (let i = 0; i < nfts; i++) {
+    productImage[i].classList.remove('none')
+    productPrice[i].style.display = 'flex'
+    productTitle[i].style.display = 'flex'
+    productDescription[i].style.display = 'flex'
+    InspectButtons[i].style.display = 'flex'
+    aSide.style.opacity = '1'
+    pBox[i].addEventListener('mouseover', () => {
+      productImage[i].style.width = '174px'
+      productImage[i].style.height = '174px'
+    })
+
+  }
+  
+})

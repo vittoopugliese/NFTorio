@@ -36,12 +36,14 @@ body{
 }
 nav{
   display: flex;
-  position: fixed;
+  justify-content: space-between;
   width: 100vw;
   height: 50px;
+  margin: 0px auto;
+  position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10;
+  z-index: 100;
   padding: 5px 10px;
   background-color: rgb(255, 255, 255);
 }
@@ -133,17 +135,18 @@ p{
   display: flex;
   flex-flow: column;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
   margin: 2px;
-  border: 7px solid transparent;
-  transition: filter 0.15s, border 0.25s, padding 0.2s;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: filter 0.15s, border 0.25s;
 }
 .productBox:hover {
-  border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.472);
   filter: drop-shadow(0px 0px 12px rgba(154, 154, 154, 0.9));
-  border: 3px solid rgb(220, 220, 220);
+  border:2px solid rgb(220, 220, 220);
 } 
+
 .productTitle{
   font-size: 21px;
   font-weight: 800;
@@ -153,14 +156,14 @@ p{
 }
 .productDescription{
   text-align: center;
-  width: 100%;
+  width: 90%;
   font-size: 15px;
   font-style: italic;
   text-align: center;
   margin: 5px auto;
-
+  display: flex;
+  justify-content: center;
 }
-
 .productPrice{
   font-size: 24px;
   margin: 2px auto 4px auto;
@@ -180,21 +183,43 @@ p{
   background-position: center center;
   box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
   border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: width 0.3s, height 0.3s;
 }
 .Fbtn, .Sbtn{
-  font-size: 17px;
+  font-size: 18px;
   font-style: normal;
   border-style: none;
   height: 40px;
   width: 80px;
-  border-radius: 4px;
+  border-radius: 5px;
   color: white;
   cursor: pointer;
-  background-color: rgb(40, 40, 40);
+  transition: border 0.1s;
+  filter: drop-shadow(2px 2px 3px rgba(54, 54, 54, 0.54));
+}
+.Fbtn{
+  background-color: rgb(45, 45, 45);
+  border-right: 3px solid rgb(25, 25, 25);
+  border-bottom: 3px solid rgb(25, 25, 25);
 }
 .Sbtn{
   background-color: rgb(130, 130, 130);
+  border-right: 3px solid rgb(74, 74, 74);
+  border-bottom: 3px solid rgb(74, 74, 74);
 }
+.Fbtn:active{
+  border-right: 1px solid rgb(25, 25, 25);
+  border-bottom: 1px solid rgb(25, 25, 25);
+  border-left: 3px solid rgb(25, 25, 25);
+  border-top: 3px solid rgb(25, 25, 25);
+}
+.Sbtn:active{
+  border-right: 1px solid rgb(35, 35, 35);
+  border-bottom: 1px solid rgb(35, 35, 35);
+  border-left: 3px solid rgb(54, 54, 54);
+  border-top: 3px solid rgb(54, 54, 54);
+}
+
 #InspectButtons{
   display: flex;
   width: 100%;
@@ -224,6 +249,8 @@ p{
   right: 0px;
   top: 4em;
   z-index: 500;
+  opacity: 0;
+  transition: opacity 0.4s;
   border-radius: 15px;
   background: linear-gradient(174deg, #ffffff 0%, #848484 100%);
   border: 2px solid rgb(130, 130, 130);
@@ -237,6 +264,8 @@ p{
   width: 200vw;
   height: 200vh;
   margin: 0px auto;
+  opacity: 0;
+  transition: opacity 0.3s;
   background-color: rgba(10, 10, 10, 0.85);
 }
 #nftImage{
@@ -289,7 +318,7 @@ footer{
   z-index: 10;
   position: relative;
   display: flex;
-  height: 400px;
+  height: 594px;
   width: 100vw;
   justify-content: center;
   background-color: rgb(30, 30, 30);
@@ -303,12 +332,12 @@ footer{
   position: fixed;
   z-index: 100;
   border: 2px solid rgba(131, 131, 131, 0.397);
-  right: 10px;
+  right: 15px;
   bottom: 15px;
   border-radius:40px;
   border-style: none;
   height: 50px;
-  width: 60px;
+  width: 54px;
   background-color: rgb(40, 40, 40);
   border: 2px solid rgb(120, 120, 120);
   color: white;
@@ -484,4 +513,42 @@ footer{
   #nftImage{
     height: 250px;
   }
+}
+
+/* landing bg */
+
+#landBg{
+  overflow-x: hidden !important;
+}
+#landingBgWrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000068;
+  margin: 0px auto;
+}
+#landingBgWrapperGif{
+  width: 100%;
+  height: 100%;
+}
+#landingBgWrapperGif img{
+
+}
+#magixs,
+#normal{
+  margin-right: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  position: absolute;
+  transition: left 0.54s;
+}
+#magixs{
+  bottom: 120px;
+  left: -200px;
+}
+#normal{
+  bottom: 70px;
+  left: -200px;
+}
+.none{
+  background-attachment: fixed;
 }
