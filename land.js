@@ -1,10 +1,10 @@
-const body = document.getElementById("landBg");
+const body = document.getElementById("landingBody");
 const spinning = document.getElementById("spinnerCenter");
-const wrapper = document.querySelector("#landingBgWrapper");
+const wrapper = document.querySelector("#landingWrapper");
 
 window.onload = function () {
   body.style.overflow = "auto";
-  landingBgWrapper.style.filter = "blur(0px)";
+  landingWrapper.style.filter = "blur(0px)";
   setTimeout(() => {
     spinning.style.opacity = "0";
     setTimeout(() => {
@@ -17,3 +17,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 
 };
+
+function toMarket() {
+  window.location.href = 'index.html'
+}

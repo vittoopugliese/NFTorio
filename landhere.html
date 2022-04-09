@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>NFTorio</title>
 </head>
-<body id="landBg" style="overflow: hidden;">
+<body id="landingBody" style="overflow: hidden;">
 <!-- preload -->
     <div id="spinnerCenter">
         <img draggable="false" style="width: 5.4rem; height: 5.4rem;" src="imgs/svgs/spinner.svg"></img>
@@ -24,22 +24,15 @@
     <header>
         <nav>
             <a href="index.html" id="isologotipo"></a>
-            <button id="mask" onclick="connect()" type="button"><img draggable="false" src="imgs/svgs/metamask.svg" alt="metamask connect button" style="height: 2.5em;width: 2.5em;user-select: none;"></button>
         </nav>
     </header>
 <!-- indice -->
-<div id="landingBgWrapper">
-    <div id="landingBgWrapperGif">
-        <img src="imgs/nftorio.png" alt="">
-    </div>
+<div id="landingWrapper">
+    <img src="imgs/nftorio.png" id="landingWrapperImg" alt="brand-logo" draggable="false">
+    <button id="landingWrapperBtnMain" onclick="toMarket()">Buy NFTs</button>
 </div>
-
-
 <!-- footer -->
 <footer>
-    <div>
-        <a class="blockoPayBtn" style="cursor: pointer;color: white;" data-toggle="modal" data-uid=13c84765d6454330>click for surprise !!</a>
-    </div>
 </footer>
 <script src="land.js"></script>
 </body>

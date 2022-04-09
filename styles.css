@@ -25,7 +25,7 @@ body{
   top: 0px;
   left: 0px;
   opacity: 1;
-  transition: opacity 0.54s;
+  transition: opacity 0.4s;
 }
 #wrapper{
   width: 80vw;
@@ -46,6 +46,7 @@ nav{
   z-index: 100;
   padding: 5px 10px;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(30, 30, 30, 0.54);
 }
 #isologotipo{
   margin: auto 0px;
@@ -121,6 +122,22 @@ p{
   cursor: pointer;
   background-color: white;
 }
+#magixs,
+#normal{
+  margin-right: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  position: absolute;
+  transition: left 0.54s;
+}
+#magixs{
+  bottom: 120px;
+  left: -200px;
+}
+#normal{
+  bottom: 70px;
+  left: -200px;
+}
 #productGrid{
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr;
@@ -184,6 +201,7 @@ p{
   box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
   border: 1px solid rgba(0, 0, 0, 0.3);
   transition: width 0.3s, height 0.3s;
+  filter: saturate(1.05);
 }
 .Fbtn, .Sbtn{
   font-size: 18px;
@@ -281,6 +299,7 @@ p{
   background-size: cover;
   background-position: center center;
   box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  filter: saturate(1.05);
 }
 #nftTitle{
   font-size: 35px;
@@ -378,6 +397,9 @@ footer{
 }
 ::-webkit-scrollbar-thumb:hover{
   background-color:rgb(85, 85, 85) ;
+}
+.none{
+  background-attachment: fixed;
 }
 
 /* Media Queris */
@@ -517,38 +539,34 @@ footer{
 
 /* landing bg */
 
-#landBg{
+#landingBody{
   overflow-x: hidden !important;
+  background: linear-gradient(190deg, #f5f5f5 0%, #cacaca 100%);
 }
-#landingBgWrapper{
-  width: 100vw;
+#landingWrapper{
   height: 100vh;
-  background-color: #00000068;
-  margin: 0px auto;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  user-select: none;
 }
-#landingBgWrapperGif{
-  width: 100%;
-  height: 100%;
-}
-#landingBgWrapperGif img{
+#landingWrapperBtnMain{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 50%;
+
 
 }
-#magixs,
-#normal{
-  margin-right: 30px;
-  font-size: 15px;
-  font-weight: 600;
+#landingWrapperImg {
   position: absolute;
-  transition: left 0.54s;
-}
-#magixs{
-  bottom: 120px;
-  left: -200px;
-}
-#normal{
-  bottom: 70px;
-  left: -200px;
-}
-.none{
-  background-attachment: fixed;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+  max-width:1200px;
+  max-height:300px;
+  width:32%;
+  height:15%;
+
 }
