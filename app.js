@@ -448,11 +448,7 @@ function share() {
       })
   }
 }
-
-// const urlBtn = document.querySelectorAll('#url');
-// for (let i = 0; i < nfts; i++) {
-//   let url = `https://raw.githubusercontent.com/vittoopugliese/NFTorio/main/imgs/nfts/nft%20${i + 1}.png`
-// }
+const urlBtn = document.querySelectorAll('#url');
 
 const magixs = document.querySelector('#magixs');
 const normal = document.querySelector('#normal');
@@ -487,7 +483,6 @@ normal.addEventListener('click', () => {
     productTitle[i].style.display = 'flex'
     productDescription[i].style.display = 'flex'
     InspectButtons[i].style.display = 'flex'
-    aSide.style.opacity = '1'
     pBox[i].addEventListener('mouseover', () => {
       productImage[i].style.width = '174px'
       productImage[i].style.height = '174px'

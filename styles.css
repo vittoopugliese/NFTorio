@@ -1,17 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
-*{padding: 0;margin: 0;box-sizing: border-box;outline:none;font-family: 'Rubik', sans-serif;font-weight: 500;}
-*::selection{background-color: grey;}html{scroll-behavior: smooth;}
-a{text-decoration: none !important;color: black;}
-a:hover{color: rgb(70, 70, 70);}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+*::selection {
+  background-color: grey;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none !important;
+  color: black;
+}
+a:hover {
+  color: rgb(70, 70, 70);
+}
 
-body{
+body {
   overflow-x: hidden !important;
   background-image: linear-gradient(to Top, rgb(200, 200, 200) 0%, white 100%);
 }
-.hide{
+.hide {
   display: none;
 }
-#spinnerCenter{
+#spinnerCenter {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -27,18 +44,18 @@ body{
   opacity: 1;
   transition: opacity 0.4s;
 }
-#wrapper{
+#wrapper {
   width: 80vw;
   min-height: 100vh;
   margin: 60px auto 10px auto;
   z-index: 1;
   transition: filter 0.4s;
 }
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  height: 50px;
+  height: 54px;
   margin: 0px auto;
   position: fixed;
   top: 0px;
@@ -47,32 +64,43 @@ nav{
   padding: 5px 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px rgba(30, 30, 30, 0.54);
+  transition: all 0.3s;
 }
-#isologotipo{
+#isologotipo {
   margin: auto 0px;
   background-image: url(imgs/nftorio.png);
-  width: 120px;
+  width: 135px;
   height: 40px;
   background-repeat: no-repeat;
-  background-size: 120px;
-  background-position: center ;
+  background-size: 135px;
+  background-position: center;
+  position: absolute;
+  transition: all 0.54s ease-out;
 }
-h2{
+.isologotipoEnMedio {
+  top: 100px !important;
+  left: 2% !important;
+  width: 80% !important;
+  background-size: 80% !important;
+  max-width: 600px !important;
+  height: 200px !important;
+}
+h2 {
   text-align: center;
   font-size: 35px;
   margin-top: 0px;
 }
-h3{
+h3 {
   font-size: 20px;
   padding-top: 20px;
 }
-p{
+p {
   font-size: 15px;
   text-align: center;
   font-style: italic;
   margin: 5px auto;
 }
-#aSide{
+#aSide {
   z-index: 5;
   background-color: rgba(255, 255, 255, 0.74);
   height: 100%;
@@ -80,27 +108,27 @@ p{
   position: fixed;
   top: 50px;
   left: 0px;
-  transition: width 0.3s ;
+  transition: width 0.3s;
   display: flex;
   flex-direction: column;
   filter: drop-shadow(0px 0px 12px rgba(124, 124, 124, 0.877));
   border-right: 1px solid rgba(170, 170, 170, 0.54);
 }
-#aSide:hover{
+#aSide:hover {
   width: 250px;
 }
-#aside-wrapper{
+#aside-wrapper {
   height: 100%;
   z-index: -100;
 }
-#search-text{
+#search-text {
   position: fixed;
   font-size: 30px;
   top: 10px;
   left: -150px;
-  transition: left 0.25s ;
+  transition: left 0.25s;
 }
-#search-input{
+#search-input {
   border-style: none;
   border-radius: 5px;
   border: 1px solid rgb(190, 190, 190);
@@ -112,7 +140,7 @@ p{
   transition: left 0.3s;
   padding-left: 10px;
 }
-#search-icon{
+#search-icon {
   position: fixed;
   z-index: 500;
   width: 26px;
@@ -123,24 +151,24 @@ p{
   background-color: white;
 }
 #magixs,
-#normal{
+#normal {
   margin-right: 30px;
   font-size: 15px;
   font-weight: 600;
   position: absolute;
   transition: left 0.54s;
 }
-#magixs{
+#magixs {
   bottom: 120px;
   left: -200px;
 }
-#normal{
+#normal {
   bottom: 70px;
   left: -200px;
 }
-#productGrid{
+#productGrid {
   display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   width: 90%;
   justify-content: center;
   align-items: center;
@@ -148,7 +176,7 @@ p{
   row-gap: 10px;
   margin: 10px auto;
 }
-.productBox{
+.productBox {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -161,17 +189,17 @@ p{
 .productBox:hover {
   background-color: rgba(255, 255, 255, 0.472);
   filter: drop-shadow(0px 0px 12px rgba(154, 154, 154, 0.9));
-  border:2px solid rgb(220, 220, 220);
-} 
+  border: 2px solid rgb(220, 220, 220);
+}
 
-.productTitle{
+.productTitle {
   font-size: 21px;
   font-weight: 800;
   text-align: center;
   margin: 10px auto 0px auto;
   white-space: nowrap;
 }
-.productDescription{
+.productDescription {
   text-align: center;
   width: 90%;
   font-size: 15px;
@@ -181,14 +209,14 @@ p{
   display: flex;
   justify-content: center;
 }
-.productPrice{
+.productPrice {
   font-size: 24px;
   margin: 2px auto 4px auto;
   font-weight: 900;
   text-align: center;
   font-style: normal;
 }
-.productImage{
+.productImage {
   display: flex;
   justify-content: center;
   margin: 3px auto;
@@ -198,12 +226,13 @@ p{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 12px 3px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.3);
   transition: width 0.3s, height 0.3s;
   filter: saturate(1.05);
 }
-.Fbtn, .Sbtn{
+.Fbtn,
+.Sbtn {
   font-size: 18px;
   font-style: normal;
   border-style: none;
@@ -215,30 +244,30 @@ p{
   transition: border 0.1s;
   filter: drop-shadow(2px 2px 3px rgba(54, 54, 54, 0.54));
 }
-.Fbtn{
+.Fbtn {
   background-color: rgb(45, 45, 45);
   border-right: 3px solid rgb(25, 25, 25);
   border-bottom: 3px solid rgb(25, 25, 25);
 }
-.Sbtn{
+.Sbtn {
   background-color: rgb(130, 130, 130);
   border-right: 3px solid rgb(74, 74, 74);
   border-bottom: 3px solid rgb(74, 74, 74);
 }
-.Fbtn:active{
+.Fbtn:active {
   border-right: 1px solid rgb(25, 25, 25);
   border-bottom: 1px solid rgb(25, 25, 25);
   border-left: 3px solid rgb(25, 25, 25);
   border-top: 3px solid rgb(25, 25, 25);
 }
-.Sbtn:active{
+.Sbtn:active {
   border-right: 1px solid rgb(35, 35, 35);
   border-bottom: 1px solid rgb(35, 35, 35);
   border-left: 3px solid rgb(54, 54, 54);
   border-top: 3px solid rgb(54, 54, 54);
 }
 
-#InspectButtons{
+#InspectButtons {
   display: flex;
   width: 100%;
   align-items: center;
@@ -248,7 +277,7 @@ p{
   margin: 2px auto;
   grid-column: 1/3;
 }
-#productModal{
+#productModal {
   display: grid;
   grid-template-rows: 10% 60% 15% 15%;
   justify-content: center;
@@ -262,7 +291,7 @@ p{
   min-width: 500px;
   max-height: 800px;
   min-height: 500px;
-  position:fixed;
+  position: fixed;
   left: 0px;
   right: 0px;
   top: 4em;
@@ -272,9 +301,9 @@ p{
   border-radius: 15px;
   background: linear-gradient(174deg, #ffffff 0%, #848484 100%);
   border: 2px solid rgb(130, 130, 130);
-  box-shadow: 10px 10px 15px 5px rgba(0,0,0,0.6);
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.6);
 }
-#modalBackground{
+#modalBackground {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -286,7 +315,7 @@ p{
   transition: opacity 0.3s;
   background-color: rgba(10, 10, 10, 0.85);
 }
-#nftImage{
+#nftImage {
   width: 375px;
   height: 375px;
   margin: 0px auto;
@@ -298,24 +327,24 @@ p{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  box-shadow: 5px 5px 12px 3px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 12px 3px rgba(0, 0, 0, 0.3);
   filter: saturate(1.05);
 }
-#nftTitle{
+#nftTitle {
   font-size: 35px;
   margin: 10px auto;
   grid-row: 1/2;
   font-weight: 900;
   text-align: center;
 }
-#nftDescription{
+#nftDescription {
   font-size: 27px;
   margin: 10px auto;
   grid-row: 3/4;
   font-style: italic;
   text-align: center;
 }
-#nftPrice{
+#nftPrice {
   position: absolute;
   bottom: 25px;
   right: 25px;
@@ -326,14 +355,14 @@ p{
   margin-bottom: 8px auto;
   font-style: normal;
 }
-#cruz{
+#cruz {
   position: absolute;
   top: 10px;
   right: 8px;
   height: 24px;
   cursor: pointer;
 }
-footer{
+footer {
   z-index: 10;
   position: relative;
   display: flex;
@@ -347,13 +376,13 @@ footer{
   flex-direction: column;
   border-top: 20px solid rgba(45, 45, 45, 0.75);
 }
-#mask{
+#mask {
   position: fixed;
   z-index: 100;
   border: 2px solid rgba(131, 131, 131, 0.397);
   right: 15px;
   bottom: 15px;
-  border-radius:40px;
+  border-radius: 40px;
   border-style: none;
   height: 50px;
   width: 54px;
@@ -362,188 +391,189 @@ footer{
   color: white;
   cursor: pointer;
 }
-#CryptoButtons{
+#CryptoButtons {
   display: flex;
   flex-direction: row;
   position: absolute;
   bottom: 10px;
 }
-#CryptoButtons a{
+#CryptoButtons a {
   height: 50px;
   width: 50px;
   background-color: white;
   border-radius: 100%;
   cursor: pointer;
 }
-#CryptoButtons:nth-child(1){
+#CryptoButtons:nth-child(1) {
   left: 15px;
 }
-#CryptoButtons:nth-child(2){
+#CryptoButtons:nth-child(2) {
   left: 75px;
 }
-#CryptoButtons:nth-child(3){
+#CryptoButtons:nth-child(3) {
   left: 135px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track{
-  background-color: rgb(185, 185, 185) ;
+::-webkit-scrollbar-track {
+  background-color: rgb(185, 185, 185);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: rgb(100, 100, 100);
   border-radius: 30px;
 }
-::-webkit-scrollbar-thumb:hover{
-  background-color:rgb(85, 85, 85) ;
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(85, 85, 85);
 }
-.none{
+.none {
   background-attachment: fixed;
 }
 
 /* Media Queris */
-@media (max-width: 1275px){
-  #productGrid{
+@media (max-width: 1275px) {
+  #productGrid {
     width: 80%;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media (max-width: 975px){
-  #productGrid{
-    grid-template-columns:1fr 1fr 1fr;
+@media (max-width: 975px) {
+  #productGrid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media (max-width: 775px){
-  #productGrid{
-    grid-template-columns:1fr 1fr;
+@media (max-width: 775px) {
+  #productGrid {
+    grid-template-columns: 1fr 1fr;
   }
-  #productModal{
+  #productModal {
     min-width: 90%;
   }
 }
 
-@media (max-width: 575px){
-  #productGrid{
-    grid-template-columns:1fr;
+@media (max-width: 575px) {
+  #productGrid {
+    grid-template-columns: 1fr;
   }
-  #productModal{
+  #productModal {
     min-width: 90%;
   }
 }
 
-@media (max-width: 475px){
-  #productModal{
+@media (max-width: 475px) {
+  #productModal {
     min-width: 90%;
   }
-  #nftImage{
+  #nftImage {
     width: 325px;
     height: 325px;
     display: flex;
   }
-  #nftTitle{
+  #nftTitle {
     font-size: 35px;
   }
-  #nftDescription{
+  #nftDescription {
     font-size: 27px;
   }
-  #nftPrice{
+  #nftPrice {
     font-size: 35px;
   }
 }
 
-@media (max-width: 400px){
-  #wrapper{
+@media (max-width: 400px) {
+  #wrapper {
     width: 70vw;
   }
-  #productModal{
+  #productModal {
     min-width: 90%;
     top: 3.5em;
   }
-  #nftImage{
+  #nftImage {
     width: 325px;
     height: 325px;
     display: flex;
   }
-  #nftTitle{
+  #nftTitle {
     font-size: 35px;
   }
-  #nftDescription{
+  #nftDescription {
     font-size: 27px;
   }
-  #nftPrice{
+  #nftPrice {
     font-size: 35px;
   }
 }
 
-@media (max-width: 375px){
-  #productGrid{
-    grid-template-columns:1fr;
+@media (max-width: 375px) {
+  #productGrid {
+    grid-template-columns: 1fr;
   }
-  h2{
+  h2 {
     text-align: center;
     font-size: 27px;
     margin-top: 0px;
   }
-  h3{
+  h3 {
     font-size: 16px;
     padding-top: 20px;
   }
-  p{
+  p {
     font-size: 14px;
     text-align: center;
     font-style: italic;
     margin: 5px auto;
   }
-  #productModal{
+  #productModal {
     min-width: 92%;
   }
-  #nftImage{
+  #nftImage {
     width: 250px;
     height: 250px;
   }
-  #nftTitle, #nftPrice{
+  #nftTitle,
+  #nftPrice {
     font-size: 28px;
   }
-  #nftDescription{
+  #nftDescription {
     font-size: 22px;
   }
 }
 
-@media (max-width: 325px){
-  #productGrid{
-    grid-template-columns:1fr;
+@media (max-width: 325px) {
+  #productGrid {
+    grid-template-columns: 1fr;
   }
-  #productModal{
+  #productModal {
     min-width: 94%;
   }
 }
 
-@media (max-width: 300px){
-  #productGrid{
-    grid-template-columns:1fr;
+@media (max-width: 300px) {
+  #productGrid {
+    grid-template-columns: 1fr;
   }
-  #nftImage{
+  #nftImage {
     width: 250px;
     height: 250px;
   }
 }
 
-@media (max-height: 675px){
-  #nftImage{
+@media (max-height: 675px) {
+  #nftImage {
     height: 250px;
   }
 }
 
 /* landing bg */
 
-#landingBody{
+#landingBody {
   overflow-x: hidden !important;
-  background: linear-gradient(190deg, #f5f5f5 0%, #cacaca 100%);
+  background: linear-gradient(154deg, #f5f5f5 30%, #7e7e7e 100%);
 }
-#landingWrapper{
+#landingWrapper {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -551,22 +581,66 @@ footer{
   justify-content: center;
   user-select: none;
 }
-#landingWrapperBtnMain{
+#imageDivContainer {
+  display: flex;
+  justify-content: center;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 35%;
-  left: 50%;
-
-
+  right: 0;
+  top: 10%;
+  width: 100%;
+  max-width: 350px;
+  height: 80vh;
+  /* background-color: rgb(225, 255, 0); */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#landingWrapperImg {
+#imageDiv1,
+#imageDiv2,
+#imageDiv3
+{
+  width: 100%;
+  height: 100%;
+  max-height: 354px;
+  max-width: 354px;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 20%;
-  left: 50%;
-  max-width:1200px;
-  max-height:300px;
-  width:32%;
-  height:15%;
-
+  box-shadow: 0px 0px 30px rgba(30, 30, 30, 0.80);
+  transition: all 0.4s;
+  border-radius: 25px;
+}
+#imageDiv1 {
+  top: 0;
+  right: 75px;
+}
+#imageDiv2 {
+  top: 30%;
+  right: 75px;
+}
+#imageDiv3 {
+  top: 60%;
+  right: 75px;
+}
+@media (max-width: 780px) {
+  .isologotipoEnMedio {
+    top: 100px !important;
+    left: -25px !important;
+    width: 80% !important;
+    background-size: 80% !important;
+    max-width: 450px !important;
+    height: 175px !important;
+  }
+  #imageDivContainer {
+    width: 100%;
+    max-width: 254px;
+  }
+  #imageDiv1,
+  #imageDiv2,
+  #imageDiv3{
+    width: 100%;
+    height: 100%;
+    max-height: 254px;
+    max-width: 254px;
+  }
 }
