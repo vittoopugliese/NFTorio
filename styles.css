@@ -22,6 +22,7 @@ a:hover {
 }
 
 body {
+  width: 100vw;
   overflow-x: hidden !important;
   background-image: linear-gradient(to Top, rgb(200, 200, 200) 0%, white 100%);
 }
@@ -159,11 +160,11 @@ p {
   transition: left 0.54s;
 }
 #magixs {
-  bottom: 120px;
+  bottom: 135px;
   left: -200px;
 }
 #normal {
-  bottom: 70px;
+  bottom: 185px;
   left: -200px;
 }
 #productGrid {
@@ -381,7 +382,7 @@ footer {
   z-index: 100;
   border: 2px solid rgba(131, 131, 131, 0.397);
   right: 15px;
-  bottom: 15px;
+  bottom: 90px;
   border-radius: 40px;
   border-style: none;
   height: 50px;
@@ -431,17 +432,250 @@ footer {
   background-attachment: fixed;
 }
 
+/* landing bg */
+
+#landingBody {
+  overflow-x: hidden !important;
+  background: linear-gradient(154deg, #f5f5f5 30%, #7e7e7e 100%);
+  height: 1000vh;
+}
+#landingWrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  user-select: none;
+}
+#imageDivContainer {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  right: 0;
+  top: 10%;
+  width: 100%;
+  max-width: 350px;
+  height: 80vh;
+  /* background-color: rgb(225, 255, 0); */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#imageDiv1,
+#imageDiv2,
+#imageDiv3 {
+  width: 100%;
+  height: 100%;
+  max-height: 354px;
+  max-width: 354px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  box-shadow: 0px 0px 30px rgba(30, 30, 30, 0.8);
+  transition: all 0.4s;
+  border-radius: 25px;
+}
+#imageDiv1 {
+  top: 0;
+  right: 75px;
+}
+#imageDiv2 {
+  top: 30%;
+  right: 75px;
+}
+#imageDiv3 {
+  top: 60%;
+  right: 75px;
+}
+
+/* pleyieerr */
+#reproductor-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 82px;
+  margin: 0px auto;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  z-index: 200;
+  padding: 5px 10px;
+  background-image: linear-gradient(to top, rgb(191, 191, 191) 0%, white 100%);
+  box-shadow: 54px 0px 54px rgb(0 0 0 / 24%);
+  user-select: none;
+  transition: all 0.3s;
+}
+#reproductor {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1285px;
+  margin: 0px auto;
+}
+#songPic {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  border-radius: 10px;
+}
+#controls {
+  position: absolute;
+  width: 100px;
+  height: 50%;
+  top: 15px;
+  right: 41%;
+  transform: scale(1.4) translate(-50%, -50%);
+}
+#playpause {
+  position: absolute;
+  width: 30px;
+  margin: 0px auto;
+  top: 15px;
+  right: 35px;
+  background-color: white;
+  border-radius: 100px;
+  cursor: pointer;
+}
+#last,
+#next {
+  position: absolute;
+  top: 0px;
+  transform: rotate(90deg) scale(0.35);
+  cursor: pointer;
+}
+#next {
+  right: -10px;
+}
+#last {
+  right: 50px;
+  transform: rotate(270deg) scale(0.35);
+}
+#volumeRange {
+  position: absolute;
+  width: 80px;
+  bottom: 30px;
+  right: -50px;
+  transform: rotate(270deg) scale(0.9);
+}
+#songName {
+  font-size: 18px;
+  font-weight: 900;
+  position: absolute;
+  top: 4px;
+  left: 72px;
+  word-wrap: break-word;
+}
+#songCurrentTime,
+#songTime {
+  transform: translate(-50%, -50%);
+}
+#songCurrentTime {
+  position: absolute;
+  left: 94px;
+  top: 38px;
+}
+#songTime {
+  position: absolute;
+  left: 154px;
+  top: 38px;
+}
+#separator {
+  position: absolute;
+  top: 23px;
+  left: 120px;
+  color: black;
+}
+#progressBar {
+  width: 94%;
+  position: absolute;
+  left: 70px;
+  bottom: 2px;
+  margin: 0px auto;
+}
+
 /* Media Queris */
 @media (max-width: 1275px) {
   #productGrid {
     width: 80%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+  #reproductor {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 90%;
+  }
+  #volumeRange {
+    position: absolute;
+    width: 80px;
+    bottom: 30px;
+    right: -30px;
+    transform: rotate(270deg) scale(0.9);
+  }
+  #progressBar{
+    width: 90%;
+  }
 }
 
 @media (max-width: 975px) {
   #productGrid {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #productModal {
+    min-width: 92%;
+  }
+  #nftImage {
+    width: 250px;
+    height: 250px;
+  }
+  #nftTitle,
+  #nftPrice {
+    font-size: 28px;
+  }
+  #nftDescription {
+    font-size: 22px;
+  }
+
+  #reproductor {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0px auto;
+  }
+  #controls {
+    width: 100px;
+    height: 50%;
+    top: 20px;
+    right: -50px;
+    transform: scale(1.8) translate(-50%, -50%);
+  }
+  #playpause {
+    width: 30px;
+    top: 15px;
+    right: 34px;
+    transform: scale(0.74);
+  }
+  #next {
+    right: -3px;
+    transform: rotate(90deg) scale(0.3);
+  }
+  #last {
+    right: 41px;
+    transform: rotate(270deg) scale(0.3);
+  }
+  #volumeRange {
+    width: 80px;
+    bottom: 30px;
+    right: -45px;
+    transform: rotate(270deg) scale(0.8);
+  }
+  #progressBar {
+    width: 90%;
+    left: 70px;
+    bottom:4px;
   }
 }
 
@@ -452,6 +686,27 @@ footer {
   #productModal {
     min-width: 90%;
   }
+  .isologotipoEnMedio {
+    top: 100px !important;
+    left: -25px !important;
+    width: 80% !important;
+    background-size: 80% !important;
+    max-width: 450px !important;
+    height: 175px !important;
+  }
+  #imageDivContainer {
+    width: 100%;
+    max-width: 254px;
+  }
+  #imageDiv1,
+  #imageDiv2,
+  #imageDiv3 {
+    width: 100%;
+    height: 100%;
+    max-height: 254px;
+    max-width: 254px;
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -460,6 +715,11 @@ footer {
   }
   #productModal {
     min-width: 90%;
+  }
+  #progressBar {
+    width: 75%;
+    left: 70px;
+    bottom: 2px;
   }
 }
 
@@ -505,6 +765,14 @@ footer {
   #nftPrice {
     font-size: 35px;
   }
+
+  #controls {
+    width: 100px;
+    height: 50%;
+    top: 30px;
+    right: -64px;
+    transform: scale(1.8) translate(-50%, -50%);
+  }
 }
 
 @media (max-width: 375px) {
@@ -526,20 +794,6 @@ footer {
     font-style: italic;
     margin: 5px auto;
   }
-  #productModal {
-    min-width: 92%;
-  }
-  #nftImage {
-    width: 250px;
-    height: 250px;
-  }
-  #nftTitle,
-  #nftPrice {
-    font-size: 28px;
-  }
-  #nftDescription {
-    font-size: 22px;
-  }
 }
 
 @media (max-width: 325px) {
@@ -549,6 +803,7 @@ footer {
   #productModal {
     min-width: 94%;
   }
+
 }
 
 @media (max-width: 300px) {
@@ -564,83 +819,5 @@ footer {
 @media (max-height: 675px) {
   #nftImage {
     height: 250px;
-  }
-}
-
-/* landing bg */
-
-#landingBody {
-  overflow-x: hidden !important;
-  background: linear-gradient(154deg, #f5f5f5 30%, #7e7e7e 100%);
-}
-#landingWrapper {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  user-select: none;
-}
-#imageDivContainer {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  right: 0;
-  top: 10%;
-  width: 100%;
-  max-width: 350px;
-  height: 80vh;
-  /* background-color: rgb(225, 255, 0); */
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#imageDiv1,
-#imageDiv2,
-#imageDiv3
-{
-  width: 100%;
-  height: 100%;
-  max-height: 354px;
-  max-width: 354px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  box-shadow: 0px 0px 30px rgba(30, 30, 30, 0.80);
-  transition: all 0.4s;
-  border-radius: 25px;
-}
-#imageDiv1 {
-  top: 0;
-  right: 75px;
-}
-#imageDiv2 {
-  top: 30%;
-  right: 75px;
-}
-#imageDiv3 {
-  top: 60%;
-  right: 75px;
-}
-@media (max-width: 780px) {
-  .isologotipoEnMedio {
-    top: 100px !important;
-    left: -25px !important;
-    width: 80% !important;
-    background-size: 80% !important;
-    max-width: 450px !important;
-    height: 175px !important;
-  }
-  #imageDivContainer {
-    width: 100%;
-    max-width: 254px;
-  }
-  #imageDiv1,
-  #imageDiv2,
-  #imageDiv3{
-    width: 100%;
-    height: 100%;
-    max-height: 254px;
-    max-width: 254px;
   }
 }

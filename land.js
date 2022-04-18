@@ -47,6 +47,7 @@ window.addEventListener('scroll', () => {
 
 
 // random index generator !  -- R I G --
+const urlBtn = document.querySelectorAll('#url');
 let randomNumber = Math.abs(Math.floor(Math.random()*20 - 10));
 
 imageDiv1.style.backgroundImage = `url(https://raw.githubusercontent.com/vittoopugliese/public-imgs/main/NFTorio/imgs/NFTs/nft${randomNumber + 1}.webp)`;
@@ -57,3 +58,7 @@ imageDiv3.style.backgroundImage = `url(https://raw.githubusercontent.com/vittoop
 if (window.matchMedia('screen and (max-width: 400px)').matches == true){
 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.scrollTo(100, 0);
+})
