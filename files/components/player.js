@@ -70,6 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+if(!localStorage.getItem("track")){
+  localStorage.setItem("track", 0)
+}
+
 playpause.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();

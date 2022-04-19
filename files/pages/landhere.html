@@ -7,62 +7,77 @@
     <meta property="og:title" content="NFTorio">
     <meta property="og:type" content="image.img" />
     <meta property="og:description" content="NFT Marketplace by Vittorio">
-    <meta property="og:image" content="https://raw.githubusercontent.com/vittoopugliese/NFTorio/main/imgs/thumbnail.png">
+    <meta property="description" content="NFT Marketplace by Vittorio">
+    <meta property="og:image" content="https://www.mediafire.com/convkey/0d91/gnr1a67fh8r5yw09g.jpg">
     <meta property="og:url" content="https://nftorio.vittoriopugliese.com/">
     <meta name="twitter:card" content="nftorio_card">
     <link rel="shortcut icon" href="../imgs/favicon.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../styles.css">
     <title>NFTorio</title>
 </head>
-<body id="landingBody" style="overflow: hidden;">
+<body id="body" style="overflow: hidden;">
+<!-- player -->
+    <!-- <div id="reproductor-container"></div> -->
 <!-- preload -->
     <div id="spinnerCenter">
-        <img draggable="false" style="width: 5.4rem; height: 5.4rem;" src="../imgs/svgs/spinner.svg"></img>
-        <img draggable="false" style="width: 200px;margin-top: 10px;" src="../imgs/nftorio.png" alt="nav-brand-logo">
+        <img alt="preloadImg" draggable="false" style="width: 5.4rem; height: 5.4rem;" src="../imgs/svgs/spinner.svg"alt="nav-brand-spinner">
+        <img alt="preloadImg" draggable="false" style="width: 220px;margin-top: 10px;" src="../imgs/nftorio.png" alt="nav-brand-logo">
     </div>
-<!-- player -->
-<div id="reproductor-container">
-    <div id="reproductor">
-        <audio id="audio" preload="metadata">
-            <source id="source" type="audio/mpeg">
-        </audio>
-
-        <img id="songPic" alt="player" draggable="false">
-        <h4 id="songName"></h4>
-
-        <input type="range" id="progressBar" value="0" min="0" max="10" step="0.1">
-        <h4 id="songCurrentTime"></h4>
-        <h4 id="songTime"></h4>
-        <h4 id="separator">_</h4>
-
-        <div id="controls">
-            <img id="last" src="../imgs/svgs/nextMusic.png">
-            <img id="playpause" src="../imgs/svgs/playMusic.png">
-            <img id="next" src="../imgs/svgs/nextMusic.png">
-        </div>
-
-        <input type="range" id="volumeRange" value="1" step="0.1" min="0" max="1">
-    </div>
-</div>
-<!-- nav --> 
+<!-- nav -->
     <header>
-        <nav id="nav">
-            <a href="../index.html" id="isologotipo" class="isologotipoEnMedio"></a>
+        <nav>
+            <a href="landhere.html" id="isologotipo"></a>
         </nav>
     </header>
-<!-- indice -->
-<div id="landingWrapper">
-    
-    <div id="imageDivContainer">
-        <div id="imageDiv1"></div>
-        <div id="imageDiv2"></div>
-        <div id="imageDiv3"></div>
-    </div>
-  
-</div>
+<!-- index -->
+<div id="wrapper">
 
-<script src="../docs/land.js"></script>
-<script src="../docs/player.js"></script>
+</div>
+<!-- footer -->
+<footer>
+    <div id="footerContainer">
+        <div class="webDescription">
+            <a href="landhere.html" id="isologotipo"></a>
+            <h4>The world's first and largest digital marketplace for crypto collectibles and non-fungible tokens (NFTs). Buy, sell, and discover exclusive digital items.</h4>
+        </div>
+
+        <div id="separatorBar"></div>
+
+        <div class="socialMedia">
+            <div class="socialMediaTexts">
+                <h2>Stay in the loop</h2>
+                <h4>Join our mailing list to stay in the loop with our newest feature releases, NFT drops, and tips and tricks for navigating OpenSea.</h4>
+            </div>
+
+            <div class="footerEmailInputs">
+                <input type="text" id="emailInputText" placeholder="Your Email Adress">
+                <button id="emailInputButton">Sign up</button>
+            </div>
+
+            <div class="mediaIcons">
+                <h2>Join the community</h2>
+                <div class="iconGroup">
+                    <div class="icon discord"></div>
+                    <div class="icon instagram"></div>
+                    <div class="icon twitter"></div>
+                    <div class="icon reddit"></div>
+                    <div class="icon youtube"></div>
+                    <div class="icon tiktok"></div>
+                </div>
+            </div>
+
+            <div class="boringThings">
+                <p>© 2021 - 2022 Torio Networks, Inc. </p>
+                <p>Service Terms</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src=../../files/components/preload.js></script>
+<script src=../../files/components/objects.js></script>
+<script src=../../files/components/web3.js></script>
+<script src=../../files/components/player.js></script>
 </body>
+
 </html>
 
