@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,82 +11,51 @@
     <meta property="og:image" content="https://www.mediafire.com/convkey/0d91/gnr1a67fh8r5yw09g.jpg">
     <meta property="og:url" content="https://nftorio.vittoriopugliese.com/">
     <meta name="twitter:card" content="nftorio_card">
-    <link rel="shortcut icon" href="imgs/favicon.png">
+    <link rel="shortcut icon" href="files/imgs/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <title>NFTorio</title>
 </head>
-
 <body id="body" style="overflow: hidden;">
-    <!-- preload -->
-    <div id="reproductor-container">
-        <div id="reproductor">
-            <audio id="audio" preload="metadata">
-                <source id="source" type="audio/mpeg">
-            </audio>
-
-            <img id="songPic" alt="player" draggable="false">
-            <h4 id="songName"></h4>
-
-            <input type="range" id="progressBar" value="0" min="0" max="10" step="0.1">
-            <h4 id="songCurrentTime"></h4>
-            <h4 id="songTime"></h4>
-            <h4 id="separator">_</h4>
-
-            <div id="controls">
-                <img id="last" src="imgs/svgs/nextMusic.png">
-                <img id="playpause" src="imgs/svgs/playMusic.png">
-                <img id="next" src="imgs/svgs/nextMusic.png">
-            </div>
-
-            <input type="range" id="volumeRange" value="1" step="0.1" min="0" max="1">
-        </div>
-    </div>
-
+<!-- player -->
+<div id="reproductor-container"></div>
+<!-- preload -->
     <div id="spinnerCenter">
-        <img alt="preloadImg" draggable="false" style="width: 5.4rem; height: 5.4rem;"
-            src="imgs/svgs/spinner.svg"></img>
-        <img alt="preloadImg" draggable="false" style="width: 220px;margin-top: 10px;" src="imgs/nftorio.png"
-            alt="nav-brand-logo">
+        <img alt="preloadImg" draggable="false" style="width: 5.4rem; height: 5.4rem;" src="files/imgs/svgs/spinner.svg"alt="nav-brand-spinner">
+        <img alt="preloadImg" draggable="false" style="width: 220px;margin-top: 10px;" src="files/imgs/nftorio.png" alt="nav-brand-logo">
     </div>
     <!-- nav -->
     <div id="modalBackground" style="display: none;"></div>
+<!-- nav -->
     <header>
         <nav>
-            <a href="index.html" id="isologotipo"></a>
-            <button id="mask" onclick="connect()" type="button"><img draggable="false" src="imgs/svgs/metamask.svg"
-                    alt="metamask connect button" style="height: 2.5em;width: 2.5em;user-select: none;"></button>
+            <a href="../../index.html" id="isologotipo"></a>
+            <button id="mask" onclick="connect()" type="button">
+                <img draggable="false" src="files/imgs/svgs/metamask.svg" alt="metamask-connect-button" style="height: 2.5em;width: 2.5em;user-select: none;">
+            </button>
         </nav>
     </header>
-    <!-- search -->
+<!-- search -->
     <aside id="aSide">
         <div id="aside-wrapper">
             <h2 id="search-text">Search...</h2>
             <div>
-                <img src="imgs/svgs/search.svg" id="search-icon" alt="search icon">
-                <input id="search-input" type="text" value="" name="search-input">
+                <img src="files/imgs/svgs/search.svg" id="search-icon" alt="search icon">
+                <input id="search-input" type="text" name="search-input">
             </div>
-
-            <button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;"
-                    src="imgs/svgs/cod.png"></button>
-            <button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;"
-                    src="imgs/svgs/codo.png"></button>
+            <button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="files/imgs/svgs/cod.png"></button>
+            <button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="files/imgs/svgs/codo.png"></button>
         </div>
     </aside>
-    <!-- modal -->
+<!-- modal -->
     <div id="productModal" style="display: none;" class="productBoxNFT"></div>
-    <!-- eneftis -->
+<!-- eneftis -->
     <div id="wrapper">
         <h2>Image Repository</h2>
-        <p>all images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
+        <p>All images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
 
         <div id="productGrid">
             <div id="added" style="display: none;"></div>
-            <div id="added">
-                <button class="Fbtn" id="musicBtn" track="0">insanity</button>
-                <button class="Fbtn" id="musicBtn" track="1">proto</button>
-                <button class="Fbtn" id="musicBtn" track="2">oro</button>
-                <button class="Fbtn" id="musicBtn" track="3">satm</button>
-            </div>
+            <div id="added"></div>
             <div id="added"></div>
             <div id="added"></div>
             <div id="added"></div>
@@ -124,18 +92,22 @@
             <div id="added"></div>
             <div id="added"></div>
         </div>
-
 
     </div>
-    <!-- footer -->
-    <footer>
-        <div>
-            <a class="blockoPayBtn" style="cursor: pointer;color: white;" data-toggle="modal"
-                data-uid=13c84765d6454330>click for surprise !!</a>
-        </div>
-    </footer>
-    <script src="https://www.blockonomics.co/js/pay_button.js"></script>
-    <script src="app.js"></script>
+<!-- footer -->
+<footer>
+    <div>
+        <a class="blockoPayBtn" style="cursor: pointer;color: white;" data-toggle="modal" data-uid=13c84765d6454330>click for surprise !!</a>
+    </div>
+</footer>
+<script src="https://www.blockonomics.co/js/pay_button.js"></script>
+<script src="files/components/preload.js"></script>
+<script src="files/components/objects.js"></script>
+<script src="files/components/dig.js"></script>
+<script src="files/components/search.js"></script>
+<script src="files/components/share.js"></script>
+<script src="files/components/web3.js"></script>
+<script src="files/components/player.js"></script>
 </body>
 
 </html>

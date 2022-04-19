@@ -18,7 +18,7 @@ a {
   color: black;
 }
 a:hover {
-  color: rgb(70, 70, 70);
+  color: rgb(205, 205, 205);
 }
 
 body {
@@ -69,9 +69,9 @@ nav {
 }
 #isologotipo {
   margin: auto 0px;
-  background-image: url(imgs/nftorio.png);
+  background-image: url(files/imgs/nftorio.png);
   width: 135px;
-  height: 40px;
+  height: 45px;
   background-repeat: no-repeat;
   background-size: 135px;
   background-position: center;
@@ -487,11 +487,126 @@ footer {
   top: 60%;
   right: 75px;
 }
+/* music gridz */
+#musicGrid{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin: 0px auto;
+}
+.trackBox{
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 27% 33% 20% 20% ;
+  max-width: 800px;
+  min-width: 600px;
+  max-height: 222px;
+  padding: 20px;
+  margin: 2px auto;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: filter 0.15s, border 0.25s;
+}
+.trackBox:hover{
+  background-color: rgba(255, 255, 255, 0.472);
+  filter: drop-shadow(0px 0px 12px rgba(154, 154, 154, 0.9));
+  border: 2px solid rgb(220, 220, 220);
+}
+.trackImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  margin: 3px auto;
+  width: 174px;
+  height: 174px;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 5px 5px 12px 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: width 0.3s, height 0.3s;
+  filter: saturate(1.05);
+}
+.trackTitle{
+  grid-column: 2/3;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 10px auto 0px auto;
+  white-space: nowrap;
+}
+.trackDescription{
+  grid-column: 2/3;
+  width: 90%;
+  font-size: 18px;
+  font-style: italic;
+  margin: 5px auto;
+}
+.trackPrice{
+  grid-column: 2/3;
+  font-size: 28px;
+  margin: 2px auto 4px auto;
+  font-weight: 900;
+  font-style: normal;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.SCbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  font-weight: 900;
+  color: black;
+  font-size: 16px;
+  border-style: none;
+  background-color: #ff7c1e;
+  border: 1px solid rgb(214, 88, 10);
+  box-shadow: #fb6a03 2px 2px 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  left: 200px;
+}
+.detailsBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  grid-column: 2/3;
+  grid-row: 4/5;
+  font-weight: 900;
+  color: white;
+  font-size: 16px;
+  border-style: none;
+  background-color: #2d2d2d;
+  box-shadow: #484848 2px 2px 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  left: 40px;
+}
+.playBtn{
+  border-style: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  width: 70px;
+  opacity: 0.54;
+}
 
 /* pleyieerr */
-#reproductor-container {
+#reproductor-container{
   display: flex;
-  justify-content: space-between;
   width: 100vw;
   height: 82px;
   margin: 0px auto;
@@ -501,10 +616,14 @@ footer {
   z-index: 200;
   padding: 5px 10px;
   background-image: linear-gradient(to top, rgb(191, 191, 191) 0%, white 100%);
+  border-top: 1px solid rgb(191, 191, 191);
   box-shadow: 54px 0px 54px rgb(0 0 0 / 24%);
   user-select: none;
   transition: all 0.3s;
 }
+/* #reproductor-container:hover{
+  height: 120px;
+} */
 #reproductor {
   position: relative;
   display: flex;
@@ -525,7 +644,7 @@ footer {
   position: absolute;
   width: 100px;
   height: 50%;
-  top: 15px;
+  top: 20px;
   right: 41%;
   transform: scale(1.4) translate(-50%, -50%);
 }
@@ -533,7 +652,7 @@ footer {
   position: absolute;
   width: 30px;
   margin: 0px auto;
-  top: 15px;
+  top: 10px;
   right: 35px;
   background-color: white;
   border-radius: 100px;
@@ -542,16 +661,16 @@ footer {
 #last,
 #next {
   position: absolute;
-  top: 0px;
-  transform: rotate(90deg) scale(0.35);
+  top: 5px;
+  transform: rotate(0deg) scale(0.6);
   cursor: pointer;
 }
 #next {
-  right: -10px;
+  right: 3px;
 }
 #last {
-  right: 50px;
-  transform: rotate(270deg) scale(0.35);
+  right: 57px;
+  transform: rotate(180deg) scale(0.6);
 }
 #volumeRange {
   position: absolute;
@@ -625,11 +744,11 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
   }
   #productModal {
-    min-width: 92%;
+    min-width: 54%;
   }
   #nftImage {
-    width: 250px;
-    height: 250px;
+    width: 325px;
+    height: 325px;
   }
   #nftTitle,
   #nftPrice {
@@ -650,21 +769,21 @@ footer {
     height: 50%;
     top: 20px;
     right: -50px;
-    transform: scale(1.8) translate(-50%, -50%);
+    transform: scale(1.2) translate(-50%, -50%);
   }
   #playpause {
     width: 30px;
-    top: 15px;
-    right: 34px;
-    transform: scale(0.74);
+    top: 10px;
+    right: 70px;
+    transform: scale(1);
   }
   #next {
-    right: -3px;
-    transform: rotate(90deg) scale(0.3);
+    right: 40px;
+    transform: rotate(0deg) scale(0.54);
   }
   #last {
-    right: 41px;
-    transform: rotate(270deg) scale(0.3);
+    right: 90px;
+    transform: rotate(180deg) scale(0.54);
   }
   #volumeRange {
     width: 80px;
@@ -707,6 +826,11 @@ footer {
     max-width: 254px;
   }
 
+  #progressBar {
+    width: 87%;
+    left: 70px;
+    bottom: 2px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -717,7 +841,7 @@ footer {
     min-width: 90%;
   }
   #progressBar {
-    width: 75%;
+    width: 72%;
     left: 70px;
     bottom: 2px;
   }
@@ -771,7 +895,7 @@ footer {
     height: 50%;
     top: 30px;
     right: -64px;
-    transform: scale(1.8) translate(-50%, -50%);
+    transform: scale(1.4) translate(-50%, -50%);
   }
 }
 
@@ -793,6 +917,17 @@ footer {
     text-align: center;
     font-style: italic;
     margin: 5px auto;
+  }
+  #nftImage {
+    width: 275px;
+    height: 275px;
+  }
+  #controls {
+    width: 100px;
+    height: 50%;
+    top: 20px;
+    right: -100px;
+    transform: scale(1.2) translate(-50%, -50%);
   }
 }
 
@@ -818,6 +953,10 @@ footer {
 
 @media (max-height: 675px) {
   #nftImage {
+    width: 250px;
     height: 250px;
+  }
+  #productModal {
+    min-width: 85%;
   }
 }
