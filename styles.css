@@ -668,6 +668,7 @@ footer {
   left: 50%;
   filter: invert(1);
   transform: translate(-50%, -50%);
+  transition: filter 0.5s ease-in-out;
 }
 .webDescription h4{
   position: relative;
@@ -675,12 +676,24 @@ footer {
   font-size: 18px;
 }
 .socialMedia{
-}
 
+}
 .socialMediaTexts{
 
 }
+.socialMediaTexts h2{
+
+}
+.socialMediaTexts h4{
+
+}
 .footerEmailInputs{
+
+}
+#emailInputText{
+
+}
+#emailInputButton{
 
 }
 .mediaIcons{
