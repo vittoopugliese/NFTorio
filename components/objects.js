@@ -289,7 +289,7 @@ const tracks = [
       tags: "anache es el 1",
       image:"https://raw.githubusercontent.com/vittoopugliese/public-imgs/main/NFTorio/imgs/NFTs/nft1.webp",
       scLink: "https://soundcloud.com/vittoopugliese/insanity",
-      src: "../../files/imgs/audio/Insanity.mp3",
+      src: "../imgs/audio/Insanity.mp3",
     }),
     (protowave = {
       title: "Protowave111",
@@ -299,7 +299,7 @@ const tracks = [
       tags: "anache es el 2",
       image:"https://raw.githubusercontent.com/vittoopugliese/public-imgs/main/NFTorio/imgs/NFTs/nft2.webp",
       scLink: "https://soundcloud.com/vittoopugliese/protoboy-111",
-      src: "../../files/imgs/audio/Protowave111.mp3",
+      src: "../imgs/audioProtowave111.mp3",
     }),
     (oro = {
       title: "ORO",
@@ -309,7 +309,7 @@ const tracks = [
       tags: "anache es el 3",
       image:"https://raw.githubusercontent.com/vittoopugliese/public-imgs/main/NFTorio/imgs/NFTs/Oro.png",
       scLink: "https://soundcloud.com/vittoopugliese/oro",
-      src: "../../files/imgs/audio/ORO.mp3",
+      src: "../imgs/audio/ORO.mp3",
     }),
     (satm = {
       title: "Sorry About The Mess",
@@ -319,6 +319,6 @@ const tracks = [
       tags: "anache es el 4",
       image:"https://raw.githubusercontent.com/vittoopugliese/public-imgs/main/NFTorio/imgs/NFTs/nft3.webp",
       scLink: "https://soundcloud.com/vittoopugliese/aah",
-      src: "../../files/imgs/audio/Sorry About The Mess.mp3",
+      src: "../imgs/audio/Sorry About The Mess.mp3",
     }),
 ];

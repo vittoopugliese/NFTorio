@@ -11,7 +11,7 @@
     <meta property="og:image" content="https://www.mediafire.com/convkey/0d91/gnr1a67fh8r5yw09g.jpg">
     <meta property="og:url" content="https://nftorio.vittoriopugliese.com/">
     <meta name="twitter:card" content="nftorio_card">
-    <link rel="shortcut icon" href="files/imgs/favicon.png">
+    <link rel="shortcut icon" href="imgs/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <title>NFTorio</title>
 </head>
@@ -20,17 +20,17 @@
 <div id="reproductor-container"></div>
 <!-- preload -->
     <div id="spinnerCenter">
-        <img alt="preloadImg" draggable="false" style="width: 5.4rem; height: 5.4rem;" src="files/imgs/svgs/spinner.svg"alt="nav-brand-spinner">
-        <img alt="preloadImg" draggable="false" style="width: 220px;margin-top: 10px;" src="files/imgs/nftorio.png" alt="nav-brand-logo">
+        <img alt="preloadImg" draggable="false" style="width: 5.4rem; height: 5.4rem;" src="imgs/svgs/spinner.svg"alt="nav-brand-spinner">
+        <img alt="preloadImg" draggable="false" style="width: 220px;margin-top: 10px;" src="imgs/nftorio.png" alt="nav-brand-logo">
     </div>
 <!-- modalBg -->
     <div id="modalBackground" style="display: none;"></div>
 <!-- nav -->
     <header>
         <nav>
-            <a href="files/pages/landhere.html" id="isologotipo"></a>
+            <a href="pages/landhere.html" id="isologotipo"></a>
             <button id="mask" onclick="connect()" type="button">
-                <img draggable="false" src="files/imgs/svgs/metamask.svg" alt="metamask-connect-button" style="height: 2.5em;width: 2.5em;user-select: none;">
+                <img draggable="false" src="imgs/svgs/metamask.svg" alt="metamask-connect-button" style="height: 2.5em;width: 2.5em;user-select: none;">
             </button>
         </nav>
     </header>
@@ -39,11 +39,11 @@
         <div id="aside-wrapper">
             <h2 id="search-text">Search...</h2>
             <div>
-                <img src="files/imgs/svgs/search.svg" id="search-icon" alt="search icon">
+                <img src="imgs/svgs/search.svg" id="search-icon" alt="search icon">
                 <input id="search-input" type="text" name="search-input">
             </div>
-            <button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="files/imgs/svgs/cod.png"></button>
-            <button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="files/imgs/svgs/codo.png"></button>
+            <button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="imgs/svgs/cod.png"></button>
+            <button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="imgs/svgs/codo.png"></button>
         </div>
     </aside>
 <!-- modal -->
@@ -95,19 +95,17 @@
 
     </div>
 <!-- footer -->
-<footer>
-    <div>
-        <a class="blockoPayBtn" style="cursor: pointer;color: white;" data-toggle="modal" data-uid=13c84765d6454330>click for surprise !!</a>
-    </div>
-</footer>
+    <footer id="innerFooter"></footer>
+<!-- scripts -->
 <script src="https://www.blockonomics.co/js/pay_button.js"></script>
-<script src="files/components/preload.js"></script>
-<script src="files/components/objects.js"></script>
-<script src="files/components/dig.js"></script>
-<script src="files/components/search.js"></script>
-<script src="files/components/share.js"></script>
-<script src="files/components/web3.js"></script>
-<script src="files/components/player.js"></script>
+<script src="components/preload.js"></script>
+<script src="components/objects.js"></script>
+<script src="components/dig.js"></script>
+<script src="components/search.js"></script>
+<script src="components/share.js"></script>
+<script src="components/web3.js"></script>
+<script src="components/player.js"></script>
+<script src="components/footer.js"></script>
 </body>
 
 </html>

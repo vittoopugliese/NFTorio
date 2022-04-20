@@ -69,7 +69,7 @@ nav {
 }
 #isologotipo {
   margin: auto 0px;
-  background-image: url(files/imgs/nftorio.png);
+  background-image: url(imgs/nftorio.png);
   width: 135px;
   height: 45px;
   background-repeat: no-repeat;
@@ -77,14 +77,6 @@ nav {
   background-position: center;
   position: absolute;
   transition: all 0.54s ease-out;
-}
-.isologotipoEnMedio {
-  top: 100px !important;
-  left: 2% !important;
-  width: 80% !important;
-  background-size: 80% !important;
-  max-width: 600px !important;
-  height: 200px !important;
 }
 h2 {
   text-align: center;
@@ -181,7 +173,7 @@ p {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  padding: 10px;
+  padding: 15px;
   margin: 2px;
   border: 2px solid transparent;
   border-radius: 10px;
@@ -267,7 +259,6 @@ p {
   border-left: 3px solid rgb(54, 54, 54);
   border-top: 3px solid rgb(54, 54, 54);
 }
-
 #InspectButtons {
   display: flex;
   width: 100%;
@@ -657,35 +648,35 @@ footer {
   height: 600px;
   width: 100vw;
   background-color: rgb(30, 30, 30);
-  margin: 0 auto;
+  margin: 0px auto;
   color: white;
   border-top: 25px solid rgba(45, 45, 45, 0.75);
 }
 #footerContainer{
-  width: 74%;
+  width: 84%;
   height: 100%;
   margin: 0px auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 .webDescription{
-  background-color: #323232;
-  width: 100vw;
-  height: 100px;
+  width: 100%;
+  height: 120px;
 }
 .webDescription #isologotipo{
-  transform: translate(-50%, -50%);
   top: 25px;
   left: 50%;
   filter: invert(1);
+  transform: translate(-50%, -50%);
 }
 .webDescription h4{
   position: relative;
   top: 50px;
+  font-size: 18px;
 }
 .socialMedia{
-  display: none;
 }
+
 .socialMediaTexts{
 
 }
@@ -702,12 +693,18 @@ footer {
 
 }
 .boringThings{
-
+  display: flex;
+  justify-content: space-between;
 }
 #separatorBar{
-  border: 2px solid white;
-  width: 80%;
-  height: 2px;
+  width: 65%;
+  height:2px;
+  margin: 0px auto;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  background-color: #848484;
+  transform: translate(-50%, -50%);
 }
 
 /* Media Queris */
@@ -799,14 +796,6 @@ footer {
   }
   #productModal {
     min-width: 90%;
-  }
-  .isologotipoEnMedio {
-    top: 100px !important;
-    left: -25px !important;
-    width: 80% !important;
-    background-size: 80% !important;
-    max-width: 450px !important;
-    height: 175px !important;
   }
 
   #progressBar {

@@ -27,9 +27,7 @@ function loadTracks() {
         `
     }
 }
-
 loadTracks()
-
 
 const trackBox = document.querySelectorAll('.trackBox');
 const trackImage = document.querySelectorAll('.trackImage');
@@ -38,3 +36,8 @@ const trackDescription = document.querySelectorAll('.trackDescription');
 const trackPrice = document.querySelectorAll('.trackPrice');
 const detailsBtn = document.querySelectorAll('.detailsBtn');
 const SCbtn = document.querySelectorAll('.SCbtn');
+
+// random index generator !  -- R I G -- (mover a documento por separado cuando sea necesario)
+const urlBtn = document.querySelectorAll('#url');
+let randomNumber = Math.abs(Math.floor(Math.random()*20 - 10));
+if (window.matchMedia('screen and (max-width: 400px)').matches == true){}

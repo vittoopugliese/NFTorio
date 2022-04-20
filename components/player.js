@@ -15,9 +15,9 @@ reproductor.innerHTML = `
     <h4 id="separator">_</h4>
 
     <div id="controls">
-        <img id="last" src="../../files/imgs/svgs/nextMusic.png" draggable="false">
-        <img id="playpause" src="../../files/imgs/svgs/playMusic.png" draggable="false">
-        <img id="next" src="../../files/imgs/svgs/nextMusic.png" draggable="false">
+        <img id="last" src="../imgs/svgs/nextMusic.png" draggable="false">
+        <img id="playpause" src="../imgs/svgs/playMusic.png" draggable="false">
+        <img id="next" src="../imgs/svgs/nextMusic.png" draggable="false">
     </div>
 
     <input type="range" id="volumeRange" value="1" step="0.1" min="0" max="1">
@@ -45,7 +45,7 @@ for (let i = 0; i < playBtn.length; i++) {
     songPic.src = tracks[`${track}`].image;
     songName.innerHTML = tracks[`${track}`].title;
     songTime.innerHTML = tracks[`${track}`].duration;
-    playpause.src = "../../files/imgs/svgs/pauseMusic.png";
+    playpause.src = "../imgs/svgs/pauseMusic.png";
     audio.play();
     audio.onloadedmetadata = function () {
       progressBar.max = audio.duration;
@@ -77,10 +77,10 @@ if(!localStorage.getItem("track")){
 playpause.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    playpause.src = "../../files/imgs/svgs/pauseMusic.png";
+    playpause.src = "../imgs/svgs/pauseMusic.png";
   } else {
     audio.pause();
-    playpause.src = "../../files/imgs/svgs/playMusic.png";
+    playpause.src = "../imgs/svgs/playMusic.png";
   }
 });
 
