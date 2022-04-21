@@ -1,4 +1,18 @@
 // search
+const asideWrapper = document.querySelector('#aSide');
+
+asideWrapper.innerHTML = `
+<div id="aside-wrapper">
+<h2 id="search-text">Search...</h2>
+<div>
+    <img src="../imgs/svgs/search.svg" id="search-icon" alt="search icon">
+    <input id="search-input" type="text" name="search-input">
+</div>
+<button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/cod.png"></button>
+<button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/codo.png"></button>
+</div>
+`
+
 const searchText = document.querySelector("#search-text");
 const searchInput = document.querySelector("#search-input");
 const searchIcon = document.querySelector("#search-icon");

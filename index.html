@@ -17,95 +17,35 @@
 </head>
 <body id="body" style="overflow: hidden;">
 <!-- player -->
-<div id="reproductor-container"></div>
+<div id="reproductor-container" style="display: none;"></div>
 <!-- preload -->
-    <div id="spinnerCenter">
-        <img alt="preloadImg" draggable="false" style="width: 5.4rem; height: 5.4rem;" src="imgs/svgs/spinner.svg"alt="nav-brand-spinner">
-        <img alt="preloadImg" draggable="false" style="width: 220px;margin-top: 10px;" src="imgs/nftorio.png" alt="nav-brand-logo">
-    </div>
-<!-- modalBg -->
-    <div id="modalBackground" style="display: none;"></div>
+    <div id="preLoad"></div>
 <!-- nav -->
-    <header>
-        <nav>
-            <a href="pages/landhere.html" id="isologotipo"></a>
-            <button id="mask" onclick="connect()" type="button">
-                <img draggable="false" src="imgs/svgs/metamask.svg" alt="metamask-connect-button" style="height: 2.5em;width: 2.5em;user-select: none;">
-            </button>
-        </nav>
-    </header>
-<!-- search -->
-    <aside id="aSide">
-        <div id="aside-wrapper">
-            <h2 id="search-text">Search...</h2>
-            <div>
-                <img src="imgs/svgs/search.svg" id="search-icon" alt="search icon">
-                <input id="search-input" type="text" name="search-input">
-            </div>
-            <button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="imgs/svgs/cod.png"></button>
-            <button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="imgs/svgs/codo.png"></button>
-        </div>
-    </aside>
-<!-- modal -->
-    <div id="productModal" style="display: none;" class="productBoxNFT"></div>
-<!-- eneftis -->
-    <div id="wrapper">
-        <h2>Image Repository</h2>
-        <p>All images are at least 1000x1000px. Images displayed on the page are in low-res on purpose.</p>
+    <header></header>
+<!-- index -->
+<div id="wrapper">
 
-        <div id="productGrid">
-            <div id="added" style="display: none;"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
-            <div id="added"></div>
+    <div style="display: flex;flex-direction: column;position: absolute;transform: translate(-50%,-50%);top: 40%;left: 50%;">
+        <h4 style="font-size: 30px;">Index Page Work in Progress...</h4>
+        <img width="300px" draggable="false" src="https://www.memesmonkey.com/images/memesmonkey/c9/c90d64a747621649b15dcc56abc7a791.jpeg">
+        <div style="display: flex;flex-direction: column;justify-content: center;">
+            <button style="margin: 10px;width: 65%;display: flex;justify-content: center;align-items: center;left: 30px;position: relative;" class="Fbtn"><a href="pages/images.html" style="color: white;">Image Repository</a></button>
+            <button style="margin: 10px;width: 65%;display: flex;justify-content: center;align-items: center;left: 30px;position: relative;" class="Fbtn"><a href="pages/music.html" style="color: white;">Music Repository</a></button>
+            <button style="margin: 10px;width: 65%;display: flex;justify-content: center;align-items: center;left: 30px;position: relative;" class="Fbtn" id="ijustwantmusic">I just want to listen music</button>
         </div>
-
     </div>
+
+</div>
 <!-- footer -->
-    <footer id="innerFooter"></footer>
+<footer id="innerFooter"></footer>
 <!-- scripts -->
-<script src="https://www.blockonomics.co/js/pay_button.js"></script>
 <script src="components/preload.js"></script>
+<script src="components/nav.js"></script>
 <script src="components/objects.js"></script>
-<script src="components/dig.js"></script>
-<script src="components/search.js"></script>
-<script src="components/share.js"></script>
 <script src="components/web3.js"></script>
 <script src="components/player.js"></script>
 <script src="components/footer.js"></script>
 </body>
 
 </html>
+

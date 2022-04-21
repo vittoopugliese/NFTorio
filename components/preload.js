@@ -1,16 +1,21 @@
 // preload
 const body = document.getElementById("body");
-const spinning = document.getElementById("spinnerCenter");
+const preLoad = document.getElementById("preLoad");
 const wrapper = document.querySelector("#wrapper");
+preLoad.innerHTML = `
+<img alt="preloadImg" draggable="false" style="width: 5.4rem; height: 5.4rem;" src="../imgs/svgs/spinner.svg"alt="nav-brand-spinner">
+<img alt="preloadImg" draggable="false" style="width: 220px;margin-top: 10px;" src="../imgs/nftorio.png" alt="nav-brand-logo">
+`
 
 wrapper.style.filter = "blur(50px)";
+
 window.onload = function () {
   body.style.overflow = "auto";
   wrapper.style.filter = "blur(0px)";
   setTimeout(() => {
-    spinning.style.opacity = "0";
+    preLoad.style.opacity = "0";
     setTimeout(() => {
-      spinning.style.display = "none";
+      preLoad.style.display = "none";
       window.scrollTo(0, 0);
     }, 400);
   }, 300);

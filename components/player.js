@@ -70,10 +70,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-if(!localStorage.getItem("track")){
-  localStorage.setItem("track", 0)
-}
-
 playpause.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
@@ -92,7 +88,7 @@ vol.addEventListener("change", () => {
 audio.addEventListener("timeupdate", function () {
   let currentTime = parseInt(audio.currentTime);
   let setCurrentTime = "00:0" + currentTime;
-
+  
   if (currentTime > 9) {
     setCurrentTime = "00:" + currentTime;
   }
@@ -129,5 +125,34 @@ progressBar.addEventListener("click", (e) => {
   let clickedValue = e.target.value;
   audio.currentTime = clickedValue;
   progressBar.value = clickedValue;
-  console.log('hola')
 });
+
+// detect page and execute this (apparently working...)
+
+const host = "https://nftorio.vittoriopugliese.com/"
+if (window.location.href == host + 'pages/images.html') {
+  if(!localStorage.getItem('track')){
+    reproductor.style.display = 'none'
+  } else{
+    reproductor.style.display = 'flex'
+  }
+} 
+
+if (window.location.href == host + 'index.html') {
+  if(localStorage.getItem('track')){
+    reproductor.style.display = 'flex'
+  }else {
+    reproductor.style.display = 'none'
+  }
+}
+
+if(!localStorage.getItem("track")){
+  localStorage.setItem("track", 0)
+}
+
+// index temp -- ijustwantmusic
+ijustwantmusic.addEventListener('click', ()=>{
+  localStorage.setItem("track", 0)
+  reproductor.style.display = 'flex'
+})
+

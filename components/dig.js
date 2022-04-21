@@ -54,16 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <p id="nftPrice">${price[i].innerHTML}</p>
             <div id="CryptoButtons">
                 <a id="CryptoButtons" class="blockoPayBtn" data-toggle="modal" data-uid=${dataUid}>
-                    <img src="imgs/svgs/bitcoin.svg" alt="bitcoin purchase button">
+                    <img src="../imgs/svgs/bitcoin.svg" alt="bitcoin purchase button">
                 </a>
                 <a id="CryptoButtons">
-                    <img src="imgs/svgs/ethereum.svg" alt="ethereum purchase button">
+                    <img src="../imgs/svgs/ethereum.svg" alt="ethereum purchase button">
                 </a>
                 <a id="CryptoButtons">
-                    <img onclick="share()" src="imgs/svgs/share.png" alt="share button">
+                    <img onclick="share()" src="../imgs/svgs/share.png" alt="share button">
                 </a>
             </div>
-            <img id="cruz" src="imgs/svgs/x.svg">`;
+            <img id="cruz" src="../imgs/svgs/x.svg">`;
 
         setTimeout(() => {
           productModal.style.opacity = "1";

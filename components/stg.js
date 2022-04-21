@@ -1,9 +1,8 @@
 // super track generator
 const musicGrid = document.getElementById('musicGrid');
-const trackQuantity = 4
 
 function loadTracks() {
-    for (let i = 0; i < trackQuantity; i++) {
+    for (let i = 0; i < tracks.length; i++) {
 
         let title = tracks[`${i}`].title;
         let description = tracks[`${i}`].description;
@@ -22,7 +21,7 @@ function loadTracks() {
         <p class="trackDescription">${description}</p>
         <p class="trackPrice">${price}</p>
         <a class="detailsBtn" onclick="details()">Details</a>
-        <a class="SCbtn" href="${scLink}" target="_blank">SoundCloud</a>
+        <a class="SCbtn" href="${scLink}" target="_blank"><img src="../imgs/svgs/soundcloud.svg" alt="soundcloud-icon"></a>
         </div>
         `
     }

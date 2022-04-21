@@ -29,7 +29,7 @@ body {
 .hide {
   display: none;
 }
-#spinnerCenter {
+#preLoad {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -45,9 +45,20 @@ body {
   opacity: 1;
   transition: opacity 0.4s;
 }
+#isologotipo {
+  margin: auto 0px;
+  background-image: url(imgs/nftorio.png);
+  width: 135px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: 135px;
+  background-position: center;
+  position: relative;
+  transition: all 0.54s ease-out;
+}
 #wrapper {
   width: 80vw;
-  min-height: 30vh;
+  min-height: 100vh;
   margin: 60px auto 10px auto;
   z-index: 1;
   transition: filter 0.4s;
@@ -67,16 +78,34 @@ nav {
   box-shadow: 0px 0px 10px rgba(30, 30, 30, 0.54);
   transition: all 0.3s;
 }
-#isologotipo {
-  margin: auto 0px;
-  background-image: url(imgs/nftorio.png);
-  width: 135px;
-  height: 45px;
-  background-repeat: no-repeat;
-  background-size: 135px;
-  background-position: center;
-  position: absolute;
-  transition: all 0.54s ease-out;
+#nav-links {
+  display: flex;
+  padding: 0px;
+  user-select: none;;
+}
+#nav-links ul {
+  padding: 0px;
+  display: flex;
+}
+#nav-links li {
+  list-style: none;
+  margin-right: 0px auto;
+  margin: 0px 4px;
+}
+#nav-links a {
+  color: #787878;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  white-space: nowrap;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+#nav-links a:hover{
+  color: #242424;
+  padding: 10px;
+  font-weight: 600;
 }
 h2 {
   text-align: center;
@@ -299,7 +328,7 @@ p {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 200;
+  z-index: 300;
   width: 200vw;
   height: 200vh;
   margin: 0px auto;
@@ -412,10 +441,8 @@ p {
 /* music gridz */
 #musicGrid{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  column-gap: 10px;
-  row-gap: 10px;
   margin: 0px auto;
 }
 .trackBox{
@@ -442,7 +469,7 @@ p {
   align-items: center;
   grid-column: 1/2;
   margin: 3px auto;
-  width: 174px;
+  width: 178px;
   height: 174px;
   border-radius: 20px;
   background-repeat: no-repeat;
@@ -481,20 +508,27 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
+  width: 64px;
   grid-column: 2/3;
   grid-row: 4/5;
   font-weight: 900;
   color: black;
-  font-size: 16px;
   border-style: none;
-  background-color: #ff7c1e;
-  border: 1px solid rgb(214, 88, 10);
   box-shadow: #fb6a03 2px 2px 4px;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   position: relative;
   left: 200px;
+  background-color: #ff7c1e;
+  border-right: 3px solid #e66312;
+  border-bottom: 3px solid #e66312;
+  transition: all 0.05s;
+}
+.SCbtn:active{
+  border-right: 1px solid #e66312;
+  border-bottom: 1px solid #e66312;
+  border-left: 3px solid #e66312;
+  border-top: 3px solid #e66312;
 }
 .detailsBtn{
   display: flex;
@@ -644,16 +678,16 @@ footer {
   align-content: flex-end;
   text-align: center;
   flex-direction: column;
-  z-index: 10;
-  height: 600px;
+  z-index: 220;
   width: 100vw;
   background-color: rgb(30, 30, 30);
   margin: 0px auto;
   color: white;
-  border-top: 25px solid rgba(45, 45, 45, 0.75);
+  border-top: 15px solid rgba(45, 45, 45, 0.75);
 }
 #footerContainer{
   width: 84%;
+  max-width: 750px;
   height: 100%;
   margin: 0px auto;
   display: flex;
@@ -661,66 +695,139 @@ footer {
 }
 .webDescription{
   width: 100%;
-  height: 120px;
+  height: 90px;
+  margin: 10px auto;
 }
 .webDescription #isologotipo{
+  position: absolute;
   top: 25px;
   left: 50%;
   filter: invert(1);
   transform: translate(-50%, -50%);
-  transition: filter 0.5s ease-in-out;
+  transition: all 5.4s;
 }
 .webDescription h4{
   position: relative;
-  top: 50px;
+  top: 40px;
   font-size: 18px;
+  margin: 0px auto;
+  width: 90%;
 }
 .socialMedia{
-
+  width: 100%;
+  height: 100%;
 }
 .socialMediaTexts{
-
+/* grid maybe */
 }
 .socialMediaTexts h2{
-
+  font-size: 30px;
+  font-weight: 900;
+  margin: 4px;
 }
 .socialMediaTexts h4{
-
+  font-size: 16px;
+  width: 80%;
+  margin: 12px auto;
 }
 .footerEmailInputs{
-
+  user-select: none;
+  margin: 20px auto;
 }
 #emailInputText{
-
+  width: 254px;
+  height: 32px;
+  padding: 4px 10px; 
+  font-size: 15px;
+  border-style: none;
+  border-radius: 6px;
+  margin: 5px 12px;
 }
 #emailInputButton{
-
+  font-size: 18px;
+  margin: 2px 12px;
+  height: 35px;
+  width: 80px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background-color: #282828;
+  border-right: 3px solid #383838;
+  border-bottom: 3px solid #383838;
+  transition: all 0.05s;
+}
+#emailInputButton:active {
+  border-right: 1px solid #383838;
+  border-bottom: 1px solid #383838;
+  border-left: 3px solid #383838;
+  border-top: 3px solid #383838;
 }
 .mediaIcons{
-
+  margin: 25px auto;
+}
+.mediaIcons h2{
+  font-size: 28px;
+  font-weight: 900;
 }
 .iconGroup{
-
+  display: flex;
+  justify-content: center;
 }
 .icon{
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  border: 1px solid #484848;
+  width: 54px;
+  height: 50px;
+  margin: 10px;
+  background-color: #2d2d2d;
+  cursor: pointer;
+  transition:all 0.1s;
+  user-select: none;
+}
+.icon img{
+  filter: invert(1);
+  width: 32px;
+  height: 32px;
+  transition:all 0.1s;
+}
+.icon:hover{
+  background-color: #484848;
+  border: 1px solid #848484;
+}
+.icon:hover img{
+  width: 38px;
+  height: 38px;
 }
 .boringThings{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
+  margin: 10px auto;
+}
+.boringThings p{
+  margin: 5px 10px;
+  width: 100%;
+  white-space: nowrap;
 }
 #separatorBar{
-  width: 65%;
-  height:2px;
-  margin: 0px auto;
-  position: absolute;
-  top: 110px;
-  left: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  width: 85%;
+  max-width: 750px;
+  height:1px;
   background-color: #848484;
-  transform: translate(-50%, -50%);
 }
 
 /* Media Queris */
+@media (max-width:1575px){
+  #musicGrid{
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 1275px) {
   #productGrid {
     width: 80%;
@@ -816,6 +923,33 @@ footer {
     left: 70px;
     bottom: 2px;
   }
+
+  #footerContainer{
+    width: 90%;
+  }
+  .webDescription{
+    width: 100%;
+    height: 110px;
+    margin: 10px auto;
+  }
+  .webDescription h4{
+    font-size: 16px;
+  }
+  .socialMediaTexts h2{
+    font-size: 28px;
+  }
+  .socialMediaTexts h4{
+    font-size: 15px;
+  }
+  .footerEmailInputs{
+    margin: 16px auto;
+  }
+  .mediaIcons{
+    margin: 25px auto;
+  }
+  .mediaIcons h2{
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -882,6 +1016,30 @@ footer {
     right: -64px;
     transform: scale(1.4) translate(-50%, -50%);
   }
+
+  .webDescription{
+    height: 140px;
+  }
+  .icon{
+    width: 44px;
+    height: 40px;
+    margin: 5px;
+  }
+  .icon img{
+    width: 25px;
+    height: 25px;
+  }
+  .icon:hover img{
+    width: 30px;
+    height: 30px;
+  }
+  .mediaIcons {
+    margin: 10px;
+  }
+  .boringThings p{
+    white-space: normal;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -924,6 +1082,44 @@ footer {
     min-width: 94%;
   }
 
+  .webDescription{
+    height: 140px;
+  }
+  .socialMediaTexts h2{
+    font-size: 26px;
+    margin: 0px;
+  }
+  .socialMediaTexts h4{
+    width: 94%;
+  }
+  .mediaIcons h2{
+    font-size: 23px;
+    margin: 8px;
+  }
+  #emailInputText{
+    width: 200px;
+    font-size: 12px;
+    margin: 2px 8px;
+  }
+  .icon{
+    width: 44px;
+    height: 40px;
+    margin: 5px;
+  }
+  .icon img{
+    width: 25px;
+    height: 25px;
+  }
+  .icon:hover img{
+    width: 30px;
+    height: 30px;
+  }
+  .mediaIcons {
+    margin: 10px;
+  }
+  .boringThings p{
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 300px) {
@@ -935,13 +1131,12 @@ footer {
     height: 250px;
   }
 }
-
 @media (max-height: 675px) {
   #nftImage {
     width: 250px;
     height: 250px;
   }
   #productModal {
-    min-width: 85%;
+    min-width: 300px;
   }
 }
