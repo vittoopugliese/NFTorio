@@ -8,8 +8,8 @@ asideWrapper.innerHTML = `
     <img src="../imgs/svgs/search.svg" id="search-icon" alt="search icon">
     <input id="search-input" type="text" name="search-input">
 </div>
-<button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/cod.png"></button>
-<button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/codo.png"></button>
+<button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/cardComplete.png"></button>
+<button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/cardIncomplete.png"></button>
 </div>
 `
 

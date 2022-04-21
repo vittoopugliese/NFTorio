@@ -6,7 +6,6 @@ function loadTracks() {
 
         let title = tracks[`${i}`].title;
         let description = tracks[`${i}`].description;
-        let price = tracks[`${i}`].price;
         let image = tracks[`${i}`].image;
         let scLink = tracks[`${i}`].scLink;
         let trackValueAttr = i
@@ -14,15 +13,16 @@ function loadTracks() {
 
         musicGrid.innerHTML += `
         <div class="trackBox" data-tag="${tags}">
-        <div class="trackImage" style="background-image: url(${image});">
+        <div class="trackImage" style="background-image: url('${image}');">
             <img class="playBtn" track="${trackValueAttr}" src="../imgs/svgs/playMusic.png" alt="play-button">
         </div>
         <h1 class="trackTitle">${title}</h1>
         <p class="trackDescription">${description}</p>
-        <p class="trackPrice">${price}</p>
-        <a class="detailsBtn" onclick="details()">Details</a>
-        <a class="SCbtn" href="${scLink}" target="_blank"><img src="../imgs/svgs/soundcloud.svg" alt="soundcloud-icon"></a>
+        <div id="buttonsContainer">
+            <a class="SCbtn" href="${scLink}" target="_blank"><img draggable="false"src="../imgs/svgs/soundcloud.svg" alt="soundcloud-icon"></a>
+            <a class="detailsBtn" onclick="details()"><img draggable="false" src="../imgs/svgs/details.png" alt="details-icon"></a>
         </div>
+    </div>
         `
     }
 }
@@ -32,7 +32,6 @@ const trackBox = document.querySelectorAll('.trackBox');
 const trackImage = document.querySelectorAll('.trackImage');
 const trackTitle = document.querySelectorAll('.trackTitle');
 const trackDescription = document.querySelectorAll('.trackDescription');
-const trackPrice = document.querySelectorAll('.trackPrice');
 const detailsBtn = document.querySelectorAll('.detailsBtn');
 const SCbtn = document.querySelectorAll('.SCbtn');
 

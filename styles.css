@@ -81,7 +81,7 @@ nav {
 #nav-links {
   display: flex;
   padding: 0px;
-  user-select: none;;
+  user-select: none;
 }
 #nav-links ul {
   padding: 0px;
@@ -102,7 +102,7 @@ nav {
   font-weight: 600;
   transition: all 0.2s;
 }
-#nav-links a:hover{
+#nav-links a:hover {
   color: #242424;
   padding: 10px;
   font-weight: 600;
@@ -407,7 +407,7 @@ p {
 #CryptoButtons a {
   height: 50px;
   width: 50px;
-  background-color: white;
+  background-color: black;
   border-radius: 100%;
   cursor: pointer;
 }
@@ -439,39 +439,40 @@ p {
 }
 
 /* music gridz */
-#musicGrid{
+#musicGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   margin: 0px auto;
 }
-.trackBox{
+.trackBox {
   display: grid;
-  grid-template-columns: 35% 65%;
-  grid-template-rows: 27% 33% 20% 20% ;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 25% 45% 30%;
   max-width: 800px;
-  min-width: 600px;
+  min-width: 540px;
   max-height: 222px;
-  padding: 20px;
+  padding: 15px;
   margin: 2px auto;
   border: 2px solid transparent;
   border-radius: 20px;
   transition: filter 0.15s, border 0.25s;
 }
-.trackBox:hover{
+.trackBox:hover {
   background-color: rgba(255, 255, 255, 0.472);
   filter: drop-shadow(0px 0px 12px rgba(154, 154, 154, 0.9));
   border: 2px solid rgb(220, 220, 220);
 }
-.trackImage{
+.trackImage {
   display: flex;
   justify-content: center;
   align-items: center;
   grid-column: 1/2;
-  margin: 3px auto;
+  grid-row: 1/5;
+  margin: auto 0px;
   width: 178px;
   height: 174px;
-  border-radius: 20px;
+  border-radius: 25px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -480,88 +481,90 @@ p {
   transition: width 0.3s, height 0.3s;
   filter: saturate(1.05);
 }
-.trackTitle{
+.trackTitle {
   grid-column: 2/3;
-  font-size: 28px;
+  grid-row: 1/2;
+  font-size: 24px;
   font-weight: 800;
-  margin: 10px auto 0px auto;
+  margin: auto 0px;
   white-space: nowrap;
 }
-.trackDescription{
+.trackDescription {
   grid-column: 2/3;
-  width: 90%;
-  font-size: 18px;
+  grid-row: 2/3;
+  width: 274px;
+  font-size: 16px;
   font-style: italic;
-  margin: 5px auto;
+  margin: auto 0px;
+  text-align: left;
 }
-.trackPrice{
-  grid-column: 2/3;
-  font-size: 28px;
-  margin: 2px auto 4px auto;
+.trackDuration {
+  font-size: 22px;
+  margin: auto 0px;
   font-weight: 900;
   font-style: normal;
   display: flex;
   justify-content: left;
-  align-items: left;
 }
-.SCbtn{
+#buttonsContainer{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+}
+.SCbtn,
+.detailsBtn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 64px;
+  width: 54px;
+  height: 34px;
   grid-column: 2/3;
-  grid-row: 4/5;
+  grid-row: 3/4;
   font-weight: 900;
-  color: black;
-  border-style: none;
-  box-shadow: #fb6a03 2px 2px 4px;
-  border-radius: 12px;
+  border-radius: 8px;
+  margin: auto 0px;
   cursor: pointer;
-  position: relative;
-  left: 200px;
+  transition: all 0.1s;
+}
+.SCbtn {
   background-color: #ff7c1e;
   border-right: 3px solid #e66312;
   border-bottom: 3px solid #e66312;
-  transition: all 0.05s;
+  box-shadow: #e66312 2px 2px 4px;
 }
-.SCbtn:active{
+.SCbtn:active {
   border-right: 1px solid #e66312;
   border-bottom: 1px solid #e66312;
   border-left: 3px solid #e66312;
   border-top: 3px solid #e66312;
 }
-.detailsBtn{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
-  grid-column: 2/3;
-  grid-row: 4/5;
-  font-weight: 900;
-  color: white;
-  font-size: 16px;
-  border-style: none;
+.detailsBtn {
   background-color: #2d2d2d;
   box-shadow: #484848 2px 2px 4px;
-  border-radius: 10px;
-  cursor: pointer;
-  position: relative;
-  left: 40px;
+  border-right: 3px solid #484848;
+  border-bottom: 3px solid #484848;
 }
-.playBtn{
+.detailsBtn:active {
+  border-right: 1px solid #484848;
+  border-bottom: 1px solid #484848;
+  border-left: 3px solid #484848;
+  border-top: 3px solid #484848;
+}
+.playBtn {
   border-style: none;
   background-color: transparent;
   padding: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;
-  border-radius: 30px;
+  border-radius: 32px;
   width: 70px;
-  opacity: 0.54;
+  opacity: 0.74;
 }
 
 /* pleyieerr */
-#reproductor-container{
+#reproductor-container {
   display: flex;
   width: 100vw;
   height: 82px;
@@ -685,7 +688,7 @@ footer {
   color: white;
   border-top: 15px solid rgba(45, 45, 45, 0.75);
 }
-#footerContainer{
+#footerContainer {
   width: 84%;
   max-width: 750px;
   height: 100%;
@@ -693,12 +696,12 @@ footer {
   display: flex;
   flex-direction: column;
 }
-.webDescription{
+.webDescription {
   width: 100%;
   height: 90px;
   margin: 10px auto;
 }
-.webDescription #isologotipo{
+.webDescription #isologotipo {
   position: absolute;
   top: 25px;
   left: 50%;
@@ -706,44 +709,44 @@ footer {
   transform: translate(-50%, -50%);
   transition: all 5.4s;
 }
-.webDescription h4{
+.webDescription h4 {
   position: relative;
   top: 40px;
   font-size: 18px;
   margin: 0px auto;
   width: 90%;
 }
-.socialMedia{
+.socialMedia {
   width: 100%;
   height: 100%;
 }
-.socialMediaTexts{
-/* grid maybe */
+.socialMediaTexts {
+  /* grid maybe */
 }
-.socialMediaTexts h2{
+.socialMediaTexts h2 {
   font-size: 30px;
   font-weight: 900;
   margin: 4px;
 }
-.socialMediaTexts h4{
+.socialMediaTexts h4 {
   font-size: 16px;
   width: 80%;
   margin: 12px auto;
 }
-.footerEmailInputs{
+.footerEmailInputs {
   user-select: none;
   margin: 20px auto;
 }
-#emailInputText{
+#emailInputText {
   width: 254px;
   height: 32px;
-  padding: 4px 10px; 
+  padding: 4px 10px;
   font-size: 15px;
   border-style: none;
   border-radius: 6px;
   margin: 5px 12px;
 }
-#emailInputButton{
+#emailInputButton {
   font-size: 18px;
   margin: 2px 12px;
   height: 35px;
@@ -762,18 +765,18 @@ footer {
   border-left: 3px solid #383838;
   border-top: 3px solid #383838;
 }
-.mediaIcons{
+.mediaIcons {
   margin: 25px auto;
 }
-.mediaIcons h2{
+.mediaIcons h2 {
   font-size: 28px;
   font-weight: 900;
 }
-.iconGroup{
+.iconGroup {
   display: flex;
   justify-content: center;
 }
-.icon{
+.icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -784,46 +787,46 @@ footer {
   margin: 10px;
   background-color: #2d2d2d;
   cursor: pointer;
-  transition:all 0.1s;
+  transition: all 0.1s;
   user-select: none;
 }
-.icon img{
+.icon img {
   filter: invert(1);
   width: 32px;
   height: 32px;
-  transition:all 0.1s;
+  transition: all 0.1s;
 }
-.icon:hover{
+.icon:hover {
   background-color: #484848;
   border: 1px solid #848484;
 }
-.icon:hover img{
+.icon:hover img {
   width: 38px;
   height: 38px;
 }
-.boringThings{
+.boringThings {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   margin: 10px auto;
 }
-.boringThings p{
+.boringThings p {
   margin: 5px 10px;
   width: 100%;
   white-space: nowrap;
 }
-#separatorBar{
+#separatorBar {
   display: flex;
   justify-content: center;
   margin: 10px auto;
   width: 85%;
   max-width: 750px;
-  height:1px;
+  height: 1px;
   background-color: #848484;
 }
 
 /* Media Queris */
-@media (max-width:1575px){
-  #musicGrid{
+@media (max-width: 1575px) {
+  #musicGrid {
     grid-template-columns: 1fr;
   }
 }
@@ -846,7 +849,7 @@ footer {
     right: -30px;
     transform: rotate(270deg) scale(0.9);
   }
-  #progressBar{
+  #progressBar {
     width: 90%;
   }
 }
@@ -906,7 +909,7 @@ footer {
   #progressBar {
     width: 90%;
     left: 70px;
-    bottom:4px;
+    bottom: 4px;
   }
 }
 
@@ -924,31 +927,68 @@ footer {
     bottom: 2px;
   }
 
-  #footerContainer{
+  #footerContainer {
     width: 90%;
   }
-  .webDescription{
+  .webDescription {
     width: 100%;
     height: 110px;
     margin: 10px auto;
   }
-  .webDescription h4{
+  .webDescription h4 {
     font-size: 16px;
   }
-  .socialMediaTexts h2{
+  .socialMediaTexts h2 {
     font-size: 28px;
   }
-  .socialMediaTexts h4{
+  .socialMediaTexts h4 {
     font-size: 15px;
   }
-  .footerEmailInputs{
+  .footerEmailInputs {
     margin: 16px auto;
   }
-  .mediaIcons{
+  .mediaIcons {
     margin: 25px auto;
   }
-  .mediaIcons h2{
+  .mediaIcons h2 {
     font-size: 28px;
+  }
+
+  .trackBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    min-height: 300px;
+    max-height: 500px;
+    padding: 15px;
+    margin: 2px auto;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: filter 0.15s, border 0.25s;
+  }
+  .trackImage {
+    min-height: 174px;
+    min-width: 174px;
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .trackTitle {
+    margin: 0px auto;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .trackDescription {
+    margin: 0px auto;
+    text-align: center;
+    width: 74%;
+    margin-bottom: 12px;
+  }
+  #buttonsContainer{
+    justify-content: center;
+    gap: 10px;
   }
 }
 
@@ -1017,26 +1057,26 @@ footer {
     transform: scale(1.4) translate(-50%, -50%);
   }
 
-  .webDescription{
+  .webDescription {
     height: 140px;
   }
-  .icon{
+  .icon {
     width: 44px;
     height: 40px;
     margin: 5px;
   }
-  .icon img{
+  .icon img {
     width: 25px;
     height: 25px;
   }
-  .icon:hover img{
+  .icon:hover img {
     width: 30px;
     height: 30px;
   }
   .mediaIcons {
     margin: 10px;
   }
-  .boringThings p{
+  .boringThings p {
     white-space: normal;
     font-size: 12px;
   }
@@ -1082,42 +1122,42 @@ footer {
     min-width: 94%;
   }
 
-  .webDescription{
+  .webDescription {
     height: 140px;
   }
-  .socialMediaTexts h2{
+  .socialMediaTexts h2 {
     font-size: 26px;
     margin: 0px;
   }
-  .socialMediaTexts h4{
+  .socialMediaTexts h4 {
     width: 94%;
   }
-  .mediaIcons h2{
+  .mediaIcons h2 {
     font-size: 23px;
     margin: 8px;
   }
-  #emailInputText{
+  #emailInputText {
     width: 200px;
     font-size: 12px;
     margin: 2px 8px;
   }
-  .icon{
+  .icon {
     width: 44px;
     height: 40px;
     margin: 5px;
   }
-  .icon img{
+  .icon img {
     width: 25px;
     height: 25px;
   }
-  .icon:hover img{
+  .icon:hover img {
     width: 30px;
     height: 30px;
   }
   .mediaIcons {
     margin: 10px;
   }
-  .boringThings p{
+  .boringThings p {
     font-size: 12px;
   }
 }
