@@ -1,4 +1,4 @@
-//div image generator - DIG
+//image wrapper generator - iwg
 const addedToGrid = document.querySelectorAll("#added");
 const nfts = 36;
 
@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     inspect[i].addEventListener("click", () => {
       setTimeout(() => {
-        productModal.style.display = "grid";
         productModal.innerHTML = `
             <h1 id="nftTitle" >${title[i].innerHTML}</h1>
             <div id="nftImage" style="background-image:url(${image});"></div>
@@ -76,36 +75,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const cruz = document.querySelectorAll("#cruz");
         cruz[0].addEventListener("click", () => {
-          modalBackground.style.display = "none";
-          productModal.style.display = "none";
-          body.style.overflow = "auto";
-          wrapper.style.filter = "blur(0px)";
-
-          productModal.style.opacity = "0";
-          modalBackground.style.opacity = "0";
+          closeModal()
         });
         modalBackground.addEventListener("click", () => {
-          productModal.style.display = "none";
-          modalBackground.style.display = "none";
-          body.style.overflow = "auto";
-          wrapper.style.filter = "blur(0px)";
-
-          productModal.style.opacity = "0";
-          modalBackground.style.opacity = "0";
+          closeModal()
         });
         document.addEventListener("keydown", (event) => {
           const key = event.key;
           if (key == "Escape") {
-            productModal.style.display = "none";
-            modalBackground.style.display = "none";
-            body.style.overflow = "auto";
-            wrapper.style.filter = "blur(0px)";
-
-            productModal.style.opacity = "0";
-            modalBackground.style.opacity = "0";
+            closeModal()
           }
         });
       }, 150);
     });
   }
 });
+
+function closeModal() {
+  modalBackground.style.display = "none";
+  productModal.style.display = "none";
+  body.style.overflow = "auto";
+  wrapper.style.filter = "blur(0px)";
+  productModal.style.opacity = "0";
+  modalBackground.style.opacity = "0";
+}

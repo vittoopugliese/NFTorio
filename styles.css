@@ -442,8 +442,34 @@ p {
 #musicGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  width: 80%;
   margin: 0px auto;
+}
+#trackModal{
+  display: grid;
+  grid-template-rows: 10% 60% 15% 15%;
+  justify-content: center;
+  align-items: center;
+  min-width: 600px;
+  width: 35%;
+  height: 75%;
+  margin: 0px auto;
+  padding: 5px;
+  max-width: 900px;
+  min-width: 500px;
+  max-height: 600px;
+  min-height: 500px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 4em;
+  z-index: 500;
+  opacity: 0;
+  transition: opacity 0.4s;
+  border-radius: 15px;
+  background: linear-gradient(174deg, #ffffff 0%, #848484 100%);
+  border: 2px solid rgb(130, 130, 130);
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.6);
 }
 .trackBox {
   display: grid;
@@ -533,6 +559,10 @@ p {
   border-bottom: 3px solid #e66312;
   box-shadow: #e66312 2px 2px 4px;
 }
+.SCbtn img{
+  filter: invert(1);
+}
+
 .SCbtn:active {
   border-right: 1px solid #e66312;
   border-bottom: 1px solid #e66312;
@@ -558,8 +588,8 @@ p {
   cursor: pointer;
   display: flex;
   justify-content: center;
-  border-radius: 32px;
-  width: 70px;
+  border-radius: 26px;
+  width: 64px;
   opacity: 0.74;
 }
 
@@ -672,6 +702,14 @@ p {
   left: 70px;
   bottom: 2px;
   margin: 0px auto;
+}
+#playerX{
+  position: absolute;
+  top: 20px;
+  left: 0px;
+}
+#playerMin{
+  width: 20px;
 }
 
 /* footer finally */
@@ -826,9 +864,7 @@ footer {
 
 /* Media Queris */
 @media (max-width: 1575px) {
-  #musicGrid {
-    grid-template-columns: 1fr;
-  }
+
 }
 
 @media (max-width: 1275px) {
@@ -851,6 +887,10 @@ footer {
   }
   #progressBar {
     width: 90%;
+  }
+
+  #musicGrid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -954,6 +994,9 @@ footer {
     font-size: 28px;
   }
 
+  #musicGrid{
+    width: 100%;
+  }
   .trackBox {
     display: flex;
     flex-direction: column;
@@ -983,8 +1026,8 @@ footer {
   .trackDescription {
     margin: 0px auto;
     text-align: center;
-    width: 74%;
     margin-bottom: 12px;
+    width: 100%;
   }
   #buttonsContainer{
     justify-content: center;

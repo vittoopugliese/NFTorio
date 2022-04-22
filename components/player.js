@@ -19,6 +19,7 @@ reproductor.innerHTML = `
         <img id="playpause" src="../imgs/svgs/playMusic.png" draggable="false">
         <img id="next" src="../imgs/svgs/nextMusic.png" draggable="false">
         <img id="playerX" src="../imgs/svgs/x.svg" draggable="false">
+        <img id="playerMin" src="../imgs/svgs/playerMin.png" draggable="false">
     </div>
 
     <input type="range" id="volumeRange" value="1" step="0.1" min="0" max="1">
@@ -36,6 +37,7 @@ const playpause = document.getElementById("playpause");
 const last = document.getElementById("last");
 const next = document.getElementById("next");
 const playerX = document.getElementById("playerX");
+const playerMin = document.getElementById("playerMin");
 const playBtn = document.querySelectorAll(".playBtn");
 
 for (let i = 0; i < playBtn.length; i++) {
@@ -129,17 +131,16 @@ progressBar.addEventListener("click", (e) => {
   progressBar.value = clickedValue;
 });
 
-playerX.addEventListener("click", (e) => {
+playerX.addEventListener("click", () => {
   reproductor.style.display = 'none'
   audio.pause()
 });
 
-playerMin.addEventListener("click", (e) => {
+playerMin.addEventListener("click", () => {
   reproductor.style.display = 'none'
 });
 
 // detect page and execute this (apparently working...)
-
 const host = "https://nftorio.vittoriopugliese.com/"
 if (window.location.href == host + 'pages/images.html') {
   if(!localStorage.getItem('track')){
