@@ -604,21 +604,35 @@ p {
   left: 0px;
   z-index: 200;
   padding: 5px 10px;
-  background-image: linear-gradient(to top, rgb(191, 191, 191) 0%, white 100%);
+  background-image: linear-gradient(to top, rgb(191, 191, 191) 0%, white 80%);
   border-top: 1px solid rgb(191, 191, 191);
   box-shadow: 54px 0px 54px rgb(0 0 0 / 24%);
   user-select: none;
   transition: all 0.3s;
 }
-/* #reproductor-container:hover{
-  height: 120px;
-} */
 #reproductor {
   position: relative;
   display: flex;
   width: 100%;
   max-width: 1285px;
   margin: 0px auto;
+}
+#topBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 54px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px 10px 0px 0px;
+  height: 12px;
+  max-width: 1285px;
+  margin: 0px auto;
+  background-color: white;
+  border-top: 1px solid rgb(191, 191, 191);
+  cursor: pointer;
 }
 #songPic {
   display: flex;
@@ -667,6 +681,8 @@ p {
   bottom: 30px;
   right: -50px;
   transform: rotate(270deg) scale(0.9);
+  transition: all 0.25s;
+  accent-color: rgb(74, 74, 74);
 }
 #songName {
   font-size: 18px;
@@ -702,14 +718,12 @@ p {
   left: 70px;
   bottom: 2px;
   margin: 0px auto;
-}
-#playerX{
-  position: absolute;
-  top: 20px;
-  left: 0px;
+  transition: all 0.25s;
+  accent-color: hsl(0, 0%, 45%);
 }
 #playerMin{
-  width: 20px;
+  width: 16px;
+  transition: all 0.54s;
 }
 
 /* footer finally */

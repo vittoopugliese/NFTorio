@@ -1,7 +1,7 @@
 // reproductor
 const reproductor = document.getElementById("reproductor-container");
 reproductor.innerHTML = `
-    <div id="reproductor">
+<div id="reproductor">
     <audio id="audio" preload="metadata">
         <source id="source" type="audio/mpeg">
     </audio>
@@ -13,18 +13,20 @@ reproductor.innerHTML = `
     <h4 id="songCurrentTime"></h4>
     <h4 id="songTime"></h4>
     <h4 id="separator">_</h4>
-
+    
+    <div id="topBar">
+      <img id="playerMin" src="../imgs/svgs/playerMin.png" draggable="false">
+    </div>
+   
     <div id="controls">
-        <img id="last" src="../imgs/svgs/nextMusic.png" draggable="false">
-        <img id="playpause" src="../imgs/svgs/playMusic.png" draggable="false">
-        <img id="next" src="../imgs/svgs/nextMusic.png" draggable="false">
-        <img id="playerX" src="../imgs/svgs/x.svg" draggable="false">
-        <img id="playerMin" src="../imgs/svgs/playerMin.png" draggable="false">
+      <img id="last" src="../imgs/svgs/nextMusic.png" draggable="false">
+      <img id="playpause" src="../imgs/svgs/playMusic.png" draggable="false">
+      <img id="next" src="../imgs/svgs/nextMusic.png" draggable="false">
     </div>
 
     <input type="range" id="volumeRange" value="1" step="0.1" min="0" max="1">
     </div>
-`
+`;
 
 const audio = document.getElementById("audio");
 const progressBar = document.getElementById("progressBar");
@@ -36,7 +38,6 @@ const vol = document.getElementById("volumeRange");
 const playpause = document.getElementById("playpause");
 const last = document.getElementById("last");
 const next = document.getElementById("next");
-const playerX = document.getElementById("playerX");
 const playerMin = document.getElementById("playerMin");
 const playBtn = document.querySelectorAll(".playBtn");
 
@@ -91,38 +92,16 @@ vol.addEventListener("change", () => {
 
 audio.addEventListener("timeupdate", function () {
   let currentTime = parseInt(audio.currentTime);
-  let setCurrentTime = "00:0" + currentTime;
+  let m = 0
+  let s = 0
   
-  if (currentTime > 9) {
-    setCurrentTime = "00:" + currentTime;
-  }
-  if (currentTime > 59) {
-    setCurrentTime = "01:0" + (currentTime - 60);
-  }
-  if (currentTime > 69) {
-    setCurrentTime = "01:" + (currentTime - 60);
-  }
-  if (currentTime > 119) {
-    setCurrentTime = "02:0" + (currentTime - 120);
-  }
-  if (currentTime > 129) {
-    setCurrentTime = "02:" + (currentTime - 120);
-  }
-  if (currentTime > 179) {
-    setCurrentTime = "03:0" + (currentTime - 180);
-  }
-  if (currentTime > 189) {
-    setCurrentTime = "03:" + (currentTime - 180);
-  }
-  if (currentTime > 239) {
-    setCurrentTime = "04:0" + (currentTime - 240);
-  }
-  if (currentTime > 249) {
-    setCurrentTime = "04:" + (currentTime - 240);
-  }
-
+  m = (m<10) ? '0' + m : m
+  s = (s<10) ? '0' + s : s
+  
+  let setCurrentTime = m + ':' + s
   songCurrentTime.innerHTML = setCurrentTime;
   progressBar.value = audio.currentTime;
+  progressBar.style.accentColor = `hsl(${currentTime}, 100%, 50%)`
 });
 
 progressBar.addEventListener("click", (e) => {
@@ -131,39 +110,46 @@ progressBar.addEventListener("click", (e) => {
   progressBar.value = clickedValue;
 });
 
-playerX.addEventListener("click", () => {
-  reproductor.style.display = 'none'
-  audio.pause()
+playerMin.addEventListener("click", () => {
+  reproductor.style.height = '10px';
+  progressBar.style.bottom = '-100px'
+  vol.style.bottom = '-100px'
+  playerMin.style.transform = 'rotate(180deg)'
+  songPic.style.top = '20px'
 });
 
-playerMin.addEventListener("click", () => {
-  reproductor.style.display = 'none'
+reproductor.addEventListener("mouseover", () => {
+  reproductor.style.height = '82px';
+  progressBar.style.bottom = '4px'
+  vol.style.bottom = '30px'
+  playerMin.style.transform = 'rotate(0deg)'
+  songPic.style.top = '2px'
 });
 
 // detect page and execute this (apparently working...)
-const host = "https://nftorio.vittoriopugliese.com/"
-if (window.location.href == host + 'pages/images.html') {
-  if(!localStorage.getItem('track')){
-    reproductor.style.display = 'none'
-  } else{
-    reproductor.style.display = 'flex'
-  }
-} 
-
-if (window.location.href == host + 'index.html') {
-  if(localStorage.getItem('track')){
-    reproductor.style.display = 'flex'
-  }else {
-    reproductor.style.display = 'none'
+const host = "https://nftorio.vittoriopugliese.com/";
+if (window.location.href == host + "pages/images.html") {
+  if (!localStorage.getItem("track")) {
+    reproductor.style.display = "none";
+  } else {
+    reproductor.style.display = "flex";
   }
 }
 
-if(!localStorage.getItem("track")){
-  localStorage.setItem("track", 0)
+if (window.location.href == host + "index.html") {
+  if (localStorage.getItem("track")) {
+    reproductor.style.display = "flex";
+  } else {
+    reproductor.style.display = "none";
+  }
+}
+
+if (!localStorage.getItem("track")) {
+  localStorage.setItem("track", 0);
 }
 
 // index temp -- ijustwantmusic
-ijustwantmusic.addEventListener('click', ()=>{
-  localStorage.setItem("track", 0)
-  reproductor.style.display = 'flex'
-})
+ijustwantmusic.addEventListener("click", () => {
+  localStorage.setItem("track", 0);
+  reproductor.style.display = "flex";
+});
