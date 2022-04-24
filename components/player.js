@@ -18,11 +18,9 @@ reproductor.innerHTML = `
       <img id="playerMin" src="../imgs/svgs/playerMin.png" draggable="false">
     </div>
    
-    <div id="controls">
-      <img id="last" src="../imgs/svgs/nextMusic.png" draggable="false">
-      <img id="playpause" src="../imgs/svgs/playMusic.png" draggable="false">
-      <img id="next" src="../imgs/svgs/nextMusic.png" draggable="false">
-    </div>
+    <img id="last" src="../imgs/svgs/nextMusic.png" draggable="false">
+    <img id="playpause" src="../imgs/svgs/playMusic.png" draggable="false">
+    <img id="next" src="../imgs/svgs/nextMusic.png" draggable="false">
 
     <input type="range" id="volumeRange" value="1" step="0.1" min="0" max="1">
     </div>
@@ -39,23 +37,25 @@ const playpause = document.getElementById("playpause");
 const last = document.getElementById("last");
 const next = document.getElementById("next");
 const playerMin = document.getElementById("playerMin");
+const topBar = document.getElementById("topBar");
 const playBtn = document.querySelectorAll(".playBtn");
 
 for (let i = 0; i < playBtn.length; i++) {
   playBtn[i].addEventListener("click", () => {
     let track = playBtn[i].getAttribute("track");
     localStorage.setItem("track", track);
-
     audio.src = tracks[`${track}`].src;
     songPic.src = tracks[`${track}`].image;
     songName.innerHTML = tracks[`${track}`].title;
     songTime.innerHTML = tracks[`${track}`].duration;
     playpause.src = "../imgs/svgs/pauseMusic.png";
+    playerUp()
     audio.play();
     audio.onloadedmetadata = function () {
       progressBar.max = audio.duration;
     };
   });
+
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -101,6 +101,7 @@ audio.addEventListener("timeupdate", function () {
   let setCurrentTime = m + ':' + s
   songCurrentTime.innerHTML = setCurrentTime;
   progressBar.value = audio.currentTime;
+  
   progressBar.style.accentColor = `hsl(${currentTime}, 100%, 50%)`
 });
 
@@ -110,24 +111,54 @@ progressBar.addEventListener("click", (e) => {
   progressBar.value = clickedValue;
 });
 
-playerMin.addEventListener("click", () => {
-  reproductor.style.height = '10px';
-  progressBar.style.bottom = '-100px'
-  vol.style.bottom = '-100px'
-  playerMin.style.transform = 'rotate(180deg)'
-  songPic.style.top = '20px'
+topBar.addEventListener("click", () => {
+  localStorage.setItem('playerOnDisplay', false)
+  playerDwn()
 });
 
 reproductor.addEventListener("mouseover", () => {
+  localStorage.setItem('playerOnDisplay', true)
+  playerUp()
+});
+
+if(localStorage.getItem('playerOnDisplay') == 'true'){
+  playerUp()
+}
+if(localStorage.getItem('playerOnDisplay') == 'false') {
+  playerDwn()
+}
+
+function playerUp() {
   reproductor.style.height = '82px';
   progressBar.style.bottom = '4px'
   vol.style.bottom = '30px'
   playerMin.style.transform = 'rotate(0deg)'
   songPic.style.top = '2px'
-});
+  mask.style.bottom = '90px'
+  magixs.style.bottom = '185px'
+  normal.style.bottom = '140px'
+}
+function playerDwn() {
+  reproductor.style.height = '10px';
+  progressBar.style.bottom = '-100px'
+  vol.style.bottom = '-100px'
+  playerMin.style.transform = 'rotate(180deg)'
+  songPic.style.top = '20px'
+  mask.style.bottom = '20px'
+  magixs.style.bottom = '120px'
+  normal.style.bottom = '75px'
+}
 
-// detect page and execute this (apparently working...)
-const host = "https://nftorio.vittoriopugliese.com/";
+if(reproductor.style.height = '82'){
+  magixs.style.bottom = '185px'
+  normal.style.bottom = '140px'
+} else{
+  magixs.style.bottom = '120px'
+  normal.style.bottom = '75px'
+}
+
+// detect page and execute this (apparently working...) // host variable in search.js
+
 if (window.location.href == host + "pages/images.html") {
   if (!localStorage.getItem("track")) {
     reproductor.style.display = "none";
@@ -147,6 +178,8 @@ if (window.location.href == host + "index.html") {
 if (!localStorage.getItem("track")) {
   localStorage.setItem("track", 0);
 }
+
+
 
 // index temp -- ijustwantmusic
 ijustwantmusic.addEventListener("click", () => {

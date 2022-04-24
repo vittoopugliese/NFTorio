@@ -13,3 +13,6 @@ header.innerHTML = `
 </div>
 </nav>
 `
+document.addEventListener("DOMContentLoaded", () => {
+    const mask = document.getElementById('#mask');
+})

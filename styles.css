@@ -181,11 +181,11 @@ p {
   transition: left 0.54s;
 }
 #magixs {
-  bottom: 135px;
+  bottom: 120px;
   left: -200px;
 }
 #normal {
-  bottom: 185px;
+  bottom: 75px;
   left: -200px;
 }
 #productGrid {
@@ -388,7 +388,7 @@ p {
   z-index: 100;
   border: 2px solid rgba(131, 131, 131, 0.397);
   right: 15px;
-  bottom: 90px;
+  bottom: 20px;
   border-radius: 40px;
   border-style: none;
   height: 50px;
@@ -397,6 +397,7 @@ p {
   border: 2px solid rgb(120, 120, 120);
   color: white;
   cursor: pointer;
+  transition: bottom 0.3s;
 }
 #CryptoButtons {
   display: flex;
@@ -444,6 +445,7 @@ p {
   grid-template-columns: 1fr 1fr;
   width: 80%;
   margin: 0px auto;
+  gap: 24px;
 }
 #trackModal{
   display: grid;
@@ -643,14 +645,6 @@ p {
   left: -4px;
   border-radius: 10px;
 }
-#controls {
-  position: absolute;
-  width: 100px;
-  height: 50%;
-  top: 20px;
-  right: 41%;
-  transform: scale(1.4) translate(-50%, -50%);
-}
 #playpause {
   position: absolute;
   width: 30px;
@@ -720,6 +714,9 @@ p {
   margin: 0px auto;
   transition: all 0.25s;
   accent-color: hsl(0, 0%, 45%);
+  cursor: pointer;
+  /* -webkit-appearance: none; */
+  background: grey;
 }
 #playerMin{
   width: 16px;
@@ -933,27 +930,6 @@ footer {
     width: 100%;
     margin: 0px auto;
   }
-  #controls {
-    width: 100px;
-    height: 50%;
-    top: 20px;
-    right: -50px;
-    transform: scale(1.2) translate(-50%, -50%);
-  }
-  #playpause {
-    width: 30px;
-    top: 10px;
-    right: 70px;
-    transform: scale(1);
-  }
-  #next {
-    right: 40px;
-    transform: rotate(0deg) scale(0.54);
-  }
-  #last {
-    right: 90px;
-    transform: rotate(180deg) scale(0.54);
-  }
   #volumeRange {
     width: 80px;
     bottom: 30px;
@@ -1106,14 +1082,6 @@ footer {
     font-size: 35px;
   }
 
-  #controls {
-    width: 100px;
-    height: 50%;
-    top: 30px;
-    right: -64px;
-    transform: scale(1.4) translate(-50%, -50%);
-  }
-
   .webDescription {
     height: 140px;
   }
@@ -1162,13 +1130,7 @@ footer {
     width: 275px;
     height: 275px;
   }
-  #controls {
-    width: 100px;
-    height: 50%;
-    top: 20px;
-    right: -100px;
-    transform: scale(1.2) translate(-50%, -50%);
-  }
+
 }
 
 @media (max-width: 325px) {

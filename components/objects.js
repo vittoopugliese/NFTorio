@@ -323,7 +323,7 @@ const tracks = [
     }),
     (signature = {
       title: "SIGNATURE SOUND ® XL",
-      description: "My trap style breaking & featuring 14 tracks obviously not finishedz",
+      description: "My trap style breaking & featuring 14 tracks.",
       duration: "31:15",
       price: "$100",
       tags: "signature sound xl edition 2021",
@@ -431,4 +431,14 @@ const tracks = [
       src: "https://github.com/vittoopugliese/public-imgs/blob/main/NFTorio/audio/thought.mp3?raw=true",
       scLink: "https://soundcloud.com/vittoopugliese/4am-thought",
     }),
+    (amThoughts = {
+      title: "im a little bit love shy",
+      description: "'Cause I know our love will be coming and I won't be loveshy anymore",
+      duration: "5:47",
+      price: "$124",
+      tags: "im a little bit love shy",
+      image:"https://github.com/vittoopugliese/public-imgs/blob/main/NFTorio/imgs/audioTapes/loveShy.webp?raw=true",
+      src: "https://github.com/vittoopugliese/public-imgs/blob/main/NFTorio/audio/loveShy.mp3?raw=true",
+      scLink: "https://soundcloud.com/vittoopugliese/im-a-little-love-shy",
+    })
 ];

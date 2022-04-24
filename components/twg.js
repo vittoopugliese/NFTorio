@@ -1,5 +1,6 @@
 // track wrapper generator - twg
 const musicGrid = document.getElementById('musicGrid');
+const trackAddedToGrid = document.querySelectorAll("#trackAddedToGrid");
 
 function loadTracks() {
     for (let i = 0; i < tracks.length; i++) {
@@ -11,7 +12,7 @@ function loadTracks() {
         let description = tracks[`${i}`].description;
         let scLink = tracks[`${i}`].scLink;
 
-        musicGrid.innerHTML += `
+        trackAddedToGrid[i].innerHTML += `
         <div class="trackBox" data-tag="${tags}">
             <div class="trackImage" style="background-image: url('${image}');">
                 <img class="playBtn" track="${trackValueAttr}" src="../imgs/svgs/playMusic.png" alt="play-button">

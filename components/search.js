@@ -1,5 +1,5 @@
 // search
-const asideWrapper = document.querySelector('#aSide');
+const asideWrapper = document.querySelector("#aSide");
 
 asideWrapper.innerHTML = `
 <div id="aside-wrapper">
@@ -8,10 +8,10 @@ asideWrapper.innerHTML = `
     <img src="../imgs/svgs/search.svg" id="search-icon" alt="search icon">
     <input id="search-input" type="text" name="search-input">
 </div>
-<button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/cardComplete.png"></button>
-<button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" style="margin-top: 4px;" src="../imgs/svgs/cardIncomplete.png"></button>
+<button class="Fbtn" id="magixs" style="width: 50px;"><img alt="cards-button" draggable="none" style="margin-top: 4px;" src="../imgs/svgs/cardComplete.png"></button>
+<button class="Fbtn" id="normal" style="width: 50px;"><img alt="cards-button" draggable="none" style="margin-top: 4px;" src="../imgs/svgs/cardIncomplete.png"></button>
 </div>
-`
+`;
 
 const searchText = document.querySelector("#search-text");
 const searchInput = document.querySelector("#search-input");
@@ -24,25 +24,48 @@ const productDescription = document.querySelectorAll(".productDescription");
 const productPrice = document.querySelectorAll(".productPrice");
 const productImage = document.querySelectorAll(".productImage");
 
+// const host = "https://nftorio.vittoriopugliese.com/";
+const host = "http://127.0.0.1:5500/";
+
 searchInput.addEventListener("keyup", (e) => {
   let target = e.target.value;
   for (let i = 0; i < 37; i++) {
-    let pBoxed = pBox[i];
-    let boxed = pBoxed.getAttribute("data-tag");
-    let addedds = addedToGrid[i + 1];
-    if (boxed.includes(target)) {
-      pBoxed.style.display = "flex";
-      pGrid.style.rowGap = "0px";
-      addedds.classList.remove("hide");
+    if (window.location.href == host + "pages/images.html") {
+      let pBoxed = pBox[i];
+      let boxed = pBoxed.getAttribute("data-tag");
+      let addedds = addedToGrid[i + 1];
+      if (boxed.includes(target)) {
+        pBoxed.style.display = "flex";
+        pGrid.style.rowGap = "0px";
+        addedds.classList.remove("hide");
+      }
+      if (!boxed.includes(target)) {
+        pBoxed.style.display = "none";
+        addedds.classList.add("hide");
+      }
+      if (target == "") {
+        pBoxed.style.display = "flex";
+        pGrid.style.rowGap = "40px";
+        addedds.classList.remove("hide");
+      }
     }
-    if (!boxed.includes(target)) {
-      pBoxed.style.display = "none";
-      addedds.classList.add("hide");
-    }
-    if (target == "") {
-      pBoxed.style.display = "flex";
-      pGrid.style.rowGap = "40px";
-      addedds.classList.remove("hide");
+
+    if (window.location.href == host + "pages/music.html") {
+      let tBoxed = trackBox[i];
+      let tboxed = tBoxed.getAttribute("data-tag");
+      let addedds = trackAddedToGrid[i];
+      if (tboxed.includes(target)) {
+        tBoxed.style.display = "grid";
+        addedds.classList.remove("hide");
+      }
+      if (!tboxed.includes(target)) {
+        tBoxed.style.display = "none";
+        addedds.classList.add("hide");
+      }
+      if (target == "") {
+        tBoxed.style.display = "grid";
+        addedds.classList.remove("hide");
+      }
     }
   }
 });
@@ -98,3 +121,8 @@ normal.addEventListener("click", () => {
   }
 });
 
+// fancy btns no aparecen en music // host variable
+if (window.location.href == host + "pages/music.html") {
+  magixs.style.display = "none";
+  normal.style.display = "none";
+}
