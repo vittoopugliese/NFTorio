@@ -178,11 +178,3 @@ if (window.location.href == host + "index.html") {
 if (!localStorage.getItem("track")) {
   localStorage.setItem("track", 0);
 }
-
-
-
-// index temp -- ijustwantmusic
-ijustwantmusic.addEventListener("click", () => {
-  localStorage.setItem("track", 0);
-  reproductor.style.display = "flex";
-});

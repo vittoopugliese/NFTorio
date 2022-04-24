@@ -24,8 +24,8 @@ const productDescription = document.querySelectorAll(".productDescription");
 const productPrice = document.querySelectorAll(".productPrice");
 const productImage = document.querySelectorAll(".productImage");
 
-// const host = "https://nftorio.vittoriopugliese.com/";
-const host = "http://127.0.0.1:5500/";
+const host = "https://nftorio.vittoriopugliese.com/";
+// const host = "http://127.0.0.1:5500/";
 
 searchInput.addEventListener("keyup", (e) => {
   let target = e.target.value;

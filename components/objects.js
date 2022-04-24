@@ -283,7 +283,7 @@ const values = {
 const tracks = [
     (innerInjuriesEp = {
       title: "inner injuries",
-      description: "NOT FINAL VERSION... WORK IN PROGRESS... NFTORIO EXCLUSIVE :p",
+      description: "temporal album art // ",
       duration: "19:48",
       price: "$154",
       tags: "more inner injuries than ever",

@@ -31,7 +31,7 @@
         <div style="display: flex;flex-direction: column;justify-content: center;">
             <button style="margin: 10px;width: 65%;display: flex;justify-content: center;align-items: center;left: 30px;position: relative;" class="Fbtn"><a href="pages/images.html" style="color: white;">Image Repository</a></button>
             <button style="margin: 10px;width: 65%;display: flex;justify-content: center;align-items: center;left: 30px;position: relative;" class="Fbtn"><a href="pages/music.html" style="color: white;">Music Repository</a></button>
-            <button style="margin: 10px;width: 65%;display: flex;justify-content: center;align-items: center;left: 30px;position: relative;" class="Fbtn" id="ijustwantmusic">I just want to listen music</button>
+            <button style="margin: 10px;width: 65%;display: flex;justify-content: center;align-items: center;left: 30px;position: relative;" class="Fbtn" onclick="indexMusic()">I just want to listen music</button>
         </div>
     </div>
 
@@ -39,6 +39,14 @@
 <!-- footer -->
 <footer id="innerFooter"></footer>
 <!-- scripts -->
+<!-- temporal script -->
+<script>
+function indexMusic() {
+  localStorage.setItem("track", 0);
+  reproductor.style.display = "flex";
+}
+</script>
+
 <script src="components/preload.js"></script>
 <script src="components/nav.js"></script>
 <script src="components/objects.js"></script>
