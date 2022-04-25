@@ -874,9 +874,6 @@ footer {
 }
 
 /* Media Queris */
-@media (max-width: 1575px) {
-
-}
 
 @media (max-width: 1275px) {
   #productGrid {
@@ -991,7 +988,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     min-width: 200px;
     min-height: 300px;
     max-height: 500px;
@@ -1033,7 +1030,7 @@ footer {
     min-width: 90%;
   }
   #progressBar {
-    width: 72%;
+    width: 82%;
     left: 70px;
     bottom: 2px;
   }
@@ -1056,6 +1053,12 @@ footer {
   }
   #nftPrice {
     font-size: 35px;
+  }
+
+  #volumeRange {
+    width: 64px;
+    right: -40px;
+    transform: rotate(270deg) scale(0.85);
   }
 }
 
@@ -1131,6 +1134,10 @@ footer {
     height: 275px;
   }
 
+  .trackBox{
+    max-width: 275px;
+  }
+
 }
 
 @media (max-width: 325px) {
@@ -1178,6 +1185,10 @@ footer {
   }
   .boringThings p {
     font-size: 12px;
+  }
+
+  .trackBox{
+    max-width: 254px;
   }
 }
 

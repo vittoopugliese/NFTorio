@@ -10,7 +10,7 @@ reproductor.innerHTML = `
     <h4 id="songName"></h4>
 
     <input type="range" id="progressBar" value="0" min="0" max="10" step="0.1">
-    <h4 id="songCurrentTime"></h4>
+    <h4 id="songCurrentTime">00:00</h4>
     <h4 id="songTime"></h4>
     <h4 id="separator">_</h4>
     
@@ -44,36 +44,47 @@ for (let i = 0; i < playBtn.length; i++) {
   playBtn[i].addEventListener("click", () => {
     let track = playBtn[i].getAttribute("track");
     localStorage.setItem("track", track);
-    audio.src = tracks[`${track}`].src;
-    songPic.src = tracks[`${track}`].image;
-    songName.innerHTML = tracks[`${track}`].title;
-    songTime.innerHTML = tracks[`${track}`].duration;
     playpause.src = "../imgs/svgs/pauseMusic.png";
+    loadTrack()
     playerUp()
-    audio.play();
-    audio.onloadedmetadata = function () {
-      progressBar.max = audio.duration;
-    };
+    setInterval(()=>{audio.play();},500)
   });
-
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("track")) {
-    let track = localStorage.getItem("track");
-    audio.src = tracks[`${track}`].src;
-    songPic.src = tracks[`${track}`].image;
-    songName.innerHTML = tracks[`${track}`].title;
-    songTime.innerHTML = tracks[`${track}`].duration;
+function loadTrack() {
+  let trackNumber = localStorage.getItem("track");
+  audio.src = tracks[`${trackNumber}`].src;
+  songPic.src = tracks[`${trackNumber}`].image;
+  songName.innerHTML = tracks[`${trackNumber}`].title;
+  songTime.innerHTML = tracks[`${trackNumber}`].duration;
+  
+  audio.onloadedmetadata = function () {
+    progressBar.max = audio.duration;
+  };
+  setInterval(updateTrackProgress,750)
+}
 
-    audio.onloadedmetadata = function () {
-      progressBar.max = audio.duration;
-      // onloadingsong
-    };
-    vol.value = localStorage.getItem("vol");
-    audio.volume = vol.value;
-  }
-});
+function nextTrack() {
+  const currentTrack = parseInt(localStorage.getItem("track"))
+  localStorage.setItem("track", (currentTrack + 1));
+  loadTrack()
+}
+
+function lastTrack() {
+  const currentTrack = parseInt(localStorage.getItem("track"))
+  localStorage.setItem("track", (currentTrack - 1));
+  loadTrack()
+}
+
+next.addEventListener('click', () => {
+  nextTrack()
+  audio.play();
+})
+
+last.addEventListener('click', () => {
+  lastTrack()
+  audio.play();
+})
 
 playpause.addEventListener("click", () => {
   if (audio.paused) {
@@ -85,30 +96,43 @@ playpause.addEventListener("click", () => {
   }
 });
 
+progressBar.addEventListener("input", (e) => {
+  let clickedValue = e.target.value;
+  audio.currentTime = clickedValue;
+  progressBar.value = clickedValue;
+});
+
 vol.addEventListener("change", () => {
   audio.volume = vol.value;
   localStorage.setItem("vol", vol.value);
 });
 
-audio.addEventListener("timeupdate", function () {
+function updateTrackProgress() {
   let currentTime = parseInt(audio.currentTime);
-  let m = 0
-  let s = 0
-  
-  m = (m<10) ? '0' + m : m
-  s = (s<10) ? '0' + s : s
-  
-  let setCurrentTime = m + ':' + s
-  songCurrentTime.innerHTML = setCurrentTime;
-  progressBar.value = audio.currentTime;
-  
-  progressBar.style.accentColor = `hsl(${currentTime}, 100%, 50%)`
-});
+  progressBar.value = currentTime
+  songCurrentTime.innerHTML = convertTime(currentTime)
+  if(progressBar.value > 0){
+    progressBar.style.accentColor = `hsl(${currentTime}, 100%, 50%)`
+  }
+}
 
-progressBar.addEventListener("click", (e) => {
-  let clickedValue = e.target.value;
-  audio.currentTime = clickedValue;
-  progressBar.value = clickedValue;
+function convertTime(secs) {
+  let min = Math.floor(secs/60)
+  let sec = secs % 60
+  
+  min = (min < 10) ? '0' + min : min
+  sec = (sec < 10) ? '0' + sec : sec
+
+  let convertedTime = min + ':' + sec
+  return convertedTime
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("track")) {
+    loadTrack()
+    vol.value = localStorage.getItem("vol");
+    audio.volume = vol.value;
+  }
 });
 
 topBar.addEventListener("click", () => {
@@ -149,14 +173,6 @@ function playerDwn() {
   normal.style.bottom = '75px'
 }
 
-if(reproductor.style.height = '82'){
-  magixs.style.bottom = '185px'
-  normal.style.bottom = '140px'
-} else{
-  magixs.style.bottom = '120px'
-  normal.style.bottom = '75px'
-}
-
 // detect page and execute this (apparently working...) // host variable in search.js
 
 if (window.location.href == host + "pages/images.html") {
@@ -170,6 +186,7 @@ if (window.location.href == host + "pages/images.html") {
 if (window.location.href == host + "index.html") {
   if (localStorage.getItem("track")) {
     reproductor.style.display = "flex";
+    console.log('ola')
   } else {
     reproductor.style.display = "none";
   }
@@ -177,4 +194,12 @@ if (window.location.href == host + "index.html") {
 
 if (!localStorage.getItem("track")) {
   localStorage.setItem("track", 0);
+}
+
+if(reproductor.style.height = '82px'){
+  magixs.style.bottom = '185px'
+  normal.style.bottom = '140px'
+} else{
+  magixs.style.bottom = '120px'
+  normal.style.bottom = '75px'
 }
