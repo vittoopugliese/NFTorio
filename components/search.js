@@ -30,6 +30,7 @@ const host = "http://127.0.0.1:5500/";
 searchInput.addEventListener("keyup", (e) => {
   let target = e.target.value;
   for (let i = 0; i < 37; i++) {
+    //  image search engine
     if (window.location.href == host + "pages/images.html") {
       let pBoxed = pBox[i];
       let boxed = pBoxed.getAttribute("data-tag");
@@ -50,6 +51,7 @@ searchInput.addEventListener("keyup", (e) => {
       }
     }
 
+    //  track search engine
     if (window.location.href == host + "pages/music.html") {
       let tBoxed = trackBox[i];
       let tboxed = tBoxed.getAttribute("data-tag");
@@ -65,6 +67,12 @@ searchInput.addEventListener("keyup", (e) => {
       if (target == "") {
         tBoxed.style.display = "grid";
         addedds.classList.remove("hide");
+      }
+      
+      if (window.matchMedia("screen and (min-width: 540px)").matches == true) {
+        tBoxed.style.display = "grid";
+      } else {
+        tBoxed.style.display = "flex";
       }
     }
   }
