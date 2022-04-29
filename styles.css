@@ -587,48 +587,28 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  width: 48px;
-  top: 0px;
-  right: 15px;
+  width: 54px;
   border-style: none;
-  cursor: pointer;
-  display: flex;
   background-color: transparent;
-  justify-content: center;
   border-radius: 100px;
   transition: all 0.54s;
+  opacity: 0.54;
+  cursor: pointer;
 }
-.playBtnContainer{
+.playBtn:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 54px;
   border-style: none;
+  background-color: transparent;
+  border-radius: 100px;
+  transition: all 0.54s;
+  opacity: 0.84;
   cursor: pointer;
-  background-color:black;
-  border: 1px solid black;
-  width: 98px;
-  height: 38px;
-  border-radius: 20px;
-  transition: all 0.54s;
-  transform: scale(0.89);
 }
-.playBtnContainer:hover{
-  background-color:white;
-  width: 98px;
-  height: 38px;
-  border-radius: 20px;
-  transition: all 0.54s;
-  transform: scale(0.89);
-}
-.playText{
-  font-size: 22px;
-  font-weight: 900;
-
-  color: white;
-  position: relative;
-  right: 12px;
-  transition: all 0.54s;
+.likeBtn{ 
+  cursor: pointer;
 }
 
 /* pleyieerr */

@@ -10,6 +10,9 @@ preLoad.innerHTML = `
 wrapper.style.filter = "blur(50px)";
 
 window.onload = function () {
+  const rn = Math.floor(Math.random() * 20) + 1;
+  localStorage.setItem('tracks', rn)
+  
   body.style.overflow = "auto";
   wrapper.style.filter = "blur(0px)";
   setTimeout(() => {
@@ -20,6 +23,7 @@ window.onload = function () {
     }, 400);
   }, 300);
 };
+
 window.onbeforeunload = function () {
   productModal.style.display = "none";
   modalBackground.style.display = "none";

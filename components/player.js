@@ -38,29 +38,23 @@ const last = document.getElementById("last");
 const next = document.getElementById("next");
 const playerMin = document.getElementById("playerMin");
 const topBar = document.getElementById("topBar");
-// styles...
-const playBtnContainer = document.querySelectorAll(".playBtnContainer");
 const playBtn = document.querySelectorAll(".playBtn");
-const playText = document.querySelectorAll(".playText");
 
 for (let i = 0; i < playBtn.length; i++) {
   playBtn[i].addEventListener("click", () => {
-    initTrack();
-  });
-  playBtnContainer[i].addEventListener("click", () => {
-    initTrack();
-  });
-
-  function initTrack() {
     let track = playBtn[i].getAttribute("track");
     localStorage.setItem("track", track);
+
     playpause.src = "../imgs/svgs/pauseMusic.png";
+
     loadTrack();
     playerUp();
-    setInterval(() => {
+
+    if (audio.paused) {
       audio.play();
-    }, 500);
-  }
+      playpause.src = "../imgs/svgs/pauseMusic.png";
+    }
+  });
 }
 
 function loadTrack() {
@@ -73,7 +67,7 @@ function loadTrack() {
   audio.onloadedmetadata = function () {
     progressBar.max = audio.duration;
   };
-  setInterval(updateTrackProgress, 750);
+  setInterval(updateTrackProgress, 1000);
 }
 
 function nextTrack() {
@@ -114,7 +108,7 @@ progressBar.addEventListener("input", (e) => {
   progressBar.value = clickedValue;
 });
 
-vol.addEventListener("change", () => {
+vol.addEventListener("input", () => {
   audio.volume = vol.value;
   localStorage.setItem("vol", vol.value);
 });
@@ -214,22 +208,4 @@ if ((reproductor.style.height = "82px")) {
 } else {
   magixs.style.bottom = "120px";
   normal.style.bottom = "75px";
-}
-
-// styles...
-for (let i = 0; i < tracks.length; i++) {
-  playBtnContainer[i].addEventListener("mouseover", () => {
-    playBtn[i].style.transform = "rotate(180deg)";
-    playBtn[i].style.right = "-58px";
-    
-    playText[i].style.color = "black";
-    playText[i].style.right = "38px";
-  });
-  playBtnContainer[i].addEventListener("mouseleave", () => {
-    playBtn[i].style.transform = "rotate(0deg)";
-    playBtn[i].style.right = "15px";
-    
-    playText[i].style.color = "white";
-    playText[i].style.right = "12px";
-  });
 }
