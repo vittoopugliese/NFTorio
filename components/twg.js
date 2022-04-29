@@ -38,3 +38,15 @@ const trackImage = document.querySelectorAll('.trackImage');
 const trackTitle = document.querySelectorAll('.trackTitle');
 const trackDescription = document.querySelectorAll('.trackDescription');
 const detailsBtn = document.querySelectorAll('.detailsBtn');
+const likeBtn = document.querySelectorAll('.likeBtn');
+
+import { likeCount, getLikes } from '../components/firebase.js';
+
+window.addEventListener('DOMContentLoaded', async () => {
+    const likes = await getLikes()
+    console.log(likes)
+})
+
+likeBtn[0].addEventListener('click', () => {
+    likeCount('innerInjuries', 1)
+})

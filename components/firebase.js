@@ -1,6 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, getDocs, setDoc, doc, updateDoc } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 const firebaseConfig = {
@@ -15,28 +14,12 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
-// My constants
-document.addEventListener("DOMContentLoaded", () => {
-  const likeBtn = document.querySelectorAll(".likeBtn");
-  for (let i = 0; i < likeBtn.length; i++) {
-    likeBtn[i].addEventListener("click", () => {
-      console.log("hola");
-    });
-  }
-});
+export const likeCount = (track, count) => {
+  addDoc(collection(db, 'likes'),{track, count})
+}
 
-import { collection, addDoc } from "firebase/firestore";
-
-try {
-  const docRef = await addDoc(collection(db, "users"), {
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815
-  });
-  console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-  console.error("Error adding document: ", e);
+export const getLikes = () => {
+  getDocs(collection(db, 'likes'))
 }
