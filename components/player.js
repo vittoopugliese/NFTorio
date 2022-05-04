@@ -67,7 +67,7 @@ function loadTrack() {
   audio.onloadedmetadata = function () {
     progressBar.max = audio.duration;
   };
-  setInterval(updateTrackProgress, 1000);
+  setInterval(updateTrackProgress, 100);
 }
 
 function nextTrack() {

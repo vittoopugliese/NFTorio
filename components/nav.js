@@ -9,7 +9,6 @@ header.innerHTML = `
     <ul>
         <li><a href="../pages/images.html">Images</a></li>
         <li><a href="../pages/music.html">Music</a></li>
-        <li><a href="../pages/room.html">room</a></li>
     </ul>
 </div>
 </nav>
